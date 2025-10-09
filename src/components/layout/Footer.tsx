@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import logo from '@/public/images/aicess/aicess_aicess.png'
-import ToveroLogo from '@/public/tovero-logo.png'
-import Image from 'next/image';
-import {Mail, Phone} from 'lucide-react'
+import Link from "next/link";
+import logo from "@/public/images/aicess/aicess_aicess.png";
+import ToveroLogo from "@/public/tovero-logo.png";
+import Image from "next/image";
+import { House, Mail, Phone } from "lucide-react";
 import uniport from "@/public/images/home/unipor.svg";
-import { officeNumber } from '@/lib/utils'
+import { officeNumber } from "@/lib/utils";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,21 +18,25 @@ export function Footer() {
             <Link href="/" className="transition-transform hover:scale-105">
               <Image src={logo} alt="AICCEES" className="w-20 h-20" />
             </Link>
-            <p className="text-sm text-gray-600 font-medium">© {currentYear}. All rights reserved.</p>
+            <p className="text-sm text-gray-600 font-medium">
+              © {currentYear}. All rights reserved.
+            </p>
           </div>
 
           {/* Quick Links */}
           <div className="flex flex-col items-center">
             <h3 className="font-bold text-xl text-green-800 mb-4">Legal</h3>
             <nav className="flex flex-col items-center gap-3">
-              <Link 
+              <Link
                 className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4"
-                href="https://docs.google.com/document/d/1vGj2MvQZk-rigl6zlAEZW-J_mRo19fp_/edit?usp=sharing&ouid=103583805913807710533&rtpof=true&sd=true">
+                href="https://docs.google.com/document/d/1vGj2MvQZk-rigl6zlAEZW-J_mRo19fp_/edit?usp=sharing&ouid=103583805913807710533&rtpof=true&sd=true"
+              >
                 Privacy Policy
               </Link>
-              <Link 
+              <Link
                 className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4"
-                href="https://docs.google.com/document/d/1vGj2MvQZk-rigl6zlAEZW-J_mRo19fp_/edit?usp=sharing&ouid=103583805913807710533&rtpof=true&sd=true">
+                href="https://docs.google.com/document/d/1vGj2MvQZk-rigl6zlAEZW-J_mRo19fp_/edit?usp=sharing&ouid=103583805913807710533&rtpof=true&sd=true"
+              >
                 Terms of Service
               </Link>
             </nav>
@@ -40,18 +44,40 @@ export function Footer() {
 
           {/* Contact Information */}
           <div className="flex flex-col items-center md:items-end">
-            <h3 className="font-bold text-xl text-green-800 mb-4">Contact Us</h3>
+            <h3 className="font-bold text-xl text-green-800 mb-4">
+              Contact Us
+            </h3>
             <div className="flex flex-col items-center md:items-end gap-3">
-              <a href="mailto:aiccees@uniport.edu.ng"
-                className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2">
-                <Mail className='w-4 h-4 text-green-700' />
-                aiccees@uniport.edu.ng
+              <a
+                href="mailto:aiccees@uniport.edu.ng"
+                className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2"
+              >
+                <Mail className="w-4 h-4 text-green-700" />
+                aiccees@toveroenergy.com
               </a>
-              <a href={`tel:${officeNumber}`}
-                className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2">
-                <Phone className='w-4 h-4 text-green-700' />
+              <a
+                href={`tel:${officeNumber}`}
+                className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2"
+              >
+                <Phone className="w-4 h-4 text-green-700" />
                 {officeNumber}
               </a>
+              <div className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex  gap-2">
+                <House className="w-4 h-4 text-green-700" />
+                <address>
+                  Suite 4, Abidea Plaza
+                  <br />
+                  Chief Ade Nwonoro Street
+                  <br />
+                  Woji-Akpajo Link Road
+                  <br />
+                  Gbalajam, Woji
+                  <br />
+                  Port Harcourt, Rivers State
+                  <br />
+                  Nigeria
+                </address>
+              </div>
             </div>
           </div>
         </div>
@@ -61,22 +87,24 @@ export function Footer() {
       <div className="w-full py-6 border-t border-t-red-600">
         <div className="w-10/12 mx-auto flex flex-col lg:flex-row items-center justify-center gap-2 md">
           <h5 className="text-lg font-medium">Organized by:</h5>
-          <Link href="https://toveroenergy.com" target="_blank" className="transition-transform hover:scale-105">
-            <Image 
-              src={ToveroLogo} 
+          <Link
+            href="https://toveroenergy.com"
+            target="_blank"
+            className="transition-transform hover:scale-105"
+          >
+            <Image
+              src={ToveroLogo}
               alt="Tovero Energy Limited"
-              className="max-h-8 w-auto" 
+              className="max-h-8 w-auto"
             />
           </Link>
           <p>in Collaboration with </p>
-          <Image 
-              src={uniport}
-              alt="Uniport"
-              className="max-h-8 w-auto" 
-            />
-          <span className='font-medium text-green-800 flex items-center'>University of Port Harcourt</span> 
+          <Image src={uniport} alt="Uniport" className="max-h-8 w-auto" />
+          <span className="font-medium text-green-800 flex items-center">
+            University of Port Harcourt
+          </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }

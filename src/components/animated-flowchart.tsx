@@ -20,12 +20,12 @@ const steps: Step[] = [
     description: "Prepare your research paper following the conference template (Download the template attached). \nPlease note that research papers sent in for the conference must be an original research that has neither been published or submitted for publication in any other conference or journal. Additionally it must adhere to our ethical standards.",
     icon: <FileText className="h-6 w-6" />,
     color: 'green',
-    templateUrl: "/Research_Paper_Template.pdf"
+    templateUrl: "https://drive.google.com/file/d/1s_0oSH3zEpext5xswh7oLFGJ9lJn4kv7/view?usp=drive_link"
   },
   {
     id: 2,
     title: "Email Submission",
-    description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review. Please note that any research paper with a plagiarism index of more than 15% will be rejected.",
+    description: "Send your full research paper by email (aiccees@toveroenergy.com) to the conference chairs for initial review. Please note that any research paper with a plagiarism index of more than 15% will be rejected.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },

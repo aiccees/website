@@ -13,7 +13,7 @@ import amina from "@/public/images/keynote_speakers/amina.jpeg"
 import Ioannis from "@/public/images/keynote_speakers/Ioannis.jpeg"
 import alicia from "@/public/images/keynote_speakers/Alicia.webp"
 import ejikeme from "@/public/images/keynote_speakers/Ejikeme.webp"
-import yacob from "@/public/images/keynote_speakers/Yacob.webp"
+import yacob from "@/public/images/keynote_speakers/omodele.png"
 import radhakrishnan from "@/public/images/keynote_speakers/Radhakrishnan Mahalingam[2].webp"
 import tarek from "@/public/images/keynote_speakers/TarekKabel.webp"
 import glory from "@/public/images/keynote_speakers/GloryOguegbu.webp"
@@ -26,12 +26,12 @@ import AOS from '../layout/AOS'
 const SPEAKERS = [
     // 2025 Keynote Speakers
     {
-        name: "Prof. Yacob Mulugetta",
-        role: "Professor of Energy and Development Policy, University College London",
+        name: "Prof. Omodele Abiodun Abosede Eletta",
+        role: "Professor of the Faculty of Engineering and Technology, University of Ilorin",
         status: "current",
         image: yacob, // Placeholder for 2025 speaker image
-        bio: "Professor of Energy and Development Policy at University College London. Lead Author at the Intergovernmental Panel on Climate Change, Greater London, England United Kingdom. Prof. Mulugetta brings extensive expertise in energy policy and sustainable development.",
-        bio2: "As a leading figure in climate change policy, Prof. Mulugetta has been instrumental in shaping international energy and development policies. His work at the IPCC has contributed significantly to global understanding of climate change mitigation and adaptation strategies."
+        bio: "Prof. Omodele Eletta is the first female Professor of the Faculty of Engineering and Technology, University of Ilorin, where she has served since 2008 as a pioneer staff of the Department of Chemical Engineering. ",
+        bio2: "She has held several leadership roles, including Acting Head of Department, Coordinator, Acting Director of Unilorin Consultancy Services, and currently, Director of the National Centre for Hydropower Research and Development (NACHRED) under the Energy Commission of Nigeria. She is a Fellow of the Nigerian Society of Chemical Engineers and a Life Member of the Nigerian Society of Engineers."
     },
     {
         name: "Alicia Butterfield",
@@ -276,8 +276,8 @@ export function SpeakersSection() {
             <h3 className="text-2xl font-semibold">Want to be a Keynote Speaker?</h3>
             <p>
               Reach out to us at{" "}
-              <Link href="mailto:aiccees@uniport.edu.ng" className="font-medium underline">
-                aiccees@uniport.edu.ng
+              <Link href="mailto:aiccees@toveroenergy.com" className="font-medium underline">
+                aiccees@toveroenergy.com
               </Link>
             </p>
           </div>

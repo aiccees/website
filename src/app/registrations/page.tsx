@@ -24,7 +24,7 @@ export default function RegistrationPage() {
   const router = useRouter();
   // Form URLs - replace with actual URLs
   const registrationFormUrl =
-    "https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRUOVcxSTRVUVhNT0NUMTlFOFdWSExPWEVQVy4u&origin=lprLink&route=shorturl";
+    "https://forms.office.com/r/g2urRDaq4P";
   const visaFormUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLScmC2LPj6Jtw7w6N9Lm9YpP7ge6DiVlSRlEZ5RSWsYaGt5SUg/viewform";
   // const scientificCommitteeFormUrl =

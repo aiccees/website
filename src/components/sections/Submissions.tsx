@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "../ui/button"
-import { Calendar, Download, Circle, MapPin } from "lucide-react"
+import { Calendar, Download, Circle } from "lucide-react"
 import AOS from "../layout/AOS"
 
 const info = [
@@ -11,7 +11,7 @@ const info = [
     id: 1,
     status: "red",
     text: "Full Paper Submission",
-    date: "Jan. 1st 2025",
+    date: "Jan. 1st 2026",
     description: "Submission portal opens for all participants",
     icon: Calendar,
   },
@@ -19,7 +19,7 @@ const info = [
     id: 2,
     status: "amber",
     text: "Full Paper Submission Deadline",
-    date: "July 31st 2025",
+    date: "July 31st 2026",
     description: "Final deadline for all research paper submissions",
     icon: Calendar,
   },
@@ -27,7 +27,7 @@ const info = [
     id: 3,
     status: "green",
     text: "Conference Date",
-    date: "Sept. 25th & 26th 2025",
+    date: "Sept. 24th & 25th 2026",
     description: "Two days of inspiring presentations, networking, and exhibitions",
     icon: Calendar,
   },
@@ -35,9 +35,9 @@ const info = [
     id: 4,
     status: "black",
     text: "Conference Venue",
-    date: "Institute of Petroleum and Energy Studies",
-    description: "University of Port Harcourt, Rivers State, Nigeria",
-    icon: MapPin,
+    date: "Sept. 24th & 25th 2026",
+    description: "Obi Wali International Conference Centre, Port Harcourt",
+    icon: Calendar,
   },
 ]
 
@@ -95,7 +95,7 @@ function Submissions() {
                 variants={itemVariants}
                 className="text-green-300 text-base tracking-wider uppercase "
               >
-                AICCEES 2025 - <span className="normal-case">3rd Edition</span>
+                AICCEES 2026 - <span className="normal-case">4th Edition</span>
               </motion.p>
               <motion.h2
                 variants={itemVariants}
@@ -165,7 +165,7 @@ function Submissions() {
                   <div className="flex flex-col gap-4">
                     <Link
                       target="_blank"
-                      href="/Book_of_abstracts.pdf"
+                      href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link"
                       download="Book_of_abstracts.pdf"
                     >
                       <Button
@@ -178,7 +178,7 @@ function Submissions() {
                       </Button>
                     </Link>
                     <Link
-                      href="/2024-Conference-Report.pdf"
+                      href="https://drive.google.com/file/d/1bWy3F-O4-kiEtB6iEZJUb_Y3sjetv-VL/view?usp=drive_link"
                       download="2024-Conference-Report.pdf"
                       target="_blank"
                     >

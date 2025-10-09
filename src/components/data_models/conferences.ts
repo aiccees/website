@@ -19,6 +19,8 @@ import asteven from "@/public/images/home/asteven.svg";
 import enerpro from "@/public/images/home/enerpro.svg";
 import trans from "@/public/images/home/trans.svg";
 import uniport from "@/public/images/home/unipor.svg";
+import rean from "@/public/images/home/rean.png"
+import veroanth from "@/public/images/home/vero_anth.png"
 
 
 export const aicess = {
@@ -35,37 +37,37 @@ export const aicess = {
     {
         id: 1,
         logo: logo1,
-        number: "1,173",
+        number: "1,787",
         description: "Participants",
       },
       {
         id: 2,
         logo: logo2,
-        number: "86",
+        number: "127",
         description: "Abstract Submissions",
       },
       {
         id: 3,
         logo: logo3,
-        number: "51",
+        number: "75",
         description: "Full Papers Accepted",
       },
       {
         id: 4,
         logo: logo4,
-        number: "45",
+        number: "68",
         description: "Paper Presentations",
       },
       {
         id: 5,
         logo: logo5,
-        number: "5",
+        number: "8",
         description: "Panel Sessions",
       },
       {
         id: 6,
         logo: logo6,
-        number: "7",
+        number: "14",
         description: "Keynote Speakers",
       },
   ]
@@ -153,6 +155,9 @@ export const sponsors_list = [
   { id: 3, image: enerpro },
   { id: 4, image: trans },
   { id: 5, image: uniport },
+  { id: 6, image: acefuels },
+  { id: 7, image: rean },
+  { id: 8, image: veroanth },
 ];
 
 export const partners = [
@@ -186,10 +191,20 @@ export const partners = [
     logo: acefuels,
     url: "https://acefuels-futo.org",
   },
+  {
+    name: "Renewable Energy Association of Nigeria(REAN)",
+    logo: rean,
+    url: "https://rean.org.ng",
+  },
+  {
+    name: "Veronica Anthony Foundation",
+    logo: veroanth,
+    url: "www.veronicaanthonyfoundation.com",
+  },
   
 ]
 
-export const registrationLink = "https://tinyurl.com/AICCEES2025"
+export const registrationLink = "https://forms.office.com/r/g2urRDaq4P"
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

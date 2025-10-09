@@ -3,9 +3,6 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/autoplay'
-import 'swiper/css/effect-fade'
 import herobg0 from '@/public/images/herobg0.jpg'
 import herobg1 from '@/public/images/herobg1.jpg'
 import herobg2 from '@/public/images/herobg2.jpg'
@@ -29,7 +26,7 @@ const BACKGROUND_IMAGES = [
 ]
 
 function CountdownTimer() {
-  const targetDate = new Date('2025-09-25T00:00:00Z').getTime()
+  const targetDate = new Date('2026-09-24T00:00:00Z').getTime()
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now())
 
   useEffect(() => {
@@ -91,7 +88,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-3 text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-              Africa International Conference on Clean Energy & Energy Storage
+              Africa International Conference on Clean Energy & Energy Storage(AICCEES)
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
               Empowering Africa&apos;s Future Through Clean Energy Innovation and Sustainable Storage Solutions
