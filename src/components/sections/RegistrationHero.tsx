@@ -33,11 +33,11 @@ export function RegistrationHero() {
           <div className="flex flex-wrap justify-center gap-4 text-sm mb-12">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Calendar className="w-4 h-4 mr-2" />
-              September 26-27, 2026
+              September 24-25, 2026
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />
-              University of Port Harcourt, Nigeria
+              Obi Wali International Conference Centre, Port Harcourt
             </div>
             
           </div>

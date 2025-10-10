@@ -40,7 +40,7 @@ export default function ConferenceProgramPage() {
       title: "Paper Presentations",
       description: "Explore cutting-edge research and innovations through academic paper presentations. Researchers and scholars will present their latest findings in clean energy technologies, energy storage solutions, and sustainable development practices.",
       time: "14:00 - 17:00",
-      date: "September 25-26, 2026",
+      date: "September 24-25, 2026",
       location: "Research Halls A & B",
       type: "Academic",
       icon: BookOpen,
@@ -97,11 +97,11 @@ export default function ConferenceProgramPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
-                <span>September 25-26, 2026</span>
+                <span>September 24-25, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
-                <span>Port Harcourt, Nigeria</span>
+                <span>Obi Wali International Conference Centre, Port Harcourt</span>
               </div>
             </div>
           </div>
