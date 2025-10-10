@@ -26,7 +26,7 @@ export default function ConferenceProgramPage() {
       title: "Business Mentorship Session",
       description: "Connect with experienced business leaders and entrepreneurs in the clean energy sector. This session provides valuable insights on business development, funding opportunities, and strategic planning for energy startups and established companies.",
       time: "11:30 - 13:00",
-      date: "September 25, 2025",
+      date: "September 25, 2026",
       location: "Business Center",
       type: "Mentorship",
       icon: Handshake,
@@ -40,7 +40,7 @@ export default function ConferenceProgramPage() {
       title: "Paper Presentations",
       description: "Explore cutting-edge research and innovations through academic paper presentations. Researchers and scholars will present their latest findings in clean energy technologies, energy storage solutions, and sustainable development practices.",
       time: "14:00 - 17:00",
-      date: "September 25-26, 2025",
+      date: "September 25-26, 2026",
       location: "Research Halls A & B",
       type: "Academic",
       icon: BookOpen,
@@ -92,12 +92,12 @@ export default function ConferenceProgramPage() {
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-green-100 mb-8">
-              Discover the comprehensive agenda for AICCEES 2025
+              Discover the comprehensive agenda for AICCEES 2026
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
-                <span>September 25-26, 2025</span>
+                <span>September 25-26, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
@@ -117,7 +117,7 @@ export default function ConferenceProgramPage() {
                 Conference Highlights
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                AICCEES 2025 brings together leading experts, researchers, and industry professionals 
+                AICCEES 2026 brings together leading experts, researchers, and industry professionals 
                 for two days of intensive learning, networking, and collaboration in clean energy and energy storage.
               </p>
             </div>
@@ -312,7 +312,7 @@ export default function ConferenceProgramPage() {
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Get the full detailed schedule, including all sessions, workshops, networking events, 
-                  and special activities planned for AICCEES 2025.
+                  and special activities planned for AICCEES 2026.
                 </p>
               </div>
 
@@ -363,7 +363,7 @@ export default function ConferenceProgramPage() {
                 size="lg"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg"
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                   <Download className="w-6 h-6 mr-2" />
                   Download Full Conference Program (PDF)
                 </a>
@@ -383,7 +383,7 @@ export default function ConferenceProgramPage() {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-                Ready to Join AICCEES 2025?
+                Ready to Join AICCEES 2026?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Don&apos;t miss this opportunity to connect with industry leaders, learn from experts, 

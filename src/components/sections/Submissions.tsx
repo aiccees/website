@@ -159,7 +159,40 @@ function Submissions() {
               className="flex flex-col items-center gap-6 mt-10"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Conference Materials</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl">
+                <div className="space-y-4">
+                  <h4 className="text-white text-lg font-semibold">2025 Documents</h4>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      target="_blank"
+                      href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link"
+                      download="Book_of_abstracts.pdf"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-emerald-600 text-white hover:bg-emerald-500 transition-colors group border-emerald-400"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2025 Conference Brochure
+                      </Button>
+                    </Link>
+                    {/* <Link
+                      href="https://drive.google.com/file/d/1bWy3F-O4-kiEtB6iEZJUb_Y3sjetv-VL/view?usp=drive_link"
+                      download="2024-Conference-Report.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-white/90 text-green-900 hover:bg-white transition-colors group border-green-400"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2025 Conference Report
+                      </Button>
+                    </Link> */}
+                  </div>
+                </div>
                 <div className="space-y-4">
                   <h4 className="text-white text-lg font-semibold">2024 Documents</h4>
                   <div className="flex flex-col gap-4">

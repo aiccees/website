@@ -13,7 +13,7 @@ import amina from "@/public/images/keynote_speakers/amina.jpeg"
 import Ioannis from "@/public/images/keynote_speakers/Ioannis.jpeg"
 import alicia from "@/public/images/keynote_speakers/Alicia.webp"
 import ejikeme from "@/public/images/keynote_speakers/Ejikeme.webp"
-import yacob from "@/public/images/keynote_speakers/omodele.png"
+import omodele from "@/public/images/keynote_speakers/omodele.jpeg"
 import radhakrishnan from "@/public/images/keynote_speakers/Radhakrishnan Mahalingam[2].webp"
 import tarek from "@/public/images/keynote_speakers/TarekKabel.webp"
 import glory from "@/public/images/keynote_speakers/GloryOguegbu.webp"
@@ -24,12 +24,12 @@ import { Button } from "@/components/ui/button"
 import AOS from '../layout/AOS'
 
 const SPEAKERS = [
-    // 2025 Keynote Speakers
+    // 2026 Keynote Speakers
     {
         name: "Prof. Omodele Abiodun Abosede Eletta",
-        role: "Professor of the Faculty of Engineering and Technology, University of Ilorin",
+        role: "Director, National Centre for Hydropower Research and Development (NACHRED), Nigeria",
         status: "current",
-        image: yacob, // Placeholder for 2025 speaker image
+        image: omodele, // Placeholder for 2026 speaker image
         bio: "Prof. Omodele Eletta is the first female Professor of the Faculty of Engineering and Technology, University of Ilorin, where she has served since 2008 as a pioneer staff of the Department of Chemical Engineering. ",
         bio2: "She has held several leadership roles, including Acting Head of Department, Coordinator, Acting Director of Unilorin Consultancy Services, and currently, Director of the National Centre for Hydropower Research and Development (NACHRED) under the Energy Commission of Nigeria. She is a Fellow of the Nigerian Society of Chemical Engineers and a Life Member of the Nigerian Society of Engineers."
     },
@@ -37,7 +37,7 @@ const SPEAKERS = [
         name: "Alicia Butterfield",
         role: "Global Manager, GeCCo",
         status: "current",
-        image: alicia, // Placeholder for 2025 speaker image
+        image: alicia, // Placeholder for 2026 speaker image
         bio: "Global Manager at GeCCo, bringing extensive experience in global energy and climate change initiatives. Alicia has been at the forefront of international cooperation in clean energy and sustainable development.",
         bio2: "Her work spans across multiple continents, facilitating partnerships between governments, organizations, and communities to advance clean energy solutions and climate action."
     },
@@ -45,7 +45,7 @@ const SPEAKERS = [
         name: "Glory Oguegbu",
         role: "Founder & CEO, Renewable Energy Technology Training Institute (RETTI)",
         status: "current",
-        image: glory, // Placeholder for 2025 speaker image
+        image: glory, // Placeholder for 2026 speaker image
         bio: "Founder and CEO of Renewable Energy Technology Training Institute (RETTI), dedicated to advancing renewable energy education and training across Africa. Glory has been instrumental in building capacity for clean energy adoption.",
         bio2: "Through RETTI, she has trained thousands of professionals and entrepreneurs in renewable energy technologies, contributing significantly to Africa's energy transition and sustainable development goals."
     },
@@ -53,7 +53,7 @@ const SPEAKERS = [
         name: "Mr. Ejikeme Nwosu",
         role: "Founder, Lumos Lab",
         status: "current",
-        image: ejikeme, // Placeholder for 2025 speaker image
+        image: ejikeme, // Placeholder for 2026 speaker image
         bio: "Founder of Lumos Lab, pioneering innovative solutions in clean energy and sustainable technology development. Ejikeme has been at the forefront of technological innovation in Africa's energy sector.",
         bio2: "His work focuses on developing cutting-edge solutions that address Africa's unique energy challenges while promoting sustainable development and technological advancement."
     },
@@ -61,7 +61,7 @@ const SPEAKERS = [
     //     name: "Dr. Ibiere Helen Jumbo",
     //     role: "Research Fellow, University of Aberdeen",
     //     status: "current",
-    //     image: "", // Placeholder for 2025 speaker image
+    //     image: "", // Placeholder for 2026 speaker image
     //     bio: "A Research Fellow at the University of Aberdeen, specializing in energy and environmental law, with a focus on regional renewable energy governance in West Africa. Dr. Jumbo brings legal expertise to energy policy development.",
     //     bio2: "Her research contributes to understanding how legal frameworks can support renewable energy development and environmental protection in West Africa, bridging the gap between law and energy policy."
     // },
@@ -69,7 +69,7 @@ const SPEAKERS = [
         name: "Radhakrishnan Mahalingam",
         role: "Technology Strategist & AI/Blockchain Energy Advisor",
         status: "current",
-        image: radhakrishnan, // Placeholder for 2025 speaker image
+        image: radhakrishnan, // Placeholder for 2026 speaker image
         bio: "Award-winning technology strategist and advisor, driving AI and Blockchain-enabled energy transformations across the MENA region and beyond. Radhakrishnan specializes in digital transformation in the energy sector.",
         bio2: "His expertise in AI and blockchain technologies has revolutionized how energy systems are managed and optimized, particularly in emerging markets and developing regions."
     },
@@ -77,7 +77,7 @@ const SPEAKERS = [
         name: "Dr. Tarek Kabel",
         role: "Lecturer in Economics, University of Sadat City",
         status: "current",
-        image: tarek, // Placeholder for 2025 speaker image
+        image: tarek, // Placeholder for 2026 speaker image
         bio: "A lecturer in Economics at the University of Sadat City, specializing in energy economics and computable general equilibrium (CGE) modeling to assess renewable energy's role in economic development.",
         bio2: "Dr. Kabel's research provides crucial insights into how renewable energy investments can drive economic growth and development, using sophisticated economic modeling techniques."
     },

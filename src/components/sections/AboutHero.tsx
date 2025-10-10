@@ -33,15 +33,15 @@ export default function AboutHero() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Calendar className="w-4 h-4 mr-2" />
-              September 25-26, 2025
+              September 24-25, 2026
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />
-              University of Port Harcourt, Nigeria
+              Obi Wali International Conference Centre, Port Harcourt
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Users className="w-4 h-4 mr-2" />
-              600+ Expected Attendees
+              1500+ Expected Attendees
             </div>
           </div>
         </div>

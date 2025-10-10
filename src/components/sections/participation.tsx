@@ -21,7 +21,7 @@ export default function ParticipationSection() {
         <div className="text-center space-y-4 mb-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">Conference Fees</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES 2025 will be open to all virtually and physically, however this will come with a determined fee.
+            Participation at AICCEES 2026 will be open to all virtually and physically, however this will come with a determined fee.
             Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all paid conference participants.
           </p>
           <div className="flex items-center justify-center space-x-2">
@@ -138,8 +138,8 @@ export default function ParticipationSection() {
             <p className="text-gray-600 italic">The sender is solely responsible for the bank fees and transfer fees.</p>
             <p className="text-gray-600">
               For enquiries on payments and invoices, please send an email to{' '}
-              <a href="mailto:aiccees@uniport.edu.ng" className="text-blue-600 hover:underline">
-                aiccees@uniport.edu.ng
+              <a href="mailto:aiccees@toveroenergy.com" className="text-blue-600 hover:underline">
+                aiccees@toveroenergy.com
               </a>
             </p>
           </div>

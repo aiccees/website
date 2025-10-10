@@ -90,8 +90,8 @@ const jsonLd = {
   "@type": "Event",
   name: "Africa International Conference on Clean Energy & Energy Storage",
   description: "Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-  startDate: "2025-09-25",
-  endDate: "2025-09-26",
+  startDate: "2026-09-25",
+  endDate: "2026-09-26",
   location: {
     "@type": "Place",
     name: "University of Port Harcourt",

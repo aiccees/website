@@ -204,7 +204,7 @@ export const partners = [
   
 ]
 
-export const registrationLink = "https://forms.office.com/r/g2urRDaq4P"
+export const registrationLink = "/registrations#registration-form"
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

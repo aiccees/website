@@ -10,7 +10,7 @@ const SpeakersHeader = () => (
             Meet Our Distinguished Speakers
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover the brilliant minds and industry leaders who will share their expertise 
+            Discover the brilliant minds and industry leaders who shared their expertise 
             and insights at AICCEES conferences across the years.
           </p>
         </div>

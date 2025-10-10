@@ -186,7 +186,7 @@ export function Header() {
             {/* Mobile Menu Footer */}
             <div className="border-t border-green-700 px-6 py-4">
               <div className="text-green-200 text-sm">
-                © 2025 AICCEES. All rights reserved.
+                © 2026 AICCEES. All rights reserved.
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ const WhatsappLive = () => {
         setIsChatOpen(true);
         setMessages([
             {
-                text: "Hi there 👋\n\nWelcome to AICCEES 2025\nHow can we help you?",
+                text: "Hi there 👋\n\nWelcome to AICCEES 2026\nHow can we help you?",
                 isBot: true
             }
         ]);
@@ -74,7 +74,7 @@ const WhatsappLive = () => {
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-sm">AICCEES 2025</h3>
+                                    <h3 className="font-semibold text-sm">AICCEES 2026</h3>
                                     <p className="text-[10px] opacity-90">Typically replies in a few hours</p>
                                 </div>
                             </div>

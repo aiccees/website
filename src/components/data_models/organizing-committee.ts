@@ -61,14 +61,14 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
   {
     id: "12",
     name: "Kentimfon  Akpan",
-    role: "Quality Assurance Officer",
+    role: "M and E Officer",
     affiliation: "Tovero Energy",
     image: "/images/organizing-cttee/kentimfon.jpeg"
   },
-  {
-    id: "8",
-    name: "Legacy TV",
-    role: "Media",
-    affiliation: "Media Partner"
-  }
+  // {
+  //   id: "8",
+  //   name: "Legacy TV",
+  //   role: "Media",
+  //   affiliation: "Media Partner"
+  // }
 ]; 

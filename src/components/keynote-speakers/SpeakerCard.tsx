@@ -22,7 +22,7 @@ interface SpeakerCardProps {
 
 const SpeakerCard = ({ speaker, year, index, isExpanded, onToggleExpanded }: SpeakerCardProps) => {
   const speakerId = `${year}-${index}`;
-  const colorScheme = year === '2025' ? 'green' : year === '2024' ? 'red' : 'emerald';
+  const colorScheme = year === '2026' ? 'green' : year === '2024' ? 'red' : 'emerald';
   
   const truncateText = (text: string, maxLength: number = 200) => {
     if (text.length <= maxLength) return text;

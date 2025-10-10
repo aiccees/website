@@ -18,8 +18,8 @@ import AOS from "@/components/layout/AOS";
 import { useRouter } from "next/navigation";
 
 export default function RegistrationPage() {
-  const [aiccees2025Registration, setAiccees2025Registration] = useState(true);
-  const [aiccees2025ScientificCommittee, setAiccees2025ScientificCommittee] =
+  const [aiccees2026Registration, setAiccees2026Registration] = useState(true);
+  const [aiccees2026ScientificCommittee, setAiccees2026ScientificCommittee] =
     useState(false);
   const router = useRouter();
   // Form URLs - replace with actual URLs
@@ -30,15 +30,15 @@ export default function RegistrationPage() {
   // const scientificCommitteeFormUrl =
   //   "https://docs.google.com/forms/d/e/1FAIpQLSfu0upSJBsHxmILPS1JGDr1je9pYOHMHy2OCNcCMMkNvewaxw/viewform?embedded=true";
 
-  const openAiccees2025RegistrationForm = () => {
-    setAiccees2025Registration(true);
-    setAiccees2025ScientificCommittee(false);
+  const openAiccees2026RegistrationForm = () => {
+    setAiccees2026Registration(true);
+    setAiccees2026ScientificCommittee(false);
     router.push("#registration-form");
   };
   
-  const openAiccees2025ScientificCommittee = () => {
-    setAiccees2025ScientificCommittee(true);
-    setAiccees2025Registration(false);
+  const openAiccees2026ScientificCommittee = () => {
+    setAiccees2026ScientificCommittee(true);
+    setAiccees2026Registration(false);
     router.push("#registration-form");
   };
 
@@ -72,7 +72,7 @@ export default function RegistrationPage() {
                     </div>
                   </div>
                   <CardTitle className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
-                    AICCEES 2025 Registration
+                    AICCEES 2026 Registration
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -80,11 +80,11 @@ export default function RegistrationPage() {
                     <div className="flex flex-col lg:flex-row gap-4 justify-between text-sm text-neutral-600 dark:text-neutral-400">
                       <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                         <Calendar className="w-4 h-4" />
-                        <p>September 26-27, 2025</p>
+                        <p>September 24-25, 2026</p>
                       </div>
                       <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                         <MapPin className="w-4 h-4" />
-                        <p>Port Harcourt, Nigeria</p>
+                        <p>Obi Wali International Conference Centre, Port Harcourt</p>
                       </div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ export default function RegistrationPage() {
                   </p>
                   <Button
                     className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    onClick={openAiccees2025RegistrationForm}
+                    onClick={openAiccees2026RegistrationForm}
                   >
                     View Registration Form
                   </Button>
@@ -168,7 +168,7 @@ export default function RegistrationPage() {
                   </p>
                   <Button
                     className="w-full bg-purple-600 hover:bg-green-700 text-white px-4"
-                    onClick={openAiccees2025ScientificCommittee}
+                    onClick={openAiccees2026ScientificCommittee}
                   >
                     Apply for Scientific Committee Membership
                   </Button>
@@ -194,9 +194,9 @@ export default function RegistrationPage() {
                 Complete Your Registration
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-                {aiccees2025Registration &&
-                  "Please fill out the form below to complete your registration for the AICCEES Conference 2025."}{" "}
-                {aiccees2025ScientificCommittee &&
+                {aiccees2026Registration &&
+                  "Please fill out the form below to complete your registration for the AICCEES Conference 2026."}{" "}
+                {aiccees2026ScientificCommittee &&
                   "Please fill out the form below to complete your registration for the Scientific Committee Membership Application."}
               </p>
             </div>
@@ -204,20 +204,20 @@ export default function RegistrationPage() {
             <Card className="w-full max-w-4xl mx-auto shadow-xl">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold">
-                  {aiccees2025Registration &&
+                  {aiccees2026Registration &&
                     "Conference Attendance Registration Form"}
-                  {aiccees2025ScientificCommittee &&
+                  {aiccees2026ScientificCommittee &&
                     "Scientific Committee Membership Application Form"}
                 </CardTitle>
                 <p className="text-neutral-600 dark:text-neutral-400">
-                  {aiccees2025Registration &&
+                  {aiccees2026Registration &&
                     "Please provide your details to register for the conference"}
-                  {aiccees2025ScientificCommittee &&
+                  {aiccees2026ScientificCommittee &&
                     "Please provide your details to register for the Scientific Committee Membership Application"}
                 </p>
               </CardHeader>
               <CardContent>
-                {aiccees2025Registration && (
+                {aiccees2026Registration && (
                   <GoogleForm
                     formUrl={registrationFormUrl}
                     height="700"
@@ -225,7 +225,7 @@ export default function RegistrationPage() {
                     className="w-full"
                   />
                 )}
-                {aiccees2025ScientificCommittee && (
+                {aiccees2026ScientificCommittee && (
                   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfu0upSJBsHxmILPS1JGDr1je9pYOHMHy2OCNcCMMkNvewaxw/viewform?embedded=true" width="100%" height="100%" className="h-[700px] w-full" >Loading…</iframe>
                 )}
               </CardContent>
