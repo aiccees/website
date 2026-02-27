@@ -1,5 +1,6 @@
-import { deets, registrationLink } from "@/components/data_models/conferences";
+import { registrationLink } from "@/components/data_models/conferences";
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 
 export default function PublicationsPage() {
@@ -23,7 +24,7 @@ export default function PublicationsPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-8 px-4 md:px-6">
+    <div className="container mx-auto py-8 px-4 md:px-6">
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-[#008751] tracking-tight sm:text-4xl md:text-5xl">
           Journal of Clean Energy, Circular Economy and Digitalisation
@@ -41,11 +42,98 @@ export default function PublicationsPage() {
           <p className="text-gray-700 mb-3">
             The journal covers topics related to the <span className="text-red-600 font-bold">Africa International Conference on Clean Energy and Energy Storage (AICCEES)</span>, including:
           </p>
-          <ol className="list-decimal list-inside text-gray-700 space-y-2">
-            {deets.map((topic, index) => (
-              <li key={index} className="font-medium">{topic.text}</li>
-            ))}
-          </ol>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {/* Theme 1 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Energy Access, Supply & Transition Pathways</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Universal access (grid, mini-grids, stand-alone systems)</li>
+                <li>Policy, governance, and enabling regulations</li>
+                <li>Energy transition finance and investment models</li>
+              </ul>
+            </Card>
+            {/* Theme 2 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Renewable Energy Systems & Productive Use</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Solar, wind, hydro, geothermal innovations</li>
+                <li>Productive use of energy in agriculture, industry, and services</li>
+                <li>Energy-water-food nexus</li>
+              </ul>
+            </Card>
+            {/* Theme 3 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Hydrogen, Biofuels & Clean Fuels for Africa</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Hydrogen economy opportunities</li>
+                <li>Bioenergy and biofuels for transport and industry</li>
+                <li>CNG, LNG, and other transition fuels</li>
+              </ul>
+            </Card>
+            {/* Theme 4 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Energy Storage, Smart Grids & Digital Solutions</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Battery manufacturing & recycling in Africa</li>
+                <li>Grid integration, flexibility, and digital energy systems</li>
+                <li>AI, IoT, and blockchain for energy efficiency</li>
+              </ul>
+            </Card>
+            {/* Theme 5 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Clean Cooking, Health & Social Inclusion</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>E-cooking, LPG, and modern cooking fuels</li>
+                <li>Gender, health, and social impacts of clean cooking</li>
+                <li>Financing and scaling adoption</li>
+              </ul>
+            </Card>
+            {/* Theme 6 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Sustainable Mobility & Transport Decarbonization</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Electric vehicles (EVs), charging infrastructure, e-mobility</li>
+                <li>CNG for transport and hybrid systems</li>
+                <li>Policies for clean, affordable mobility</li>
+              </ul>
+            </Card>
+            {/* Theme 7 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Waste-to-Energy, Circular Economy & Carbon Markets</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Waste valorization for energy</li>
+                <li>Recycling, e-waste, and circular economy approaches</li>
+                <li>Carbon credits and climate finance mechanisms</li>
+              </ul>
+            </Card>
+            {/* Theme 8 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Climate Change, Adaptation & Resilience in Africa</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Energy solutions for climate adaptation</li>
+                <li>Resilient infrastructure for vulnerable communities</li>
+                <li>Role of youth and innovation in climate action</li>
+              </ul>
+            </Card>
+            {/* Theme 9 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Hydropower & Agri-food Systems</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Small- and large-scale hydro development</li>
+                <li>Energy for irrigation, processing, and storage</li>
+                <li>Reducing post-harvest losses with clean energy</li>
+              </ul>
+            </Card>
+            {/* Theme 10 */}
+            <Card className="border hover:shadow-lg transition-shadow duration-200">
+              <CardHeader className="font-semibold text-green-800">Policy, Capacity Building & Just Energy Transition</CardHeader>
+              <ul className="list-disc list-inside ml-6 text-sm text-gray-600 space-y-1 pb-4">
+                <li>Skills development for Africa’s energy workforce</li>
+                <li>Equity, inclusion, and just transition principles</li>
+                <li>Strengthening academia-industry-government collaboration</li>
+              </ul>
+            </Card>
+          </div>
           <p className="text-gray-700 mt-3">
             Papers from AICCEES are published in this journal, contributing to the global discourse on clean energy and sustainable development.
           </p>
