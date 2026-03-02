@@ -4,6 +4,7 @@ import abam from "@/public/images/conference-chairs/abam.jpg"
 import oghneruona from "@/public/images/conference-chairs/ruona.jpg"
 import oyedepo from "@/public/images/conference-chairs/oyedepo.jpg"
 import vero from "@/public/images/conference-chairs/verro.jpg"
+import mbohwa from "@/public/images/conference-chairs/charles-mbohwa.jpg"
 
 export const conferenceChairInfo = [
     {
@@ -37,6 +38,14 @@ export const conferenceChairInfo = [
         school: "University of Port Harcourt",
         portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
         image: oghneruona
+    },
+    {
+        id: 4,
+        name: "Professor Charles Mbohwa",
+        role: "Conference Co-Chair",
+        school: "University of South Africa.",
+        portfolio: "Professor of Sustainability Engineering and Future Technologies, College of Science, Engineering and Technology",
+        image: mbohwa
     },
     {
         id: 5,

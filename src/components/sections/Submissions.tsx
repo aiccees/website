@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Button } from "../ui/button"
-import { Calendar, Download, Circle } from "lucide-react"
-import AOS from "../layout/AOS"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "../ui/button";
+import { Calendar, Download, Circle } from "lucide-react";
+import AOS from "../layout/AOS";
 
 const info = [
   {
@@ -28,7 +28,8 @@ const info = [
     status: "green",
     text: "Conference Date",
     date: "Sept. 24th & 25th 2026",
-    description: "Two days of inspiring presentations, networking, and exhibitions",
+    description:
+      "Two days of inspiring presentations, networking, and exhibitions",
     icon: Calendar,
   },
   {
@@ -39,7 +40,7 @@ const info = [
     description: "Obi Wali International Conference Centre, Port Harcourt",
     icon: Calendar,
   },
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -49,7 +50,7 @@ const containerVariants = {
       staggerChildren: 0.2,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -60,23 +61,23 @@ const itemVariants = {
       duration: 0.5,
     },
   },
-}
+};
 
 // Helper function to get status color
 const getStatusColor = (status: string) => {
   switch (status) {
-    case 'red':
-      return 'text-red-500'
-    case 'amber':
-      return 'text-amber-500'
-    case 'green':
-      return 'text-green-400'
-    case 'black':
-      return 'text-black'
+    case "red":
+      return "text-red-500";
+    case "amber":
+      return "text-amber-500";
+    case "green":
+      return "text-green-400";
+    case "black":
+      return "text-black";
     default:
-      return 'text-gray-400'
+      return "text-gray-400";
   }
-}
+};
 
 function Submissions() {
   return (
@@ -118,7 +119,9 @@ function Submissions() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative">
                       <Circle
-                        className={`w-6 h-6 ${getStatusColor(item.status)} animate-pulse`}
+                        className={`w-6 h-6 ${getStatusColor(
+                          item.status
+                        )} animate-pulse`}
                         fill="currentColor"
                       />
                     </div>
@@ -133,22 +136,21 @@ function Submissions() {
                       <item.icon className="w-4 h-4" />
                       <p className="text-sm">{item.date}</p>
                     </div>
-                    {item.description && (
-                      item.id === 4 ? (
+                    {item.description &&
+                      (item.id === 4 ? (
                         <>
-                        <p className="text-gray-200 text-sm">
-                          {item.description}
-                        </p>
-                        <p className="text-gray-200 text-sm">
-                          Virtual Attendance via Zoom
-                        </p>
+                          <p className="text-gray-200 text-sm">
+                            {item.description}
+                          </p>
+                          <p className="text-gray-200 text-sm">
+                            Virtual Attendance via Zoom
+                          </p>
                         </>
                       ) : (
                         <p className="text-gray-200 text-sm">
                           {item.description}
                         </p>
-                      )
-                    )}
+                      ))}
                   </div>
                 </motion.div>
               ))}
@@ -158,14 +160,18 @@ function Submissions() {
               variants={itemVariants}
               className="flex flex-col items-center gap-6 mt-10"
             >
-              <h3 className="text-2xl font-bold text-white mb-4">Conference Materials</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Conference Materials
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl">
                 <div className="space-y-4">
-                  <h4 className="text-white text-lg font-semibold">2025 Documents</h4>
+                  <h4 className="text-white text-lg font-semibold">
+                    Conference Brochures
+                  </h4>
                   <div className="flex flex-col gap-4">
                     <Link
                       target="_blank"
-                      href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1MmRWs_vstYgFS0oe0qNDXM0cMakuz9Zg/view?usp=drive_link"
                       download="Book_of_abstracts.pdf"
                     >
                       <Button
@@ -177,25 +183,6 @@ function Submissions() {
                         2025 Conference Brochure
                       </Button>
                     </Link>
-                    {/* <Link
-                      href="https://drive.google.com/file/d/1bWy3F-O4-kiEtB6iEZJUb_Y3sjetv-VL/view?usp=drive_link"
-                      download="2024-Conference-Report.pdf"
-                      target="_blank"
-                    >
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="w-full bg-white/90 text-green-900 hover:bg-white transition-colors group border-green-400"
-                      >
-                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                        2025 Conference Report
-                      </Button>
-                    </Link> */}
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white text-lg font-semibold">2024 Documents</h4>
-                  <div className="flex flex-col gap-4">
                     <Link
                       target="_blank"
                       href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link"
@@ -210,6 +197,29 @@ function Submissions() {
                         2024 Conference Brochure
                       </Button>
                     </Link>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-white text-lg font-semibold">
+                    Conference Reports
+                  </h4>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="https://drive.google.com/file/d/19ZK_LBP-h9x66k26Dn2NCa5twOLn3BFr/view?usp=drive_link"
+                      download="2025-Conference-Report.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-white/90 text-green-900 hover:bg-white transition-colors group border-green-400"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2025 Conference Report
+                      </Button>
+                    </Link>
+                  </div>
+                  <div className="flex flex-col gap-4">
                     <Link
                       href="https://drive.google.com/file/d/1bWy3F-O4-kiEtB6iEZJUb_Y3sjetv-VL/view?usp=drive_link"
                       download="2024-Conference-Report.pdf"
@@ -228,8 +238,22 @@ function Submissions() {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-white text-lg font-semibold">Conference Proceedings</h4>
+                  <h4 className="text-white text-lg font-semibold">
+                    Conference Proceedings
+                  </h4>
                   <div className="flex flex-col gap-4">
+                    <Link
+                      href="https://www.scientific.net/book/the-3rd-africa-international-conference-on-clean-energy-and-energy-storage-aiccees/978-3-0364-3059-1"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-emerald-600 text-white hover:bg-emerald-500 transition-colors group border-emerald-400"
+                      >
+                        3rd Edition (2025) Proceedings
+                      </Button>
+                    </Link>
                     <Link
                       href="https://www.scientific.net/AST.160?utm_source=AST160&utm_medium=email&utm_campaign=AST160_authors&utm_id=AST160"
                       target="_blank"
@@ -239,7 +263,6 @@ function Submissions() {
                         size="lg"
                         className="w-full bg-emerald-600 text-white hover:bg-emerald-500 transition-colors group border-emerald-400"
                       >
-                       
                         2nd Edition (2024) Proceedings
                       </Button>
                     </Link>
@@ -250,9 +273,8 @@ function Submissions() {
                       <Button
                         variant="outline"
                         size="lg"
-                        className="w-full bg-white/90 text-green-900 hover:bg-white transition-colors group border-green-400"
+                        className="w-full bg-emerald-600 text-white hover:bg-emerald-500 transition-colors group border-emerald-400"
                       >
-                       
                         1st Edition (2023) Proceedings
                       </Button>
                     </Link>
@@ -264,7 +286,7 @@ function Submissions() {
         </div>
       </section>
     </AOS>
-  )
+  );
 }
 
-export default Submissions
+export default Submissions;

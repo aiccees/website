@@ -138,8 +138,8 @@ export default function ParticipationSection() {
             <p className="text-gray-600 italic">The sender is solely responsible for the bank fees and transfer fees.</p>
             <p className="text-gray-600">
               For enquiries on payments and invoices, please send an email to{' '}
-              <a href="mailto:aiccees@toveroenergy.com" className="text-blue-600 hover:underline">
-                aiccees@toveroenergy.com
+              <a href="mailto:aiccees@uniport.edu.ng" className="text-blue-600 hover:underline">
+                aiccees@uniport.edu.ng
               </a>
             </p>
           </div>
