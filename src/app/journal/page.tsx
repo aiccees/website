@@ -144,7 +144,7 @@ export default function PublicationsPage() {
               </Link>
             </Button>
             <Link
-              href="mailto:aiccees@toveroenergy.com"
+              href="mailto:aiccees@uniport.edu.ng"
               target="_blank"
               className="bg-red-600 text-white hover:bg-red-700 rounded-md px-4 py-2 text-sm font-medium"
             >

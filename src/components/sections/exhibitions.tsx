@@ -139,8 +139,8 @@ export default function Exhibitions() {
               </a>
             </Button>
             <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
-              <a href="mailto:aiccees@toveroenergy.com">
-                Email: aiccees@toveroenergy.com
+              <a href="mailto:aiccees@uniport.edu.ng">
+                Email: aiccees@uniport.edu.ng
               </a>
             </Button>
           </div>

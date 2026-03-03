@@ -276,8 +276,8 @@ export function SpeakersSection() {
             <h3 className="text-2xl font-semibold">Want to be a Keynote Speaker?</h3>
             <p>
               Reach out to us at{" "}
-              <Link href="mailto:aiccees@toveroenergy.com" className="font-medium underline">
-                aiccees@toveroenergy.com
+              <Link href="mailto:aiccees@uniport.edu.ng" className="font-medium underline">
+                aiccees@uniport.edu.ng
               </Link>
             </p>
           </div>
