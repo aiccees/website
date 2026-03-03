@@ -49,11 +49,11 @@ export function Footer() {
             </h3>
             <div className="flex flex-col items-center md:items-end gap-3">
               <a
-                href="mailto:aiccees@toveroenergy.com"
+                href="mailto:aiccees@uniport.edu.ng"
                 className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2"
               >
                 <Mail className="w-4 h-4 text-green-700" />
-                aiccees@toveroenergy.com
+                aiccees@uniport.edu.ng
               </a>
               <a
                 href={`tel:${officeNumber}`}

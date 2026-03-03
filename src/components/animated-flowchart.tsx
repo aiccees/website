@@ -25,7 +25,7 @@ const steps: Step[] = [
   {
     id: 2,
     title: "Email Submission",
-    description: "Send your full research paper by email (aiccees@toveroenergy.com) to the conference chairs for initial review. Please note that any research paper with a plagiarism index of more than 15% will be rejected.",
+    description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review. Please note that any research paper with a plagiarism index of more than 15% will be rejected.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },

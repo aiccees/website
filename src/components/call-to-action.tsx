@@ -32,7 +32,7 @@ const ConferenceCallToAction = () => {
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white"
             >
-              <Link href="mailto:aiccees@toveroenergy.com" target="_blank">
+                <Link href="mailto:aiccees@uniport.edu.ng" target="_blank">
              
               Submit Paper
               </Link>

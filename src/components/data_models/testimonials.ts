@@ -10,6 +10,24 @@ interface Testimonial {
   
  export const testimonials: Testimonial[] = [
     {
+      id: 51,
+      name: "Awoyele Oluwatosin",
+      role: "PhD Student",
+      company: "Department of Mechanical Engineering, University of Lagos.",
+      content: "While the financial support is valued, the recognition by AICCEES is priceless. I extend my sincere gratitude to the conference organisers, Tovero Energy Ltd, in association with the Energy Technology Institute(ETI) UNIPORT, Transforming Energy Access Learning Partnership (TEA-LP), the African Centre of Excellence in Future Energies and Electrochemical Systems, ACE-FUELS/FUTO (ACE-FUELS), and Renewable Energy Association of Nigeria (REAN), who foster an environment of scholarly exchange and innovation.",
+      rating: 5,
+      image: "/placeholder.svg?height=100&width=100"
+    },
+    {
+      id: 51,
+      name: "Dominic Kata",
+      role: "Founder & CEO, Geotto (Kenya)",
+      company: "Geotto (Kenya)",
+      content: "I was there during AICCEES 2024, and thanks to the sponsors who facilitated my travel, it was an amazing session. Through the support and exposure I received at AICCEES 2024 from TEA-LP, I was able to refine my idea, secure funding, and expand our geothermal innovation project in Kenya. The conference truly strengthened my vision for sustainable energy solutions in Africa.",
+      rating: 5,
+      image: "/placeholder.svg?height=100&width=100"
+    },
+    {
       id: 1,
       name: "Sammy Joel Panwal",
       role: "Undergraduate Student",
