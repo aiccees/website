@@ -1,6 +1,8 @@
 import { Badge } from "../ui/badge";
 
 import { Star } from "lucide-react";
+import { Button } from "../ui/button";
+import { officeNumber } from "@/lib/utils";
 
 export function ExhibitionHero() {
   return (
@@ -24,19 +26,24 @@ export function ExhibitionHero() {
             Exhibitions
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
-            Explore a world of innovation and artistry through our curated
-            exhibitions. From thought-provoking installations to groundbreaking
-            showcases, each exhibition aims to challenge perspectives and spark
-            conversation.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Exhibitions are paid for and negotiable. Companies, Organisations and Individuals interested in exhibiting
+            their products and services at the conference should contact the conference organisers on {officeNumber} or
+            via email: aiccees@uniport.edu.ng.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
-              <Star className="w-4 h-4 mr-2" />
-              Discover the art that defines tomorrow
-            </div>
-          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+            <a href={`tel:${officeNumber}`}>
+              Call: {officeNumber}
+            </a>
+          </Button>
+          <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+            <a href="mailto:aiccees@uniport.edu.ng">
+              Email: aiccees@uniport.edu.ng
+            </a>
+          </Button>
+        </div>
         </div>
       </div>
     </div>
