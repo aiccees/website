@@ -13,7 +13,6 @@ import PreviousConferences from "@/components/sections/PreviousConferences";
 import { Card, CardContent, CardTitle, CardHeader } from "@/components/ui/card";
 import { Table, TableCell, TableRow, TableBody, TableHead, TableHeader } from "@/components/ui/table";
 import { participationTypes } from "@/components/data_models/about-aiccees";
-import { formatPrice } from "@/lib/utils";
 import { useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -60,8 +59,8 @@ export default function AboutPage() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[40%] text-black">CATEGORY</TableHead>
-                  <TableHead className="text-black">PHYSICAL</TableHead>
-                  <TableHead className="text-black">VIRTUAL</TableHead>
+                  <TableHead className="text-black">EARLY-BIRD PAYMENT</TableHead>
+                  <TableHead className="text-black">LATE PAYMENT</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -69,20 +68,14 @@ export default function AboutPage() {
                   <TableRow key={type.category}>
                     <TableCell className="font-medium text-lg">{type.category}</TableCell>
                     <TableCell>
-                      {formatPrice(type.physical.regular, type.category.includes('Open Access'), showNGN)}
-                      {type.physical.student && (
-                        <div className="text-sm text-gray-500">
-                          Students: ₦{type.physical.student.toLocaleString()}
-                        </div>
-                      )}
+                      {showNGN
+                        ? `₦${type.earlyBird.ngn.toLocaleString()}`
+                        : `$${type.earlyBird.usd.toLocaleString()}`}
                     </TableCell>
                     <TableCell>
-                      {formatPrice(type.virtual.regular, type.category.includes('Open Access'), showNGN)}
-                      {type.virtual.student && (
-                        <div className="text-sm text-gray-500">
-                          Students: ₦{type.virtual.student.toLocaleString()}
-                        </div>
-                      )}
+                      {showNGN
+                        ? `₦${type.latePayment.ngn.toLocaleString()}`
+                        : `$${type.latePayment.usd.toLocaleString()}`}
                     </TableCell>
                   </TableRow>
                 ))}

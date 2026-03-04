@@ -60,7 +60,7 @@ export function Header() {
     business: {
       label: 'More Info',
       links: [
-        { href: '/exhibitions', label: 'Exhibitions' },
+        // { href: '/exhibitions', label: 'Exhibitions' },
         { href: '/grants', label: 'Grants' },
         { href: '/sponsors', label: 'Sponsorship' },
         { href: '/partners', label: 'Partners' },

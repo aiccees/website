@@ -19,63 +19,65 @@ interface Tier {
 const tiers: Tier[] = [
     {
         name: "Platinum",
-        description: "The highest level of sponsorship with maximum visibility",
-        priceUSD: 7000,
-        priceNGN: 10500000,
+        description: "The highest level of sponsorship with maximum visibility and speaking opportunities",
+        priceUSD: 14000,
+        priceNGN: 21000000,
         featured: true,
         benefits: [
-            "Keynote speaking opportunity",
-            "Research paper presentation and publication",
-            "Prominent branding on conference materials",
-            "Advertising opportunities during event",
+            "A keynote speaking opportunity by a member of the sponsor organisation.",
+            "Research paper presentation and publication opportunity by a member of the sponsor organisation.",
+            "Prominent branding on all the conference materials and banners.",
+            "Advertising opportunities during the event.",
             "Recognition in conference materials",
-            "Panel discussion opportunity",
-            "Direct contact to presenters",
-            "Soft copy of Book of Abstract"
+            "Panel discussion by a team from your organisation.",
+            "Direct contact to presenters and researchers.",
+            "Soft copy of the Book of Abstract."
         ]
     },
     {
         name: "Gold",
-        description: "Premium sponsorship with extensive benefits",
-        priceUSD: 6000,
-        priceNGN: 9000000,
+        description: "Premium sponsorship with strong branding and publication visibility",
+        priceUSD: 7000,
+        priceNGN: 10500000,
         benefits: [
-            "Research paper presentation and publication",
-            "Prominent branding on conference materials",
-            "Advertising opportunities during event",
+            "Research paper presentation and publication opportunity by a member of the sponsor organisation.",
+            "Prominent branding on all the conference materials and banners.",
+            "Advertising opportunities during the event.",
             "Recognition in conference materials",
-            "Direct contact to presenters"
+            "Direct contact to presenters and researchers."
         ]
     },
     {
         name: "Silver",
-        description: "Mid-tier sponsorship package",
-        priceUSD: 3000,
-        priceNGN: 4500000,
+        description: "Mid-tier sponsorship package with event visibility",
+        priceUSD: 3500,
+        priceNGN: 5250000,
         benefits: [
-            "Research paper presentation and publication",
-            "Advertising opportunities during event",
+            "Research paper presentation and publication opportunity by a member of the sponsor organisation.",
+            "Advertising opportunities during the event.",
             "Recognition in conference materials"
         ]
     },
     {
-        name: "Bronze",
-        description: "Entry-level sponsorship opportunity",
-        priceUSD: 1000,
-        priceNGN: 1500000,
+        name: "Research Paper",
+        description: "Sponsor researchers to attend and publish with full recognition",
+        priceUSD: 2000,
+        priceNGN: 3000000,
         benefits: [
-            "Research paper presentation and publication",
-            "Recognition in conference materials"
+            "Companies and organisations can sponsor 15-20 researchers to attend the conference and publish their papers and receive recognition for it.",
+            "The sponsorship will cover transportation, accommodation, conference attendance fee, and publication fee of the researcher.",
+            "The sponsor will be highlighted on all media platforms and will receive a recognition award."
         ]
     },
     {
         name: "Session",
-        description: "Sponsor specific conference sessions",
-        priceUSD: 1000,
-        priceNGN: 1500000,
+        description: "Sponsor plenary, business innovation, mentorship, or thematic sessions",
+        priceUSD: 2000,
+        priceNGN: 3000000,
         benefits: [
-            "Session-specific recognition",
-            "Recognition in conference materials"
+            "Companies and organisations can sponsor plenary sessions, business innovation and mentorship sessions, or specific themes of the conference.",
+            "Available themes include climate adaptation, hydropower and agri-food systems, energy access and transition pathways, storage and smart grids, policy and capacity building, hydrogen and clean fuels, clean cooking, renewable energy systems, waste-to-energy and circular economy, and sustainable mobility.",
+            "Sponsors will be highlighted on all media platforms and will receive an award of recognition."
         ]
     }
 ]
