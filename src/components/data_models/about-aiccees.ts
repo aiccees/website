@@ -6,49 +6,35 @@ export const aboutAiccees = [
 export const participationTypes = [
     {
       category: "Audience Member Only",
-      physical: {
-        regular: 20,
-        student: 20000
+      earlyBird: {
+        ngn: 50000,
+        usd: 40
       },
-      virtual: {
-        regular: 20,
-        student: 20000
+      latePayment: {
+        ngn: 70000,
+        usd: 50
       }
     },
     {
       category: "Only Paper Presentation",
-      physical: {
-        regular: 50
+      earlyBird: {
+        ngn: 100000,
+        usd: 80
       },
-      virtual: {
-        regular: 40
+      latePayment: {
+        ngn: 150000,
+        usd: 100
       }
     },
     {
-      category: "Paper Presentation + Abstract Publication",
-      physical: {
-        regular: 100
+      category: "Paper Presentation + Publication",
+      earlyBird: {
+        ngn: 200000,
+        usd: 140
       },
-      virtual: {
-        regular: 100
-      }
-    },
-    {
-      category: "Paper Presentation + Paper Publication + Abstract Publication",
-      physical: {
-        regular: 150
-      },
-      virtual: {
-        regular: 150
-      }
-    },
-    {
-      category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
-      physical: {
-        regular: 500  // Base fee + Open Access fee
-      },
-      virtual: {
-        regular: 500  // Base fee + Open Access fee
+      latePayment: {
+        ngn: 220000,
+        usd: 150
       }
     }
   ]
