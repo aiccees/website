@@ -171,7 +171,7 @@ function Submissions() {
                   <div className="flex flex-col gap-4">
                     <Link
                       target="_blank"
-                      href="https://drive.google.com/file/d/1MmRWs_vstYgFS0oe0qNDXM0cMakuz9Zg/view?usp=drive_link"
+                      href="hhttps://drive.google.com/file/d/1qwZicrxrCkvxRAsaOJ-htPuI2ivag9Kr/view?usp=drive_link"
                       download="Book_of_abstracts.pdf"
                     >
                       <Button
