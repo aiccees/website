@@ -74,8 +74,14 @@ export default function AboutPage() {
                     </TableCell>
                     <TableCell>
                       {showNGN
-                        ? `₦${type.latePayment.ngn.toLocaleString()}`
-                        : `$${type.latePayment.usd.toLocaleString()}`}
+                        ? type.latePayment.ngn === 0
+                          ? "-"
+                          : `₦${type.latePayment.ngn.toLocaleString()}`
+                        : type.latePayment.usd === 0
+                          ? "-"
+                          : `$${type.latePayment.usd.toLocaleString()}`
+                        }
+                      
                     </TableCell>
                   </TableRow>
                 ))}

@@ -44,8 +44,8 @@ export const participationTypes = [
         usd: 550
       },
       latePayment: {
-        ngn: 750000,
-        usd: 600
+        ngn: 0,
+        usd: 0
       }
     }
   ]
