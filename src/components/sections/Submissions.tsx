@@ -197,6 +197,20 @@ function Submissions() {
                         2024 Conference Brochure
                       </Button>
                     </Link>
+                    <Link
+                      target="_blank"
+                      href="https://drive.google.com/file/d/1hfZu3e08-7X2kIs076ogpYEvNLTgxtj7/view?usp=drive_link"
+                      download="Book_of_abstracts.pdf"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-emerald-600 text-white hover:bg-emerald-500 transition-colors group border-emerald-400"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2023 Conference Brochure
+                      </Button>
+                    </Link>
                   </div>
                 </div>
                 <div className="space-y-4">
