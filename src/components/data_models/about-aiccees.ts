@@ -36,5 +36,16 @@ export const participationTypes = [
         ngn: 220000,
         usd: 150
       }
+    },
+    {
+      category: "Open Access Publication",
+      earlyBird: {
+        ngn: 700000,
+        usd: 550
+      },
+      latePayment: {
+        ngn: 0,
+        usd: 0
+      }
     }
   ]
