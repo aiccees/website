@@ -61,6 +61,7 @@ export function Header() {
       label: 'More Info',
       links: [
         // { href: '/exhibitions', label: 'Exhibitions' },
+        { href: '/innovation-challenge', label: 'Innovation Challenge' },
         { href: '/grants', label: 'Grants' },
         { href: '/sponsors', label: 'Sponsorship' },
         { href: '/partners', label: 'Partners' },
@@ -108,7 +109,7 @@ export function Header() {
               
               {/* Dropdown Content */}
               <div
-                className={`absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2 transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg py-2 transition-all duration-200 ${
                   openDropdown === key ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                 }`}
                 onMouseEnter={() => setOpenDropdown(key)}
