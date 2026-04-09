@@ -81,7 +81,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="ml-auto hidden md:flex gap-6 items-center">
+        <nav className="ml-auto hidden lg:flex gap-6 items-center">
           {/* Standalone Registration link */}
           {navLinks.map((link) => (
             <Link
@@ -132,7 +132,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="ml-auto md:hidden"
+          className="ml-auto lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -144,7 +144,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <div className={`fixed inset-0 top-20 z-[50] w-screen h-[calc(100vh-5rem)] bg-green-800 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-          } md:hidden`}>
+          } lg:hidden`}>
           <div className="flex flex-col h-full">
             {/* Mobile Menu Content */}
             <div className="flex-1 overflow-y-auto px-6 py-8">
