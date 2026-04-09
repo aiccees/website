@@ -6,7 +6,7 @@ import AOS from '../layout/AOS'
 const themes = [
 	{
 		title: 'Energy Access, Supply & Transition Pathways',
-		image: '/images/aicess/svg1.png',
+		image: '/images/conference-theme-icons/Energy Access anfd Transition Pathways.png',
 		bullets: [
 			'Universal access (grid, mini-grids, stand-alone systems)',
 			'Policy, governance, and enabling regulations',
@@ -15,7 +15,7 @@ const themes = [
 	},
 	{
 		title: 'Renewable Energy Systems & Productive Use',
-		image: '/images/aicess/svg2.png',
+		image: '/images/conference-theme-icons/Renewable Energy Systems & Productive Use.png',
 		bullets: [
 			'Solar, wind, hydro, geothermal innovations',
 			'Productive use of energy in agriculture, industry, and services',
@@ -24,7 +24,7 @@ const themes = [
 	},
 	{
 		title: 'Hydrogen, Biofuels & Clean Fuels for Africa',
-		image: '/images/aicess/svg3.png',
+		image: '/images/conference-theme-icons/Hydrogen and biofuels for clean energy.png',
 		bullets: [
 			'Hydrogen economy opportunities',
 			'Bioenergy and biofuels for transport and industry',
@@ -33,7 +33,7 @@ const themes = [
 	},
 	{
 		title: 'Energy Storage, Smart Grids & Digital Solutions',
-		image: '/images/aicess/svg4.png',
+		image: '/images/conference-theme-icons/Energy Storage Smart Grid.png',
 		bullets: [
 			'Battery manufacturing & recycling in Africa',
 			'Grid integration, flexibility, and digital energy systems',
@@ -42,7 +42,7 @@ const themes = [
 	},
 	{
 		title: 'Clean Cooking, Health & Social Inclusion',
-		image: '/images/aicess/svg5.png',
+		image: '/images/conference-theme-icons/Clean Cooking.png',
 		bullets: [
 			'E-cooking, LPG, and modern cooking fuels',
 			'Gender, health, and social impacts of clean cooking',
@@ -51,7 +51,7 @@ const themes = [
 	},
 	{
 		title: 'Sustainable Mobility & Transport Decarbonization',
-		image: '/images/aicess/svg6.png',
+		image: '/images/conference-theme-icons/Sustainable Mobility.png',
 		bullets: [
 			'Electric vehicles (EVs), charging infrastructure, e-mobility',
 			'CNG for transport and hybrid systems',
@@ -60,7 +60,7 @@ const themes = [
 	},
 	{
 		title: 'Waste-to-Energy, Circular Economy & Carbon Markets',
-		image: '/images/aicess/svg7.png',
+		image: '/images/conference-theme-icons/Waste to Energy.png',
 		bullets: [
 			'Waste valorization for energy',
 			'Recycling, e-waste, and circular economy approaches',
@@ -69,7 +69,7 @@ const themes = [
 	},
 	{
 		title: 'Climate Change, Adaptation & Resilience in Africa',
-		image: '/images/aicess/svg8.png',
+		image: '/images/conference-theme-icons/Climate change and Resilience.png',
 		bullets: [
 			'Energy solutions for climate adaptation',
 			'Resilient infrastructure for vulnerable communities',
@@ -78,7 +78,7 @@ const themes = [
 	},
 	{
 		title: 'Hydropower & Agri-food Systems',
-		image: '/images/aicess/svg9.png',
+		image: '/images/conference-theme-icons/Hydropower and agric-food Systems.png',
 		bullets: [
 			'Small- and large-scale hydro development',
 			'Energy for irrigation, processing, and storage',
@@ -87,7 +87,7 @@ const themes = [
 	},
 	{
 		title: 'Policy, Capacity Building & Just Energy Transition',
-		image: '/images/aicess/svg1.png',
+		image: '/images/conference-theme-icons/Policy, Capacity & Just Transition.png',
 		bullets: [
 			'Skills development for Africa’s energy workforce',
 			'Equity, inclusion, and just transition principles',
@@ -121,8 +121,8 @@ const ConferenceThemes = () => {
 								className={`border hover:shadow-lg transition-shadow duration-200`}
 							>
 								<CardHeader>
-									<div className="flex items-center gap-3">
-										<div className="w-12 h-12 relative flex-shrink-0">
+									<div className="flex flex-col items-center gap-1">
+										<div className="w-32 h-32 relative flex-shrink-0">
 											<Image
 												src={theme.image}
 												alt={theme.title}
@@ -130,7 +130,7 @@ const ConferenceThemes = () => {
 												className="object-contain"
 											/>
 										</div>
-										<CardTitle className="text-left">
+										<CardTitle className="text-center">
 											{theme.title}
 										</CardTitle>
 									</div>

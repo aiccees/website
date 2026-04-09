@@ -61,6 +61,7 @@ export function Header() {
       label: 'More Info',
       links: [
         // { href: '/exhibitions', label: 'Exhibitions' },
+        { href: '/innovation-challenge', label: 'Innovation Challenge' },
         { href: '/grants', label: 'Grants' },
         { href: '/sponsors', label: 'Sponsorship' },
         { href: '/partners', label: 'Partners' },
@@ -80,7 +81,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="ml-auto hidden md:flex gap-6 items-center">
+        <nav className="ml-auto hidden lg:flex gap-6 items-center">
           {/* Standalone Registration link */}
           {navLinks.map((link) => (
             <Link
@@ -108,7 +109,7 @@ export function Header() {
               
               {/* Dropdown Content */}
               <div
-                className={`absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2 transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg py-2 transition-all duration-200 ${
                   openDropdown === key ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                 }`}
                 onMouseEnter={() => setOpenDropdown(key)}
@@ -131,7 +132,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="ml-auto md:hidden"
+          className="ml-auto lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -143,7 +144,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <div className={`fixed inset-0 top-20 z-[50] w-screen h-[calc(100vh-5rem)] bg-green-800 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-          } md:hidden`}>
+          } lg:hidden`}>
           <div className="flex flex-col h-full">
             {/* Mobile Menu Content */}
             <div className="flex-1 overflow-y-auto px-6 py-8">
