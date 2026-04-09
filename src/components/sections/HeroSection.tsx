@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
 import herobg0 from '@/public/images/herobg0.jpg'
 import herobg1 from '@/public/images/herobg1.jpg'
 import herobg2 from '@/public/images/herobg2.jpg'
@@ -87,6 +89,9 @@ export function HeroSection() {
       <div className="relative z-[3] container mx-auto h-full px-4 md:px-6 flex items-center">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-3 text-center">
+            <p className="inline-flex rounded-full bg-red-600/90 px-4 py-1 text-sm font-semibold text-white shadow-sm">
+              Innovation Challenge applications are now open
+            </p>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
             </h1>
@@ -97,6 +102,9 @@ export function HeroSection() {
           <div className="space-x-4 !mb-10">
             <Button asChild className="bg-red-600 text-white hover:bg-red-700">
               <Link href="/registrations">Register Now</Link>
+            </Button>
+            <Button asChild className="bg-white text-green-700 hover:bg-green-100">
+              <Link href="/innovation-challenge">Innovation Challenge</Link>
             </Button>
             <Button
               onClick={() => {
