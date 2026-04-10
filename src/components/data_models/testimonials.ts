@@ -10,7 +10,7 @@ interface Testimonial {
   
  export const testimonials: Testimonial[] = [
     {
-      id: 51,
+      id: 1,
       name: "Awoyele Oluwatosin",
       role: "PhD Student",
       company: "Department of Mechanical Engineering, University of Lagos.",
@@ -19,7 +19,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 51,
+      id: 2,
       name: "Dominic Kata",
       role: "Founder & CEO, Geotto (Kenya)",
       company: "Geotto (Kenya)",
@@ -28,7 +28,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 1,
+      id: 3,
       name: "Sammy Joel Panwal",
       role: "Undergraduate Student",
       company: "National Open University of Nigeria",
@@ -37,7 +37,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 2,
+      id: 4,
       name: "Desire Mussa",
       role: "M.Sc. Student",
       company: "Malawi University of Business and Applied Science",
@@ -46,7 +46,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 3,
+      id: 5,
       name: "Engr. Anthony Akpasoh",
       role: "COO",
       company: "Tovero Energy Limited",
@@ -55,7 +55,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },  
     {
-      id: 5,
+      id: 6,
       name: "Mourice Kausya",
       role: "M.Sc. Student",
       company: "Kenyatta University ",
@@ -64,7 +64,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 6,
+      id: 7,
       name: "G. Plason Z. Plakar",
       role: "M.Sc. Student",
       company: "Africa Center of Excellence in Future Energies and Electrochemical Systems, Federal University of Technology Owerri",
@@ -73,7 +73,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 7,
+      id: 8,
       name: "Mourice Kausya",
       role: "M.Sc. Student",
       company: "Kenyatta University",
@@ -82,7 +82,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 8,
+      id: 9,
       name: "Cyril Praise",
       role: "M.Sc. Student",
       company: "Obafemi Awolowo University, Ile-Ife",
@@ -91,7 +91,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 9,
+      id: 10,
       name: "Isaac Kerina",
       role: "M.Sc. Student",
       company: "Strathmore University",
@@ -100,7 +100,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 10,
+      id: 11,
       name: "G. Plason Z. Plakar",
       role: "M.Sc. Student",
       company: "Africa Center of Excellence in Future Energies and Electrochemical Systems, Federal University of Technology Owerri",
@@ -109,7 +109,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 11,
+      id: 12,
       name: "Mourice Kausya",
       role: "M.Sc. Student",
       company: "Kenyatta University",
@@ -118,7 +118,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 12,
+      id: 13,
       name: "Sammy Joel Panwal",
       role: "Undergraduate Student",
       company: "National Open University of Nigeria",
@@ -127,7 +127,7 @@ interface Testimonial {
       image: "/placeholder.svg?height=100&width=100"
     },
     {
-      id: 13,
+      id: 14,
       name: "Dr. Veronica Akpasoh",
       role: "Chief Executive Officer",
       company: "Tovero Energy Limited",
