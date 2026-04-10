@@ -46,12 +46,12 @@ function CountdownTimer() {
   const seconds = Math.floor((timeLeft / 1000) % 60)
 
   return (
-    <div className="flex items-center justify-center gap-2 text-white text-lg md:text-2xl font-semibold bg-black/40 rounded-lg px-4 py-2 shadow-lg">
+    <div className="flex items-center justify-center gap-2 text-white text-sm sm:text-lg md:text-2xl font-semibold bg-black/40 rounded-lg px-3 sm:px-4 py-2 shadow-lg">
       <span className="flex items-center gap-1">
         <Clock className="text-yellow-400 mr-1" />
        <span className="text-white hidden sm:block">Days left:</span>
       </span>
-      <span>{days}days</span>:
+      <span>{days}d</span>:
       <span>{hours}h</span>:
       <span>{minutes}m</span>:
       <span>{seconds}s</span>
@@ -61,7 +61,7 @@ function CountdownTimer() {
 
 export function HeroSection() {
   return (
-    <section className="w-full relative h-[60vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
+    <section className="w-full relative min-h-[86vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
       {/* Background Carousel (always visible) */}
       <div className="absolute inset-0 z-[1]">
         <Swiper
@@ -86,24 +86,24 @@ export function HeroSection() {
       <div className="absolute z-[2] inset-0 bg-gradient-to-r from-green-600/90 to-green-800/90 transition-all duration-700" />
       
       {/* Hero Content */}
-      <div className="relative z-[3] container mx-auto h-full px-4 md:px-6 flex items-center">
-        <div className="flex flex-col items-center space-y-4 text-center">
+      <div className="relative z-[3] container mx-auto h-full px-4 md:px-6 py-16 md:py-0 flex items-center">
+        <div className="flex w-full flex-col items-center space-y-4 text-center">
           <div className="space-y-3 text-center">
-            <p className="inline-flex rounded-full bg-red-600/90 px-4 py-1 text-sm font-semibold text-white shadow-sm">
+            <p className="inline-flex rounded-full bg-red-600/90 px-4 py-1 text-xs sm:text-sm font-semibold text-white shadow-sm">
               Innovation Challenge applications are now open
             </p>
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+            <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
             </h1>
-            <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
+            <p className="mx-auto max-w-[700px] text-gray-200 text-base sm:text-lg md:text-xl">
               Empowering Africa&apos;s Future Through Clean Energy Innovation and Sustainable Storage Solutions
             </p>
           </div>
-          <div className="space-x-4 !mb-10">
-            <Button asChild className="bg-red-600 text-white hover:bg-red-700">
+          <div className="flex w-full max-w-md sm:max-w-none flex-col sm:flex-row items-center justify-center gap-3 !mb-8 md:!mb-10">
+            <Button asChild className="w-full sm:w-auto bg-red-600 text-white hover:bg-red-700">
               <Link href="/registrations">Register Now</Link>
             </Button>
-            <Button asChild className="bg-white text-green-700 hover:bg-green-100">
+            <Button asChild className="w-full sm:w-auto bg-white text-green-700 hover:bg-green-100">
               <Link href="/innovation-challenge">Innovation Challenge</Link>
             </Button>
             <Button
@@ -111,7 +111,7 @@ export function HeroSection() {
                 document.getElementById('submissions')?.scrollIntoView({ behavior: 'smooth' });
               }}
               variant="outline"
-              className="!text-green-700 border-white hover:bg-green-700 hover:!text-white hover:border-green-700"
+              className="w-full sm:w-auto !text-green-700 border-white hover:bg-green-700 hover:!text-white hover:border-green-700"
             >
               Submit Paper
             </Button>
