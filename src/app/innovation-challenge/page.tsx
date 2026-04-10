@@ -43,19 +43,19 @@ export default function InnovationChallengePage() {
                   ecosystem leaders at AICCEES 2026.
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Button asChild size="lg" className="bg-red-600 text-white hover:bg-red-700">
+                <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row">
+                  <Button asChild size="lg" className="w-full sm:w-auto bg-red-600 text-white hover:bg-red-700">
                     <Link href={innovationChallengeLink} target="_blank">
                       Apply now
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" className="bg-white text-green-700 hover:bg-green-100">
+                  <Button asChild size="lg" className="w-full sm:w-auto bg-white text-green-700 hover:bg-green-100">
                     <Link href="#program">See programme structure</Link>
                   </Button>
                 </div>
 
-                <div className="mt-8 flex flex-wrap gap-3 sm:hidden">
+                <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:hidden">
                   <div className="rounded-lg border border-white/25 bg-white/10 px-4 py-2">
                     <p className="text-xl font-bold">10-15</p>
                     <p className="text-xs text-green-100">Finalists shortlisted</p>
