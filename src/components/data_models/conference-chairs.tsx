@@ -1,6 +1,5 @@
 import roland from "@/public/images/conference-chairs/roland.jpg"
 import abam from "@/public/images/conference-chairs/abam.jpg"
-
 import oghneruona from "@/public/images/conference-chairs/ruona.jpg"
 import oyedepo from "@/public/images/conference-chairs/oyedepo.jpg"
 import vero from "@/public/images/conference-chairs/verro.jpg"
@@ -40,7 +39,7 @@ export const conferenceChairInfo = [
         image: oghneruona
     },
     {
-        id: 4,
+        id: 5,
         name: "Professor Charles Mbohwa",
         role: "Conference Co-Chair",
         school: "University of South Africa.",
@@ -48,7 +47,7 @@ export const conferenceChairInfo = [
         image: mbohwa
     },
     {
-        id: 5,
+        id: 6,
         name: "Dr. Veronica Akpasoh",
         role: "Conference Co-Chair",
         school: "CEO Tovero Energy Ltd.",

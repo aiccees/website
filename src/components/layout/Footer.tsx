@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import logo from "@/public/images/aicess/aicess_aicess.png";
 import ToveroLogo from "@/public/tovero-logo.png";
@@ -5,9 +6,12 @@ import Image from "next/image";
 import { House, Mail, Phone } from "lucide-react";
 import uniport from "@/public/images/home/unipor.svg";
 import { officeNumber } from "@/lib/utils";
+import vaflLogo from "@/public/images/vaf-logo.jpeg";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const isInnovationChallengePage = usePathname() === "/innovation-challenge";
   return (
     <footer className="w-full border-t border-green-200 bg-green-50">
       {/* Main Footer Content */}
@@ -65,7 +69,7 @@ export function Footer() {
               <div className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex  gap-2">
                 <House className="w-4 h-4 text-green-700" />
                 <address>
-                  Suite 4, Abidea Plaza
+                  Suite 4, Adibea Plaza
                   <br />
                   Chief Ade Nwonoro Street
                   <br />
@@ -98,11 +102,28 @@ export function Footer() {
               className="max-h-8 w-auto"
             />
           </Link>
-          <p>in Collaboration with </p>
-          <Image src={uniport} alt="Uniport" className="max-h-8 w-auto" />
-          <span className="font-medium text-green-800 flex items-center">
-            University of Port Harcourt
-          </span>
+          {isInnovationChallengePage ? (
+              <>
+              <p>in Collaboration with</p>
+              <Link
+                href="https://veronicaanthonyfoundation.org"
+                target="_blank"
+                className="transition-transform hover:scale-105 flex items-center gap-2 flex-row-reverse"
+              >
+                {/* <span className="font-medium text-green-800 flex items-center">Veronica Anthony Foundation</span> */}
+                <Image src={vaflLogo} alt="VAFL" className="max-h-8 w-auto" />
+              </Link>
+            </>
+         
+          ) : (
+            <>
+            <p>in Collaboration with </p>
+            <Image src={uniport} alt="Uniport" className="max-h-8 w-auto" />
+            <span className="font-medium text-green-800 flex items-center">
+              University of Port Harcourt
+            </span>
+          </>
+          )}
         </div>
       </div>
     </footer>
