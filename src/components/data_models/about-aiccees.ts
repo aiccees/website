@@ -8,33 +8,33 @@ export const participationTypes = [
       category: "Audience Member Only",
       earlyBird: {
         ngn: 50000,
-        usd: 40
+        usd: 50
       },
       latePayment: {
         ngn: 70000,
-        usd: 50
+        usd: 70
       }
     },
     {
       category: "Only Paper Presentation",
       earlyBird: {
         ngn: 100000,
-        usd: 80
+        usd: 100
       },
       latePayment: {
         ngn: 150000,
-        usd: 100
+        usd: 150
       }
     },
     {
       category: "Paper Presentation + Publication",
       earlyBird: {
         ngn: 200000,
-        usd: 140
+        usd: 200
       },
       latePayment: {
         ngn: 220000,
-        usd: 150
+        usd: 250
       }
     },
     {
@@ -44,8 +44,8 @@ export const participationTypes = [
         usd: 550
       },
       latePayment: {
-        ngn: 0,
-        usd: 0
+        ngn: 700000,
+        usd: 550
       }
     }
   ]

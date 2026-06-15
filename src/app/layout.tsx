@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://aiccees.com'),
   title: {
     default: "Africa International Conference on Clean Energy & Energy Storage",
-    template: "%s | AICEES",
+    template: "%s | AICCEES",
   },
   description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nathaniel Essien", url: "https://nathanielessien.vercel.app" }],
   creator: "Nathaniel Essien",
-  publisher: "AICEES",
+  publisher: "AICCEES",
   formatDetection: {
     email: false,
     address: false,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://aiccees.com",
-    siteName: "AICEES",
+    siteName: "AICCEES",
     title: "Africa International Conference on Clean Energy & Energy Storage",
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         url: "/images/herobg2.jpg",
         width: 1200,
         height: 630,
-        alt: "AICEES Conference",
+        alt: "AICCEES Conference",
       },
     ],
   },
