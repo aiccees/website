@@ -37,7 +37,7 @@ const info = [
     status: "black",
     text: "Conference Venue",
     date: "Sept. 24th & 25th 2026",
-    description: "Obi Wali International Conference Centre, Port Harcourt",
+    description: "IPES Hall, University of Port Harcourt, Rivers State, Nigeria",
     icon: Calendar,
   },
 ];
