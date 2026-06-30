@@ -96,7 +96,7 @@ export function HeroSection() {
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-200 text-base sm:text-lg md:text-xl">
-              Empowering Africa&apos;s Future Through Clean Energy Innovation and Sustainable Storage Solutions
+            Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition 
             </p>
           </div>
           <div className="flex w-full max-w-md sm:max-w-none flex-col sm:flex-row items-center justify-center gap-3 !mb-8 md:!mb-10">
