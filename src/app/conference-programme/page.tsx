@@ -65,8 +65,8 @@ export default function ConferenceProgramPage() {
       color: "bg-indigo-100 text-indigo-700"
     },
     {
-      title: "Workshop Sessions",
-      description: "Hands-on workshops on practical applications and technologies",
+      title: "Live Pitch Session",
+      description: "Live pitch session for innovation challenge participants",
       icon: Lightbulb,
       color: "bg-orange-100 text-orange-700"
     },
@@ -330,7 +330,7 @@ export default function ConferenceProgramPage() {
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      <span>Workshop details</span>
+                      <span>Live Pitch Session</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-green-600 rounded-full"></div>
