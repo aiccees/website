@@ -51,7 +51,7 @@ export default function InnovationChallengePage() {
                     </Link>
                   </Button>
                   <Button asChild size="lg" className="w-full sm:w-auto bg-white text-green-700 hover:bg-green-100">
-                    <Link href="#program">See programme structure</Link>
+                    <Link href="#programme">See programme structure</Link>
                   </Button>
                 </div>
 
@@ -128,7 +128,7 @@ export default function InnovationChallengePage() {
       </AOS>
 
       <AOS>
-        <section id="program" className="w-full py-14 md:py-20 bg-green-50">
+        <section id="programme" className="w-full py-14 md:py-20 bg-green-50">
           <div className="container w-11/12 mx-auto px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-green-700 text-center">Programme Structure</h2>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">

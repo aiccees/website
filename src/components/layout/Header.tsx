@@ -37,7 +37,7 @@ export function Header() {
     { href: '/registrations', label: 'Registrations' },
     { href: '/about', label: 'About AICCEES' },
     { href: '/keynote-speakers', label: 'Keynote Speakers' },
-    { href: '/conference-program', label: 'Program' },
+    { href: '/conference-programme', label: 'Programme' },
   ]
 
   const dropdownMenus = {

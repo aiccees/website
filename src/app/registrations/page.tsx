@@ -164,7 +164,7 @@ export default function RegistrationPage() {
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6">
                     Join our scientific committee and contribute to the
                     conference organization. Help review papers, moderate
-                    sessions, and shape the conference program.
+                    sessions, and shape the conference programme.
                   </p>
                   <Button
                     className="w-full bg-purple-600 hover:bg-green-700 text-white px-4"

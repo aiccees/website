@@ -88,7 +88,7 @@ export default function ConferenceProgramPage() {
             <div className="flex items-center justify-center mb-6">
               <Calendar className="h-12 w-12 text-yellow-400 mr-3" />
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Conference Program
+                Conference Programme
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-green-100 mb-8">
@@ -145,7 +145,7 @@ export default function ConferenceProgramPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-                Featured Program Sessions
+                Featured Programme Sessions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Explore the key sessions that will shape the future of clean energy and energy storage.
@@ -308,7 +308,7 @@ export default function ConferenceProgramPage() {
               <div className="mb-8">
                 <Download className="h-16 w-16 text-green-600 mx-auto mb-4" />
                 <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
-                  Download Complete Conference Program
+                  Download Complete Conference Programme
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Get the full detailed schedule, including all sessions, workshops, networking events, 
@@ -365,12 +365,12 @@ export default function ConferenceProgramPage() {
               >
                 <a href="https://drive.google.com/file/d/1qcbBNpC9wK2LZI5ZtP1opUksGGzG-skm/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                   <Download className="w-6 h-6 mr-2" />
-                  Download Full Conference Program (PDF)
+                  Download Full Conference Programme (PDF)
                 </a>
               </Button>
 
               <p className="text-sm text-gray-500 mt-4">
-                * The complete program will be available for download closer to the conference date
+                * The complete programme will be available for download closer to the conference date
               </p>
             </div>
           </div>
