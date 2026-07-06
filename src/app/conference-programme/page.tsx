@@ -18,6 +18,7 @@ import AOS from "@/components/layout/AOS";
 import Image from "next/image";
 import conferencePics1 from "@/public/images/conference-pics/IMG_2257.jpg";
 import conferencePics2 from "@/public/images/conference-pics/IMG_2095.jpg";
+import { conferenceVenue } from "@/lib/utils";
 
 export default function ConferenceProgramPage() {
   const conferencePrograms = [
@@ -101,7 +102,7 @@ export default function ConferenceProgramPage() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
-                <span>Obi Wali International Conference Centre, Port Harcourt</span>
+                <span>{conferenceVenue}</span>
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import AOS from "@/components/layout/AOS";
 import { useRouter } from "next/navigation";
+import { conferenceVenue } from "@/lib/utils";
 
 export default function RegistrationPage() {
   const [aiccees2026Registration, setAiccees2026Registration] = useState(true);
@@ -84,7 +85,7 @@ export default function RegistrationPage() {
                       </div>
                       <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                         <MapPin className="w-4 h-4" />
-                        <p>Obi Wali International Conference Centre, Port Harcourt</p>
+                          <p>{conferenceVenue}</p>
                       </div>
                     </div>
                   </div>

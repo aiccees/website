@@ -7,6 +7,7 @@ import {
   Calendar,
   MapPin,
 } from "lucide-react";
+import { conferenceVenue } from "@/lib/utils";
 
 export function RegistrationHero() {
   return (
@@ -37,7 +38,7 @@ export function RegistrationHero() {
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />
-              Obi Wali International Conference Centre, Port Harcourt
+              {conferenceVenue}
             </div>
             
           </div>

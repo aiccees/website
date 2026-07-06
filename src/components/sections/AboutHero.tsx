@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Star } from "lucide-react";
+import { conferenceVenue } from "@/lib/utils";
 
 export default function AboutHero() {
   return (
@@ -37,7 +38,7 @@ export default function AboutHero() {
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />
-              Obi Wali International Conference Centre, Port Harcourt
+              {conferenceVenue}
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Users className="w-4 h-4 mr-2" />

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Calendar, Download, Circle } from "lucide-react";
 import AOS from "../layout/AOS";
+import { conferenceVenue } from "@/lib/utils";
 
 const info = [
   {
@@ -37,7 +38,7 @@ const info = [
     status: "black",
     text: "Conference Venue",
     date: "Sept. 24th & 25th 2026",
-    description: "IPES Hall, University of Port Harcourt, Rivers State, Nigeria",
+    description: conferenceVenue,
     icon: Calendar,
   },
 ];
