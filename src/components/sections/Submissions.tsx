@@ -250,6 +250,22 @@ function Submissions() {
                       </Button>
                     </Link>
                   </div>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="https://drive.google.com/file/d/1hfZu3e08-7X2kIs076ogpYEvNLTgxtj7"
+                      download="2023-Conference-Report.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-white/90 text-green-900 hover:bg-white transition-colors group border-green-400"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2023 Conference Report
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
