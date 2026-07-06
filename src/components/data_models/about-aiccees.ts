@@ -5,7 +5,7 @@ export const aboutAiccees = [
 
 export const participationTypes = [
     {
-      category: "Audience Member Only",
+      category: "Delegate",
       earlyBird: {
         ngn: 50000,
         usd: 50
@@ -16,7 +16,7 @@ export const participationTypes = [
       }
     },
     {
-      category: "Only Paper Presentation",
+      category: "Delegate + Only Paper Presentation",
       earlyBird: {
         ngn: 100000,
         usd: 100
@@ -27,7 +27,7 @@ export const participationTypes = [
       }
     },
     {
-      category: "Paper Presentation + Publication",
+      category: "Delegate + Paper Presentation + Publication",
       earlyBird: {
         ngn: 200000,
         usd: 200
@@ -38,7 +38,7 @@ export const participationTypes = [
       }
     },
     {
-      category: "Open Access Publication",
+      category: "Delegate + Paper Presentation + Open Access Publication",
       earlyBird: {
         ngn: 700000,
         usd: 550

@@ -42,8 +42,8 @@ export default function ParticipationSection() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[40%] text-black">CATEGORY</TableHead>
-                  <TableHead className="text-black">EARLY-BIRD PAYMENT</TableHead>
-                  <TableHead className="text-black">LATE PAYMENT</TableHead>
+                  <TableHead className="text-black">EARLY-BIRD PAYMENT (Before July 31st 2026)</TableHead>
+                  <TableHead className="text-black">LATE PAYMENT (After July 31st 2026)</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
