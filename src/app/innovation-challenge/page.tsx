@@ -5,6 +5,7 @@ import { ArrowRight, CarFront, CalendarDays, Trophy, ShieldCheck } from 'lucide-
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import AOS from '@/components/layout/AOS'
+import InnovationChallengeMentors from '@/components/sections/InnovationChallengeMentors'
 import {
   awardsAndBenefits,
   eligibilityCriteria,
@@ -126,6 +127,8 @@ export default function InnovationChallengePage() {
           </div>
         </section>
       </AOS>
+
+      <InnovationChallengeMentors variant="full" />
 
       <AOS>
         <section id="programme" className="w-full py-14 md:py-20 bg-green-50">
