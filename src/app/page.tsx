@@ -4,6 +4,7 @@ import { SpeakersSection } from '@/components/sections/SpeakersSection'
 import AboutUs from '@/components/sections/AboutUs'
 import ConferenceThemes from '@/components/sections/ConferenceThemes'
 import InnovationChallengeHighlight from '@/components/sections/InnovationChallengeHighlight'
+import InnovationChallengeMentors from '@/components/sections/InnovationChallengeMentors'
 import PublishingPapers from '@/components/sections/PublishingPapers'
 import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
@@ -23,6 +24,7 @@ export default function ConferencePage() {
     <main className="flex-1">
       <HeroSection />
       <InnovationChallengeHighlight />
+      <InnovationChallengeMentors variant="highlight" />
       <AboutUs />
       <div className="flex justify-center items-center">
         <ConferenceCallToAction />
