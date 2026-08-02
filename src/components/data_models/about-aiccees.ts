@@ -38,7 +38,7 @@ export const participationTypes = [
       }
     },
     {
-      category: "Delegate + Paper Presentation + Open Access Publication",
+      category: "Paper Presentation + Open Access Publication",
       earlyBird: {
         ngn: 700000,
         usd: 550
