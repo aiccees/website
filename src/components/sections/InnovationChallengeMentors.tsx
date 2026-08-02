@@ -14,75 +14,6 @@ import {
 type InnovationChallengeMentorsProps = {
   variant?: 'full' | 'highlight'
 }
-
-/**
- * Interactive mentor showcase for the Innovation Challenge.
- * Portrait strip selects an active mentor; the spotlight panel mirrors the flyer-style
- * profile (photo + red label + bio) without embedding flyer assets.
- */
-const InnovationChallengeMentors = ({
-  variant = 'full',
-}: InnovationChallengeMentorsProps) => {
-  const mentors = innovationChallengeMentors
-  const [activeMentorId, setActiveMentorId] = useState(mentors[0]?.id ?? '')
-  const activeMentor =
-    mentors.find((mentor) => mentor.id === activeMentorId) ?? mentors[0]
-
-  if (!activeMentor) {
-    return null
-  }
-
-  const isHighlight = variant === 'highlight'
-  const visibleMentors = isHighlight ? mentors.slice(0, 4) : mentors
-
-  return (
-    <AOS>
-      <section
-        id="innovation-mentors"
-        className={`w-full ${isHighlight ? 'py-12 md:py-16' : 'py-14 md:py-20'} bg-white`}
-      >
-        <div className="container w-11/12 mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center text-center gap-4">
-            <div className="max-w-2xl">
-              <p className="inline-flex rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-700">
-                Mentorship Bootcamp
-              </p>
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight text-green-700">
-                Meet the Innovation Challenge Mentors
-              </h2>
-              <p className="mt-3 text-gray-600">
-                Industry operators, researchers, and ecosystem builders guiding finalists on pitch,
-                market readiness, and impact models ahead of AICCEES 2026.
-              </p>
-            </div>
-            {isHighlight ? (
-              <Button asChild className="bg-green-700 text-white hover:bg-green-800 w-full sm:w-auto">
-                <Link href="/innovation-challenge#innovation-mentors">
-                  View all mentors
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            ) : null}
-          </div>
-
-          <div className="mt-8 flex justify-center gap-3 overflow-x-auto pb-2 scrollbar-thin">
-            {visibleMentors.map((mentor) => (
-              <MentorPortraitButton
-                key={mentor.id}
-                mentor={mentor}
-                isActive={mentor.id === activeMentor.id}
-                onSelect={() => setActiveMentorId(mentor.id)}
-              />
-            ))}
-          </div>
-
-          <MentorSpotlight mentor={activeMentor} compact={isHighlight} />
-        </div>
-      </section>
-    </AOS>
-  )
-}
-
 type MentorPortraitButtonProps = {
   mentor: InnovationChallengeMentor;
   isActive: boolean;
@@ -170,5 +101,70 @@ function MentorSpotlight({ mentor, compact = false }: MentorSpotlightProps) {
     </div>
   )
 }
+
+
+const InnovationChallengeMentors = ({
+  variant = 'full',
+}: InnovationChallengeMentorsProps) => {
+  const mentors = innovationChallengeMentors
+  const [activeMentorId, setActiveMentorId] = useState(mentors[0]?.id ?? '')
+  const activeMentor =
+    mentors.find((mentor) => mentor.id === activeMentorId) ?? mentors[0]
+
+  if (!activeMentor) {
+    return null
+  }
+
+  const isHighlight = variant === 'highlight'
+  const visibleMentors = isHighlight ? mentors.slice(0, 4) : mentors
+
+  return (
+    <AOS>
+      <section
+        id="innovation-mentors"
+        className={`w-full ${isHighlight ? 'py-12 md:py-16' : 'py-14 md:py-20'} bg-white`}
+      >
+        <div className="container w-11/12 mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center text-center gap-4">
+            <div className="max-w-2xl">
+              <p className="inline-flex rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-700">
+                Mentorship Bootcamp
+              </p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight text-green-700">
+                Meet the Innovation Challenge Mentors
+              </h2>
+              <p className="mt-3 text-gray-600">
+                Industry operators, researchers, and ecosystem builders guiding finalists on pitch,
+                market readiness, and impact models ahead of AICCEES 2026.
+              </p>
+            </div>
+            {isHighlight ? (
+              <Button asChild className="bg-green-700 text-white hover:bg-green-800 w-full sm:w-auto">
+                <Link href="/innovation-challenge#innovation-mentors">
+                  View all mentors
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            ) : null}
+          </div>
+
+          <div className="mt-8 flex justify-center gap-3 overflow-x-auto pb-2 scrollbar-thin">
+            {visibleMentors.map((mentor) => (
+              <MentorPortraitButton
+                key={mentor.id}
+                mentor={mentor}
+                isActive={mentor.id === activeMentor.id}
+                onSelect={() => setActiveMentorId(mentor.id)}
+              />
+            ))}
+          </div>
+
+          <MentorSpotlight mentor={activeMentor} compact={isHighlight} />
+        </div>
+      </section>
+    </AOS>
+  )
+}
+
 
 export default InnovationChallengeMentors
