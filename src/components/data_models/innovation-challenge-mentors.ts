@@ -26,7 +26,7 @@ export const innovationChallengeMentors: InnovationChallengeMentor[] = [
     name: 'William Brent',
     title: 'Chief Marketing Officer, Husk Power',
     image: '/images/mentors/william-Brent.jpeg',
-    bio: "William Brent is a cleantech entrepreneur and evangelist. He is currently Chief Technical Officer (CTO) at Husk Power, the leading distributed energy resources (DER) platform electrifying unserved and underserved communities in the Global South, and the world's largest minigrid company. Previously, he was Co-Founder and Chief Campaign Officer at Power for All, an international NGO working to end energy poverty. Before that, he was a senior executive and head of the cleantech practice at Weber Shandwick, an award-winning global marketing services agency.",
+    bio: "William Brent is a cleantech entrepreneur and evangelist. He is currently Chief Marketing Officer (CMO) at Husk Power, the leading distributed energy resources (DER) platform electrifying unserved and underserved communities in the Global South, and the world's largest minigrid company. Previously, he was Co-Founder and Chief Campaign Officer at Power for All, an international NGO working to end energy poverty. Before that, he was a senior executive and head of the cleantech practice at Weber Shandwick, an award-winning global marketing services agency.",
   },
   {
     id: 'iwona-bisaga',
@@ -55,5 +55,19 @@ export const innovationChallengeMentors: InnovationChallengeMentor[] = [
     title: 'Senior Director, Sustainable Energy for All (SEforALL) — Universal Energy Unit',
     image: '/images/mentors/Anita-Otubu.jpeg',
     bio: 'Anita leads SEforALL\'s work on Universal Energy Readiness, the Universal Energy Facility, Mini-Grids & Distributed Energy Systems, and Powering Healthcare & Education — driving blended finance, private investment mobilisation, and decentralised renewable energy delivery across Sierra Leone, Madagascar, Benin, Zambia, Nigeria and Mozambique. Previously, she led the Project Management Unit for the US$550 million Nigeria Electrification Project (World Bank/African Development Bank), mobilising US$120 million in private capital, delivering over 1 million electricity connections, reaching 5+ million people, and supporting 26 healthcare facilities. She also coordinated the Energizing Education Programme, electrifying seven tertiary institutions. Anita has served senior government leadership as a member of the Advisory Power Team in the Office of Nigeria\'s Vice President, and previously as Technical Assistant (Legal) to a Minister of Power. She sits on several global advisory bodies, including the UN Special Adviser on Africa\'s Knowledge Network, the World Bank ESMAP Technical Advisory Group, and advisory boards for GOGLA and the African School of Regulation.',
+  },
+  {
+    id: 'lovans-owusu-takyi',
+    name: 'Lovans Owusu-Takyi',
+    title: 'Social Entrepreneur | Environmentalist | Sustainable Energy & Clean Cooking Expert',
+    image: '/images/mentors/lovans-owusu.jpg',
+    bio: 'Lovans Owusu-Takyi is a social entrepreneur, environmentalist and sustainable development professional with over 18 years of experience in renewable energy, clean cooking, agriculture, engineering, market development and climate initiatives across Ghana and Africa. He is Co-Founder and Director of the Institute for Sustainable Energy and Environmental Solutions (ISEES), where he coordinates the Clean Cooking Innovation Center and supports green businesses. He is also Co-Founder and President of Sustainable Energy Technologies Limited (SETECH), a clean cookstove manufacturing and distribution company promoting biomass gasifier stoves and climate-smart energy solutions. Lovans previously served as a National Renewable Energy Advisor with SNV Netherlands Development Organisation, Ghana, and as Country Director with VE International Ghana and Trees for the Future.',
+  },
+  {
+    id: 'maureen-esu-edu',
+    name: 'Maureen Esu Edu',
+    title: 'Energy Transition Professional | Renewable Energy & Sustainability Expert',
+    image: '/images/mentors/maureen-edu.jpg',
+    bio: 'Maureen Esu Edu is an experienced energy-transition professional with over 15 years of experience cutting across diverse sectors including energy, renewable energy, digital innovation and sustainability. She has worked with organisations to achieve technologically enabled transformation in multicultural environments including European Commodity Clearing (ECC AG), EPEX SPOT (France) and NIRSAL PLC. Her professional interests span energy transition, renewable energy, decarbonisation and sustainable development, with strengths in stakeholder management and communication, risk management, organisational change transformation through coaching and mentoring. She holds an Advanced Master’s in International Energy Management from Mines Paris, an MBA from Maastricht School of Management Netherlands alongside professional certifications in Financial Regulations from Cambridge University and Leadership from Luxembourg School of Business. Her experience with the UNIDO Accelerate-to-Demonstrate (A2D) Facility and GIZ-NESP Mentorship program are expertise she is willing to include as she supports emerging innovators and early practitioners in the energy sector, working to advance Africa’s clean energy transition.',
   },
 ]
