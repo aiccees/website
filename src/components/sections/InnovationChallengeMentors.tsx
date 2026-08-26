@@ -26,12 +26,12 @@ function MentorPortraitButton({ mentor, isActive, onSelect }: MentorPortraitButt
       type="button"
       onClick={onSelect}
       aria-pressed={isActive}
-      className={`group min-w-[7.5rem] max-w-[8.5rem] shrink-0 text-center transition ${
+      className={`group w-[7.5rem] shrink-0 text-center transition ${
         isActive ? 'opacity-100' : 'opacity-70 hover:opacity-100'
       }`}
     >
       <div
-        className={`relative h-28 w-full overflow-hidden rounded-xl border-2 ${
+        className={`relative mx-auto h-28 w-28 overflow-hidden rounded-xl border-2 bg-green-50 ${
           isActive ? 'border-red-600 shadow-md' : 'border-transparent'
         }`}
       >
@@ -39,8 +39,8 @@ function MentorPortraitButton({ mentor, isActive, onSelect }: MentorPortraitButt
           src={mentor.image}
           alt={mentor.name}
           fill
-          sizes="136px"
-          className="object-cover object-top transition duration-300 group-hover:scale-105"
+          sizes="112px"
+          className="object-contain object-center p-1 transition duration-300 group-hover:scale-105"
         />
       </div>
       <p className="mt-2 text-sm font-semibold text-green-900 leading-tight line-clamp-2">
@@ -148,15 +148,22 @@ const InnovationChallengeMentors = ({
             ) : null}
           </div>
 
-          <div className="mt-8 flex justify-center gap-3 overflow-x-auto pb-2 scrollbar-thin">
-            {visibleMentors.map((mentor) => (
-              <MentorPortraitButton
-                key={mentor.id}
-                mentor={mentor}
-                isActive={mentor.id === activeMentor.id}
-                onSelect={() => setActiveMentorId(mentor.id)}
-              />
-            ))}
+          <div className="mt-8 overflow-x-auto pb-2">
+            {/*
+              Inner w-max + min-w-full keeps the row centered when it fits,
+              and still scrollable from the first mentor when it overflows.
+              justify-center alone on an overflow container clips the first items.
+            */}
+            <div className="mx-auto flex w-max min-w-full justify-center gap-3 px-1">
+              {visibleMentors.map((mentor) => (
+                <MentorPortraitButton
+                  key={mentor.id}
+                  mentor={mentor}
+                  isActive={mentor.id === activeMentor.id}
+                  onSelect={() => setActiveMentorId(mentor.id)}
+                />
+              ))}
+            </div>
           </div>
 
           <MentorSpotlight mentor={activeMentor} compact={isHighlight} />
