@@ -232,7 +232,7 @@ export function SpeakersSection() {
                 className="flex items-center gap-2 text-black border-white hover:bg-white hover:text-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <ChevronLeft className="w-4 h-4" />
-                Previous
+             <span className="hidden sm:block">Previous</span>
               </Button>
 
               {/* Page Numbers */}
@@ -260,7 +260,7 @@ export function SpeakersSection() {
                 variant="outline"
                   className="flex items-center gap-2 text-black border-white hover:bg-white hover:text-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Next
+                <span className="hidden sm:block">Next</span>  
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
