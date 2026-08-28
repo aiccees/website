@@ -13,6 +13,10 @@ export type ProgramStage = {
 
 export const innovationChallengeLink = 'https://bit.ly/AICCEES-INNOVATION'
 
+const today = new Date()
+const applicationCloseDate = new Date('2026-07-31')
+export const innovationChallengeApplicationsClosed = today > applicationCloseDate
+
 export const focusAreas: FocusArea[] = [
   { id: 1, title: 'Energy access and off-grid solutions', icon: '/innovation-challenge/energy-access.svg' },
   { id: 2, title: 'Renewable energy systems and productive use', icon: '/innovation-challenge/renewable-systems.svg' },
