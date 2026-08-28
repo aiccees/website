@@ -15,6 +15,7 @@ import herobg6 from '@/public/images/herobg6.jpg'
 import herobg7 from '@/public/images/herobg7.jpg'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
+import { innovationChallengeApplicationsClosed } from '../data_models/innovation-challenge'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -51,10 +52,10 @@ function CountdownTimer() {
         <Clock className="text-yellow-400 mr-1" />
        <span className="text-white hidden sm:block">Days left:</span>
       </span>
-      <span>{days}d</span>:
-      <span>{hours}h</span>:
-      <span>{minutes}m</span>:
-      <span>{seconds}s</span>
+      <span className='text-2xl sm:text-5xl'>{days}d</span>:
+      <span className='text-2xl sm:text-5xl'>{hours}h</span>:
+      <span className='text-2xl sm:text-5xl'>{minutes}m</span>:
+      <span className='text-2xl sm:text-5xl'>{seconds}s</span>
     </div>
   )
 }
@@ -88,9 +89,9 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-[3] container mx-auto h-full px-4 md:px-6 py-16 md:py-0 flex items-center">
         <div className="flex w-full flex-col items-center space-y-4 text-center">
-          <div className="space-y-3 text-center">
+          <div className="space-y-3 text-center mb-4">
             <p className="inline-flex rounded-full bg-red-600/90 px-4 py-1 text-xs sm:text-sm font-semibold text-white shadow-sm">
-              Innovation Challenge applications are now open
+              Innovation Challenge applications are now {innovationChallengeApplicationsClosed ? 'closed' : 'open'}
             </p>
             <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
@@ -99,7 +100,9 @@ export function HeroSection() {
             Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition 
             </p>
           </div>
-          <div className="flex w-full max-w-md sm:max-w-none flex-col sm:flex-row items-center justify-center gap-3 !mb-8 md:!mb-10">
+          <CountdownTimer />
+
+          <div className="flex w-full max-w-md sm:max-w-none flex-col sm:flex-row items-center justify-center sm:gap-3 gap-6 !mt-8 md:!mt-10">
             <Button asChild className="w-full sm:w-auto bg-red-600 text-white hover:bg-red-700">
               <Link href="/registrations">Register Now</Link>
             </Button>
@@ -116,7 +119,6 @@ export function HeroSection() {
               Submit Paper
             </Button>
           </div>
-          <CountdownTimer />
         </div>
       </div>
     </section>
