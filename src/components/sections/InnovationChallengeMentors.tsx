@@ -75,14 +75,14 @@ function MentorSpotlight({ mentor, compact = false }: MentorSpotlightProps) {
           </div>
         </div>
 
-        <div className="flex h-full min-h-0 flex-col p-6 md:p-8">
+        <div className="flex h-full min-h-0 flex-col items-center justify-center p-6 md:p-8">
           <div className="inline-flex w-fit items-center gap-2 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide">
             <UserRound className="h-4 w-4" />
             Mentor&apos;s Profile
           </div>
           <div className="mt-5 min-h-0 flex-1 overflow-y-auto pr-1">
             <p
-              className={`text-green-50 leading-relaxed ${
+              className={`text-green-50 leading-relaxed text-justify ${
                 compact ? 'line-clamp-6' : ''
               }`}
             >
