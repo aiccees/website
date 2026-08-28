@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CarFront, CalendarDays, Trophy, ShieldCheck } from 'lucide-react'
+import { ArrowRight, CarFront, CalendarDays, Trophy, ShieldCheck, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import AOS from '@/components/layout/AOS'
@@ -11,6 +11,7 @@ import {
   eligibilityCriteria,
   focusAreas,
   innovationChallengeLink,
+  innovationChallengeApplicationsClosed,
   innovationProgramStages,
   intellectualProperty,
   timelineItems,
@@ -45,15 +46,30 @@ export default function InnovationChallengePage() {
                 </p>
 
                 <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row">
-                  <Button asChild size="lg" className="w-full sm:w-auto bg-red-600 text-white hover:bg-red-700">
-                    <Link href={innovationChallengeLink} target="_blank">
-                      Apply now
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button
+                    asChild
+                    size="lg"
+                    className={`w-full sm:w-auto ${innovationChallengeApplicationsClosed ? 'bg-gray-300 text-gray-500 hover:bg-gray-300 cursor-not-allowed' : 'bg-red-600 text-white hover:bg-red-700'}`}
+                    disabled={innovationChallengeApplicationsClosed}
+                  >
+                    <Link href={innovationChallengeApplicationsClosed ? '#' : innovationChallengeLink} target="_blank" tabIndex={innovationChallengeApplicationsClosed ? -1 : 0}>
+                      {innovationChallengeApplicationsClosed ? (
+                        <>
+                          Application form closed
+                          <Lock className="ml-2 h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          Apply now
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </Link>
                   </Button>
                   <Button asChild size="lg" className="w-full sm:w-auto bg-white text-green-700 hover:bg-green-100">
                     <Link href="#programme">See programme structure</Link>
                   </Button>
+             
                 </div>
 
                 <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:hidden">
@@ -192,14 +208,40 @@ export default function InnovationChallengePage() {
                 <CardTitle className="text-green-800 text-2xl">How to Submit</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700">Use the registration link below to submit your innovation application.</p>
-                <Button asChild className="mt-4 bg-green-700 text-white hover:bg-green-800">
-                  <Link href={innovationChallengeLink} target="_blank">
-                    Open application form
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                {/* <p className="mt-3 text-sm text-gray-500">bit.ly/AICCEES-INNOVATION</p> */}
+                {innovationChallengeApplicationsClosed ? (
+                  <>
+                    <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3">
+                      <Lock className="mt-0.5 h-5 w-5 shrink-0 text-red-700" />
+                      <div>
+                        <p className="font-semibold text-red-800">Applications closed</p>
+                        <p className="mt-1 text-sm text-red-700">
+                          The call for innovators deadline has passed. We are no longer accepting new
+                          applications for AICCEES 2026.
+                        </p>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-gray-500">
+                      Thank you for your interest. Shortlisted innovators will be contacted directly.
+                    </p>
+                    <Button
+                      disabled
+                      className="mt-4 w-full sm:w-auto cursor-not-allowed bg-gray-300 text-gray-500 hover:bg-gray-300"
+                    >
+                      Application form closed
+                      <Lock className="ml-2 h-4 w-4" />
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-gray-700">Use the registration link below to submit your innovation application.</p>
+                    <Button asChild className="mt-4 bg-green-700 text-white hover:bg-green-800">
+                      <Link href={innovationChallengeLink} target="_blank">
+                        Open application form
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </>
+                )}
               </CardContent>
             </Card>
 
