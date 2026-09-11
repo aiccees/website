@@ -1,3 +1,4 @@
+import { conferenceVenue } from "@/lib/utils";
 import { Award, Calendar, MapPin } from "lucide-react";
 
 const KeynoteSpeakersHero = () => (
@@ -21,7 +22,7 @@ const KeynoteSpeakersHero = () => (
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="h-5 w-5" />
-            <span>Port Harcourt, Nigeria</span>
+            <span>{conferenceVenue}</span>
           </div>
         </div>
       </div>

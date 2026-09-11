@@ -19,4 +19,4 @@ export const formatPrice = (price: number, isOpenAccess = false, showNGN = false
   return `$${price.toLocaleString()}`
 }
 
-export const conferenceVenue = 'IPES Hall, University of Port Harcourt, Rivers State, Nigeria'
+export const conferenceVenue = 'IPES, University of Port Harcourt, Rivers State, Nigeria'
