@@ -20,7 +20,17 @@ import enerpro from "@/public/images/home/enerpro.svg";
 import trans from "@/public/images/home/trans.svg";
 import uniport from "@/public/images/home/unipor.svg";
 import rean from "@/public/images/home/rean.png"
-import veroanth from "@/public/images/home/vero_anth.png"
+import veroanth from "@/public/images/home/vaf.png"
+import tenn from "@/public/images/home/tenn.jpg"
+import techrise from "@/public/images/home/techrise.png"
+import tovero from "@/public/images/home/tovero.png"
+import scientificNet from "@/public/images/home/scientific_net.png"
+import ministryOfEnergy from "@/public/images/home/ministry_of_environment.png"
+import maraEvents from "@/public/images/home/mara_events.png"
+import inmotv from "@/public/images/home/inmotv.png"
+import design from "@/public/images/home/dev_design.png"
+import aiccees2026 from "@/public/images/home/aiccees2026.jpg"
+
 
 
 export const aicess = {
@@ -176,11 +186,11 @@ export const partners = [
     logo: asteven,
     url: "https://astevengroup.com",
   },
-  {
-    name: "EnerPro",
-    logo: enerpro,
-    url: "https://enerproafrica.com/",
-  },
+  // {
+  //   name: "EnerPro",
+  //   logo: enerpro,
+  //   url: "https://enerproafrica.com/",
+  // },
   {
     name: "University of Port Harcourt",
     logo: uniport,
@@ -191,17 +201,58 @@ export const partners = [
     logo: acefuels,
     url: "https://acefuels-futo.org",
   },
-  {
-    name: "Renewable Energy Association of Nigeria(REAN)",
-    logo: rean,
-    url: "https://rean.org.ng",
-  },
+  // {
+  //   name: "Renewable Energy Association of Nigeria(REAN)",
+  //   logo: rean,
+  //   url: "https://rean.org.ng",
+  // },
   {
     name: "Veronica Anthony Foundation",
     logo: veroanth,
     url: "www.veronicaanthonyfoundation.com",
   },
-  
+  {
+    name: "TENN",
+    logo: tenn,
+  },
+  {
+    name: "TechRise",
+    logo: techrise,
+    url: "https://techrisedti.org/",
+  },
+  {
+    name: "TOVERO",
+    logo: tovero,
+    url: "https://www.toveroenergy.com/",
+  },
+  {
+    name: "Scientific.Net",
+    logo: scientificNet,
+    url: "https://www.scientific.net/",
+  },
+  {
+    name: "Rivers State Ministry of Environment",
+    logo: ministryOfEnergy,
+    url: "https://rsipa.riversstateapps.ng/rivers-state-ministry-of-environment/",
+  },
+  {
+    name: "MARA Events",
+    logo: maraEvents,
+    url: "https://mara-events.com/",
+  },
+  {
+    name: "INMOTV",
+    logo: inmotv,
+  },
+  {
+    name: "Dev & Design",
+    logo: design,
+    url: "https://www.devdesignhq.com/",
+  },
+  {
+    name: "AICCEES 2026",
+    logo: aiccees2026,
+  },
 ]
 
 export const registrationLink = "/registrations#registration-form"
