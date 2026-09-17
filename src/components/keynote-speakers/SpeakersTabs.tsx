@@ -14,9 +14,66 @@ import radhakrishnan from "@/public/images/keynote_speakers/Radhakrishnan Mahali
 import tarek from "@/public/images/keynote_speakers/TarekKabel.webp";
 import ifeoma from "@/public/images/keynote_speakers/Ifeoma.webp";
 import glory from "@/public/images/keynote_speakers/GloryOguegbu.webp";
-import omodele from "@/public/images/keynote_speakers/omodele.jpeg"
+import omodele from "@/public/images/keynote_speakers/omodele.jpeg";
+import anita from "@/public/images/mentors/Anita-Otubu.jpeg";
+import diarmid from "@/public/images/keynote_speakers/DiarmidRoberts.webp";
+import oduoza from "@/public/images/keynote_speakers/ChikeOduoza.jpg";
 
-// Mock data for 2026 speakers
+const keynoteSpeakers2026 = [
+  {
+    name: "Ejikeme Patrick Nwosu",
+    picture: ejikeme,
+    description:
+      "Ejikeme Patrick Nwosu is a pioneering Nigerian researcher, inventor, and entrepreneur driving Africa's clean energy transition. As CEO and Co-Founder of Lumos Laboratories Nigeria Limited, he operates under the philosophy that \"waste is gold,\" converting agricultural, institutional, municipal, and human waste into clean electricity, cooking gas, and organic fertilizer. Nwosu holds seven invention patent rights granted by the Federal Republic of Nigeria for advancements in waste-to-energy and green hydrogen technologies. He serves as a facilitator for the African Hydrogen Fellowship program and will speak at the SEDIT Africa Summit 2026. His international accolades include winning the Hydrogen Innovation of the Year at the 2025 Global African Hydrogen Summit in Windhoek, Namibia, and being named a finalist for the 2026 Canadian Hydrogen Convention Awards. Recognized by former Vice President Prof. Yemi Osinbajo as a top national innovator, Nwosu also bridges the gap between academia and industry by serving on the Industry Advisory Board for Chemical Engineering at the University of Abuja.",
+    linkedin: "",
+    topics: [
+      "Waste-to-Energy",
+      "Green Hydrogen",
+      "Clean Energy Innovation",
+      "Entrepreneurship",
+    ],
+  },
+  {
+    name: "Anita Otubu",
+    picture: anita,
+    description:
+      "Anita leads SEforALL's work on Universal Energy Readiness, the Universal Energy Facility, Mini-Grids & Distributed Energy Systems, and Powering Healthcare & Education — driving blended finance, private investment mobilisation, and decentralised renewable energy delivery across Sierra Leone, Madagascar, Benin, Zambia, Nigeria and Mozambique. Previously, she led the Project Management Unit for the US$550 million Nigeria Electrification Project (World Bank/African Development Bank), mobilising US$120 million in private capital, delivering over 1 million electricity connections, reaching 5+ million people, and supporting 26 healthcare facilities. She also coordinated the Energizing Education Programme, electrifying seven tertiary institutions. Anita has served senior government leadership as a member of the Advisory Power Team in the Office of Nigeria's Vice President, and previously as Technical Assistant (Legal) to a Minister of Power. She sits on several global advisory bodies, including the UN Special Adviser on Africa's Knowledge Network, the World Bank ESMAP Technical Advisory Group, and advisory boards for GOGLA and the African School of Regulation.",
+    linkedin: "",
+    topics: [
+      "Universal Energy Access",
+      "Mini-Grids",
+      "Blended Finance",
+      "Energy Policy",
+    ],
+  },
+  {
+    name: "Diarmid Roberts",
+    picture: diarmid,
+    description:
+      "Diarmid Roberts is a Senior Consultant at Foresight Transitions, an innovative strategic consultancy helping organisations navigate deep uncertainty to make robust decisions on investment and procurement. He was lead author on the report \"Market & Technology Assessment of Flow Batteries for Developing Economies\" commissioned by the Faraday Institution. He has a PhD in the techno-economics of vanadium redox flow batteries, and has also analysed the economics of zinc and lead based flow batteries alongside lithium-ion benchmarks.",
+    linkedin: "",
+    topics: [
+      "Flow Batteries",
+      "Energy Storage",
+      "Techno-Economics",
+      "Investment Strategy",
+    ],
+  },
+  {
+    name: "Prof. Chike F. Oduoza",
+    picture: oduoza,
+    description:
+      "Chike F. Oduoza, a Chartered Engineer, Fellow of the Institution of Chemical Engineers, and Senior Fellow of the Higher Education Academy, is a Professor in Process and Manufacturing Engineering and Head of Chemical Engineering at the University of Wolverhampton, UK. He holds a PhD from UMIST Manchester, a Diploma in Management Science from UMIST, and an MBA from the University of Exeter, and has worked in UK higher education for almost 37 years, during which he won research grants of more than £5.5m from industry, the Engineering and Physical Sciences Research Council, the British Council, and the European Union, and published over 207 research papers in journals and conferences, 3 books and 8 book chapters. Research funding received so far enabled him to supervise 32 PhDs and Postdocs on a variety of research topics. Prof Oduoza was former UK Chair, Society of the Chemical Industry, Electrochemical Technology Group (2006–2010), a member of the Engineering and Physical Sciences Research Council Peer Review College, and an Evaluator for European Union Horizon Europe. His research interests include resource efficiency and energy engineering management, circular economy, sustainable electrochemical engineering, Net Zero carbon emissions and environmental sustainability. He sits on various subcommittees of the UK Engineering Professors Council and belongs to several international scientific and technical committees. He is guest Editor of Robotics and Integrated Manufacturing and the International Journal of Advanced Manufacturing Technology.",
+    linkedin: "",
+    topics: [
+      "Resource Efficiency",
+      "Circular Economy",
+      "Electrochemical Engineering",
+      "Net Zero",
+    ],
+  },
+];
+
 const keynoteSpeakers2025 = [
   {
     name: "Prof. Omodele Abiodun Abosede Eletta",
@@ -200,6 +257,12 @@ const SpeakersTabs = () => {
         <div className="overflow-x-auto">
           <TabsList className="flex w-max !p-0 gap-4 md:gap-8 lg:gap-20">
             <TabsTrigger
+              value="2026"
+              className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg whitespace-nowrap"
+            >
+              2026 Speakers
+            </TabsTrigger>
+            <TabsTrigger
               value="2025"
               className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg whitespace-nowrap"
             >
@@ -220,9 +283,24 @@ const SpeakersTabs = () => {
           </TabsList>
         </div>
 
-        {/* 2026 Speakers */}
         <TabsContent
           value="2026"
+          className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {keynoteSpeakers2026.map((speaker, index) => (
+            <SpeakerCard
+              key={index}
+              speaker={speaker}
+              year="2026"
+              index={index}
+              isExpanded={expandedSpeakers[`2026-${index}`] || false}
+              onToggleExpanded={toggleExpanded}
+            />
+          ))}
+        </TabsContent>
+
+        <TabsContent
+          value="2025"
           className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {keynoteSpeakers2025.map((speaker, index) => (
