@@ -13,6 +13,7 @@ import herobg4 from '@/public/images/herobg4.jpg'
 import herobg5 from '@/public/images/herobg5.jpg'
 import herobg6 from '@/public/images/herobg6.jpg'
 import herobg7 from '@/public/images/herobg7.jpg'
+import herobg8 from '@/public/images/herobg8.jpg'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
 import { innovationChallengeApplicationsClosed } from '../data_models/innovation-challenge'
@@ -26,6 +27,7 @@ const BACKGROUND_IMAGES = [
   herobg5,
   herobg6,
   herobg7,
+  herobg8,
 ]
 
 function CountdownTimer() {
