@@ -9,7 +9,7 @@ import WhatsappLive from "@/components/WhatsappLive";
 import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL as string),
+  metadataBase: new URL('https://aiccees.com'),
   title: {
     default: "Africa International Conference on Clean Energy & Energy Storage",
     template: "%s | AICCEES",
