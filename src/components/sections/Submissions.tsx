@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Calendar, Download, Circle } from "lucide-react";
 import AOS from "../layout/AOS";
-import { conferenceVenue } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
 
 const info = [
   {
     id: 1,
     status: "red",
     text: "Full Paper Submission",
-    date: "Jan. 1st 2026",
+    date: paperSubmissionOpenLabel ?? TO_BE_ANNOUNCED,
     description: "Submission portal opens for all participants",
     icon: Calendar,
   },
@@ -20,7 +20,7 @@ const info = [
     id: 2,
     status: "amber",
     text: "Full Paper Submission Deadline",
-    date: "July 31st 2026",
+    date: paperSubmissionDeadlineLabel ?? TO_BE_ANNOUNCED,
     description: "Final deadline for all research paper submissions",
     icon: Calendar,
   },
@@ -28,7 +28,7 @@ const info = [
     id: 3,
     status: "green",
     text: "Conference Date",
-    date: "Sept. 24th & 25th 2026",
+    date: conferenceDateLabel ?? TO_BE_ANNOUNCED,
     description:
       "Two days of inspiring presentations, networking, and exhibitions",
     icon: Calendar,
@@ -37,7 +37,7 @@ const info = [
     id: 4,
     status: "black",
     text: "Conference Venue",
-    date: "Sept. 24th & 25th 2026",
+    date: null,
     description: conferenceVenue,
     icon: Calendar,
   },
@@ -97,7 +97,7 @@ function Submissions() {
                 variants={itemVariants}
                 className="text-green-300 text-base tracking-wider uppercase "
               >
-                AICCEES 2026 - <span className="normal-case">4th Edition</span>
+                AICCEES {conferenceYear} - <span className="normal-case">{conferenceEdition}</span>
               </motion.p>
               <motion.h2
                 variants={itemVariants}
@@ -133,10 +133,12 @@ function Submissions() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
-                      <item.icon className="w-4 h-4" />
-                      <p className="text-sm">{item.date}</p>
-                    </div>
+                    {item.date && (
+                      <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
+                        <item.icon className="w-4 h-4" />
+                        <p className="text-sm">{item.date}</p>
+                      </div>
+                    )}
                     {item.description &&
                       (item.id === 4 ? (
                         <>
