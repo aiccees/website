@@ -259,7 +259,7 @@ export const currentCommitteeMembers: CommitteeMember[] = [
   },
   {
       id: 15,
-      name: "Prof. Professor Kenneth E.",
+      name: "Prof. Kenneth Okedu",
           institution: "University of Port Harcourt",
       country: "Nigeria",
       role: "",

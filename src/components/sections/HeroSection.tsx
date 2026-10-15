@@ -17,6 +17,7 @@ import herobg8 from '@/public/images/herobg8.jpg'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
 import { innovationChallengeApplicationsClosed } from '../data_models/innovation-challenge'
+import { conferenceStartDate, conferenceYear } from '@/lib/utils'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -30,8 +31,22 @@ const BACKGROUND_IMAGES = [
   herobg8,
 ]
 
+// Shows "Date to be announced" until conferenceStartDate is set in src/lib/utils.ts,
+// then counts down to it automatically.
 function CountdownTimer() {
-  const targetDate = new Date('2026-09-24T00:00:00Z').getTime()
+  if (!conferenceStartDate) {
+    return (
+      <div className="flex items-center justify-center gap-2 text-white text-base sm:text-xl md:text-2xl font-semibold bg-black/40 rounded-lg px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
+        <Clock className="text-yellow-400 shrink-0" />
+        <span>AICCEES {conferenceYear} &middot; Date to be announced</span>
+      </div>
+    )
+  }
+  return <Countdown target={conferenceStartDate} />
+}
+
+function Countdown({ target }: { target: string }) {
+  const targetDate = new Date(target).getTime()
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now())
 
   useEffect(() => {
