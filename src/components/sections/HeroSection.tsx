@@ -17,7 +17,7 @@ import herobg8 from '@/public/images/herobg8.jpg'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
 import { innovationChallengeApplicationsClosed } from '../data_models/innovation-challenge'
-import { conferenceStartDate, conferenceYear } from '@/lib/utils'
+import { conferenceStartDate, conferenceYear, conferenceTheme } from '@/lib/utils'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -114,7 +114,7 @@ export function HeroSection() {
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-200 text-base sm:text-lg md:text-xl">
-            Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition 
+            {conferenceTheme} 
             </p>
           </div>
           <CountdownTimer />

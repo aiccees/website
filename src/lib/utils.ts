@@ -25,6 +25,7 @@ export const formatPrice = (price: number, isOpenAccess = false, showNGN = false
 
 export const conferenceYear = 2027
 export const conferenceEdition = '5th Edition'
+export const conferenceTheme = 'From Transition to Transformation: Powering Africa’s Energy Sovereignty through Innovation, Industrialisation and Resilience'
 
 export const conferenceVenue = 'Port Harcourt, Nigeria'
 
