@@ -36,8 +36,8 @@ const BACKGROUND_IMAGES = [
 function CountdownTimer() {
   if (!conferenceStartDate) {
     return (
-      <div className="flex items-center justify-center gap-2 text-white text-base sm:text-xl md:text-2xl font-semibold bg-black/40 rounded-lg px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
-        <Clock className="text-yellow-400 shrink-0" />
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-white text-sm min-[360px]:text-[15px] min-[390px]:text-base sm:text-xl md:text-2xl font-semibold bg-black/40 rounded-lg px-2.5 sm:px-6 py-2 sm:py-3 shadow-lg">
+        <Clock className="text-yellow-400 shrink-0 w-4 h-4 sm:w-6 sm:h-6" />
         <span>AICCEES {conferenceYear} &middot; Date to be announced</span>
       </div>
     )
