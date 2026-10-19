@@ -30,10 +30,10 @@ export const conferenceTheme = 'From Transition to Transformation: Powering Afri
 export const conferenceVenue = 'Port Harcourt, Nigeria'
 
 // Countdown target, in Nigerian time. Example: '2027-09-23T09:00:00+01:00'
-export const conferenceStartDate: string | null = null
+export const conferenceStartDate: string | null = '2027-10-20T08:30:00+01:00'
 
 // Text shown on the site. Example: 'Sept. 23rd & 24th 2027'
-export const conferenceDateLabel: string | null = null
+export const conferenceDateLabel: string | null = 'Oct. 20th & 21st 2027'
 export const paperSubmissionOpenLabel: string | null = null
 export const paperSubmissionDeadlineLabel: string | null = null
 
