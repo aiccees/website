@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import AOS from "@/components/layout/AOS";
+import { conferenceYear, keynoteSpeakersAnnounced } from "@/lib/utils";
 
 const SpeakersHeader = () => (
   <AOS>
@@ -13,6 +14,11 @@ const SpeakersHeader = () => (
             Discover the brilliant minds and industry leaders who shared their expertise 
             and insights at AICCEES conferences across the years.
           </p>
+          {!keynoteSpeakersAnnounced && (
+            <p className="mt-4 text-lg font-semibold text-green-700">
+              AICCEES {conferenceYear} keynote speakers will be announced soon.
+            </p>
+          )}
         </div>
         <Separator />
       </div>

@@ -1,3 +1,5 @@
+import { innovationChallengeStatus } from '@/lib/utils'
+
 export type FocusArea = {
   id: number
   title: string
@@ -13,9 +15,8 @@ export type ProgramStage = {
 
 export const innovationChallengeLink = 'https://bit.ly/AICCEES-INNOVATION'
 
-const today = new Date()
-const applicationCloseDate = new Date('2026-07-31')
-export const innovationChallengeApplicationsClosed = today > applicationCloseDate
+// Applications are only accepted while innovationChallengeStatus (src/lib/utils.ts) is 'open'
+export const innovationChallengeApplicationsClosed = innovationChallengeStatus !== 'open'
 
 export const focusAreas: FocusArea[] = [
   { id: 1, title: 'Energy access and off-grid solutions', icon: '/innovation-challenge/energy-access.svg' },

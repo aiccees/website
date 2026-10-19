@@ -41,8 +41,21 @@ export const conferenceEndDate: string | null = '2027-10-22T00:00:00+01:00'
 // Pre-conference events (Innovation Challenge pitch), shown on the Conference Date card
 export const preConferenceDateLabel: string | null = 'Oct. 18th & 19th 2027'
 
-// Red banner at the top of the homepage
-export const innovationChallengeBanner = `${conferenceYear} Innovation Challenge: applications opening soon`
+// Innovation Challenge: 'opening-soon', 'open' or 'closed'.
+// Controls the homepage banner, the homepage Innovation Challenge section and the Apply buttons.
+export type InnovationChallengeStatus = 'opening-soon' | 'open' | 'closed'
+export const innovationChallengeStatus = 'opening-soon' as InnovationChallengeStatus
+
+// Red banner at the top of the homepage (follows the status above)
+export const innovationChallengeBanner =
+  innovationChallengeStatus === 'open'
+    ? `${conferenceYear} Innovation Challenge: applications are now open`
+    : innovationChallengeStatus === 'closed'
+      ? `${conferenceYear} Innovation Challenge: applications are now closed`
+      : `${conferenceYear} Innovation Challenge: applications opening soon`
+
+// Keynote speakers: change to true once the AICCEES 2027 speakers have been added
+export const keynoteSpeakersAnnounced: boolean = false
 export const paperSubmissionOpenLabel: string | null = null
 export const paperSubmissionDeadlineLabel: string | null = null
 

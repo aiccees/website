@@ -2,11 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { CarFront, ArrowRight, Lock } from 'lucide-react'
+import { CarFront, ArrowRight, Lock, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle } from '@/components/ui/card'
 import AOS from '@/components/layout/AOS'
 import { focusAreas, innovationChallengeApplicationsClosed, innovationChallengeLink } from '@/components/data_models/innovation-challenge'
+import { conferenceYear, innovationChallengeStatus, preConferenceDateLabel } from '@/lib/utils'
 
 const InnovationChallengeHighlight = () => {
   return (
@@ -15,7 +16,7 @@ const InnovationChallengeHighlight = () => {
         <div className="container w-11/12 mx-auto px-4 md:px-6">
           <div className="text-center ">
             <p className="inline-flex items-center rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-700">
-              AICCEES 2026 Clean Energy Innovation Challenge
+              AICCEES {conferenceYear} Clean Energy Innovation Challenge
             </p>
             <h2 className="mt-4 text-3xl md:text-8xl font-bold tracking-tight text-green-700 uppercase">
               Build <span className="text-red-600 text-3xl">•</span> Pitch <span className="text-red-600 text-3xl">•</span> Scale
@@ -57,14 +58,18 @@ const InnovationChallengeHighlight = () => {
           <div className="mt-14 rounded-2xl bg-green-700 px-6 py-8 md:px-10 md:py-10 text-white flex flex-col gap-5 lg:items-center lg:justify-between">
             <div>
               <h3 className="text-2xl font-bold text-center">
-                {innovationChallengeApplicationsClosed
-                  ? 'Applications are now closed'
-                  : 'Applications are open across Africa'}
+                {innovationChallengeStatus === 'open'
+                  ? 'Applications are open across Africa'
+                  : innovationChallengeStatus === 'closed'
+                    ? 'Applications are now closed'
+                    : 'Applications opening soon'}
               </h3>
               <p className="mt-2 text-green-50 max-w-2xl text-center">
-                {innovationChallengeApplicationsClosed
-                  ? 'The application deadline for AICCEES 2026 has passed. Thank you for your interest. Shortlisted innovators will be contacted directly.'
-                  : 'Finalists pitch live during AICCEES 2026 after screening and a mentorship bootcamp.'}
+                {innovationChallengeStatus === 'open'
+                  ? `Finalists pitch live at the AICCEES ${conferenceYear} pre-conference${preConferenceDateLabel ? ` (${preConferenceDateLabel})` : ''} after screening and a mentorship bootcamp.`
+                  : innovationChallengeStatus === 'closed'
+                    ? `The application deadline for AICCEES ${conferenceYear} has passed. Thank you for your interest. Shortlisted innovators will be contacted directly.`
+                    : `Applications for the AICCEES ${conferenceYear} Innovation Challenge will open soon. Shortlisted finalists will pitch live at the pre-conference${preConferenceDateLabel ? ` on ${preConferenceDateLabel}` : ''}.`}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
@@ -89,7 +94,12 @@ const InnovationChallengeHighlight = () => {
                   target="_blank"
                   tabIndex={innovationChallengeApplicationsClosed ? -1 : 0}
                 >
-                  {innovationChallengeApplicationsClosed ? (
+                  {innovationChallengeStatus === 'opening-soon' ? (
+                    <>
+                      Opening soon
+                      <Clock className="ml-2 h-4 w-4" />
+                    </>
+                  ) : innovationChallengeApplicationsClosed ? (
                     <>
                       Applications closed
                       <Lock className="ml-2 h-4 w-4" />
