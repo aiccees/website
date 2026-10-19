@@ -1,6 +1,7 @@
 import { Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AOS from "@/components/layout/AOS";
+import { conferenceYear } from "@/lib/utils";
 
 const CallToAction = () => (
   <AOS>
@@ -8,7 +9,7 @@ const CallToAction = () => (
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-            Join Us at AICCEES 2026
+            Join Us at AICCEES {conferenceYear}
           </h2>
           <p className="text-lg text-gray-600 mb-8">
             Don&apos;t miss the opportunity to hear from these distinguished speakers and 

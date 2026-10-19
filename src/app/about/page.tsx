@@ -16,6 +16,7 @@ import { participationTypes } from "@/components/data_models/about-aiccees";
 import { useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { conferenceYear } from "@/lib/utils";
 
 export default function AboutPage() {
   const [showNGN, setShowNGN] = useState(false)
@@ -36,9 +37,9 @@ export default function AboutPage() {
         {/* Conference Fees */}
         <div className="mb-20 max-w-7xl mx-auto px-6 py-20 space-y-20">
         <div className="text-center space-y-4 mb-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">About AICCEES 2026</h1>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">About AICCEES {conferenceYear}</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES 2026 will be open to all virtually and physically, however this will come with a determined fee.
+            Participation at AICCEES {conferenceYear} will be open to all virtually and physically, however this will come with a determined fee.
             Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all paid conference participants.
           </p>
           <div className="flex items-center justify-center space-x-2">

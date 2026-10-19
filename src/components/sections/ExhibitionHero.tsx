@@ -1,4 +1,6 @@
 
+import { conferenceYear } from "@/lib/utils";
+
 export function ExhibitionHero() {
   return (
     <div className="relative overflow-hidden">
@@ -21,7 +23,7 @@ export function ExhibitionHero() {
           <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
             Showcase your clean energy products, technologies, and services to
             investors, policymakers, and industry leaders from across Africa.
-            AICCEES 2026 brings exhibitors and conference delegates together on
+            AICCEES {conferenceYear} brings exhibitors and conference delegates together on
             one floor in Port Harcourt.
           </p>         
         </div>
