@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { aicess } from "@/components/data_models/conferences";
 
 // Counter animation hook
 function useCountAnimation(end: number, duration: number = 2000) {
@@ -37,7 +38,7 @@ function StatsCard({
   return (
     <div>
       <div className="text-5xl lg:text-7xl text-center font-bold text-gray-800 mb-2">
-        {animatedValue}
+        {animatedValue.toLocaleString("en-US")}
         {suffix}
       </div>
       <div className="text-2xl text-center text-green-700 font-medium">{label}</div>
@@ -45,19 +46,19 @@ function StatsCard({
   );
 }
 
+// The numbers come from the same list as the homepage "About AICCEES" stats
+// (src/components/data_models/conferences.ts), so both always match.
 export default function AboutStats() {
   return (
     <div className="container mx-auto grid grid-cols-2 px-6 md:grid-cols-3 place-items-center gap-6 mb-14 mt-10 relative z-10">
-      <StatsCard
-        value={2998}
-        label="Global Attendees"
-        suffix="+"
-      />
-      <StatsCard value={86} label="Abstract Submissions" />
-      <StatsCard value={51} label="Papers Accepted" />
-      <StatsCard value={45} label="Paper Presentations" />
-      <StatsCard value={5} label="Panel Sessions" />
-      <StatsCard value={7} label="Keynote Speakers" />
+      {aicess.aicessStats.map((item) => (
+        <StatsCard
+          key={item.id}
+          value={Number(item.number.replace(/,/g, ""))}
+          label={item.description}
+          suffix={item.id === 1 ? "+" : ""}
+        />
+      ))}
     </div>
   );
 } 

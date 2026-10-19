@@ -47,13 +47,13 @@ export const aicess = {
     {
         id: 1,
         logo: logo1,
-        number: "2,998",
-        description: "Participants",
+        number: "3,292",
+        description: "Global Attendees",
       },
       {
         id: 2,
         logo: logo2,
-        number: "127",
+        number: "253",
         description: "Abstract Submissions",
       },
       {
@@ -65,19 +65,19 @@ export const aicess = {
       {
         id: 4,
         logo: logo4,
-        number: "68",
+        number: "89",
         description: "Paper Presentations",
       },
       {
         id: 5,
         logo: logo5,
-        number: "8",
+        number: "14",
         description: "Panel Sessions",
       },
       {
         id: 6,
         logo: logo6,
-        number: "14",
+        number: "18",
         description: "Keynote Speakers",
       },
   ]
