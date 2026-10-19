@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Calendar, Download, Circle } from "lucide-react";
 import AOS from "../layout/AOS";
-import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, preConferenceDateLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
 
 const info = [
   {
@@ -29,8 +29,10 @@ const info = [
     status: "green",
     text: "Conference Date",
     date: conferenceDateLabel ?? TO_BE_ANNOUNCED,
-    description:
-      "Two days of inspiring presentations, networking, and exhibitions",
+    description: "Two days of inspiring presentations, networking, and exhibitions",
+    note: preConferenceDateLabel
+      ? `Pre-conference events (Clean Energy Innovation Challenge pitch): ${preConferenceDateLabel}`
+      : null,
     icon: Calendar,
   },
   {
@@ -154,6 +156,9 @@ function Submissions() {
                           {item.description}
                         </p>
                       ))}
+                    {item.note && (
+                      <p className="text-gray-200 text-sm">{item.note}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}

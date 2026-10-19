@@ -34,6 +34,15 @@ export const conferenceStartDate: string | null = '2027-10-20T08:30:00+01:00'
 
 // Text shown on the site. Example: 'Sept. 23rd & 24th 2027'
 export const conferenceDateLabel: string | null = 'Oct. 20th & 21st 2027'
+
+// After this moment the homepage shows "Thank you for joining" instead of "Conference is Live!"
+export const conferenceEndDate: string | null = '2027-10-22T00:00:00+01:00'
+
+// Pre-conference events (Innovation Challenge pitch), shown on the Conference Date card
+export const preConferenceDateLabel: string | null = 'Oct. 18th & 19th 2027'
+
+// Red banner at the top of the homepage
+export const innovationChallengeBanner = `${conferenceYear} Innovation Challenge: applications opening soon`
 export const paperSubmissionOpenLabel: string | null = null
 export const paperSubmissionDeadlineLabel: string | null = null
 
