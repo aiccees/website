@@ -16,7 +16,7 @@ import { participationTypes } from "@/components/data_models/about-aiccees";
 import { useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { conferenceYear } from "@/lib/utils";
+import { conferenceYear, showPreviousConferences } from "@/lib/utils";
 
 export default function AboutPage() {
   const [showNGN, setShowNGN] = useState(false)
@@ -113,8 +113,8 @@ export default function AboutPage() {
         {/* Organizing Committee */}
         <OrganizingCommittee />
 
-        {/* Previous Conferences */}
-        <PreviousConferences />
+        {/* Previous Conferences: hidden for now (placeholder text). Turn on with showPreviousConferences in src/lib/utils.ts */}
+        {showPreviousConferences && <PreviousConferences />}
 
         <ConferenceCallToAction />
       </div>

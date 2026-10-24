@@ -63,3 +63,6 @@ export const paperSubmissionDeadlineLabel: string | null = 'July 31st 2027'
 export const earlyBirdDeadlineLabel = 'July 31st 2027'
 
 export const TO_BE_ANNOUNCED = 'To be announced'
+
+// About page "Previous Conferences" section: hidden until real write-ups replace the placeholder text
+export const showPreviousConferences: boolean = false
