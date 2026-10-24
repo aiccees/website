@@ -7,6 +7,7 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import Exhibitions from './exhibitions'
 import { participationTypes } from '../data_models/about-aiccees'
+import { conferenceYear, earlyBirdDeadlineLabel } from '@/lib/utils'
 
 
 
@@ -20,7 +21,7 @@ export default function ParticipationSection() {
         <div className="text-center space-y-4 mb-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">Conference Fees</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES 2026 will be open to all virtually and physically, however this will come with a determined fee.
+            Participation at AICCEES {conferenceYear} will be open to all virtually and physically, however this will come with a determined fee.
             Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all paid conference participants.
           </p>
           <div className="flex items-center justify-center space-x-2">
@@ -42,8 +43,8 @@ export default function ParticipationSection() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[40%] text-black">CATEGORY</TableHead>
-                  <TableHead className="text-black">EARLY-BIRD PAYMENT (Before July 31st 2026)</TableHead>
-                  <TableHead className="text-black">LATE PAYMENT (After July 31st 2026)</TableHead>
+                  <TableHead className="text-black">EARLY-BIRD PAYMENT (Before {earlyBirdDeadlineLabel})</TableHead>
+                  <TableHead className="text-black">LATE PAYMENT (After {earlyBirdDeadlineLabel})</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>

@@ -54,24 +54,24 @@ export const aicess = {
         id: 2,
         logo: logo2,
         number: "253",
-        description: "Abstract Submissions",
+        description: "Research Paper Submissions",
       },
       {
         id: 3,
         logo: logo3,
         number: "75",
-        description: "Full Papers Accepted",
+        description: "Full Research Papers Accepted",
       },
       {
         id: 4,
         logo: logo4,
         number: "89",
-        description: "Paper Presentations",
+        description: "Research Paper Presentations",
       },
       {
         id: 5,
         logo: logo5,
-        number: "14",
+        number: "10",
         description: "Panel Sessions",
       },
       {

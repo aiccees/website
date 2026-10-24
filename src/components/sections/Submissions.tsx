@@ -11,7 +11,7 @@ const info = [
   {
     id: 1,
     status: "red",
-    text: "Full Paper Submission",
+    text: "Research Paper Submission",
     date: paperSubmissionOpenLabel ?? TO_BE_ANNOUNCED,
     description: "Submission portal opens for all participants",
     icon: Calendar,
@@ -19,7 +19,7 @@ const info = [
   {
     id: 2,
     status: "amber",
-    text: "Full Paper Submission Deadline",
+    text: "Research Paper Submission Deadline",
     date: paperSubmissionDeadlineLabel ?? TO_BE_ANNOUNCED,
     description: "Final deadline for all research paper submissions",
     icon: Calendar,

@@ -33,13 +33,13 @@ export const conferenceVenue = 'Port Harcourt, Nigeria'
 export const conferenceStartDate: string | null = '2027-10-20T08:30:00+01:00'
 
 // Text shown on the site. Example: 'Sept. 23rd & 24th 2027'
-export const conferenceDateLabel: string | null = 'Oct. 20th & 21st 2027'
+export const conferenceDateLabel: string | null = 'October 20th & 21st 2027'
 
 // After this moment the homepage shows "Thank you for joining" instead of "Conference is Live!"
 export const conferenceEndDate: string | null = '2027-10-22T00:00:00+01:00'
 
 // Pre-conference events (Innovation Challenge pitch), shown on the Conference Date card
-export const preConferenceDateLabel: string | null = 'Oct. 18th & 19th 2027'
+export const preConferenceDateLabel: string | null = 'October 18th & 19th 2027'
 
 // Innovation Challenge: 'opening-soon', 'open' or 'closed'.
 // Controls the homepage banner, the homepage Innovation Challenge section and the Apply buttons.
@@ -56,7 +56,10 @@ export const innovationChallengeBanner =
 
 // Keynote speakers: change to true once the AICCEES 2027 speakers have been added
 export const keynoteSpeakersAnnounced: boolean = false
-export const paperSubmissionOpenLabel: string | null = null
-export const paperSubmissionDeadlineLabel: string | null = null
+export const paperSubmissionOpenLabel: string | null = 'November 1st 2026'
+export const paperSubmissionDeadlineLabel: string | null = 'July 31st 2027'
+
+// Conference fees: early-bird payment deadline (shown in the fees table)
+export const earlyBirdDeadlineLabel = 'July 31st 2027'
 
 export const TO_BE_ANNOUNCED = 'To be announced'
