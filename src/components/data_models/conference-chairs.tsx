@@ -4,6 +4,7 @@ import oghneruona from "@/public/images/conference-chairs/ruona.jpg"
 import oyedepo from "@/public/images/conference-chairs/oyedepo.jpg"
 import vero from "@/public/images/conference-chairs/verro.jpg"
 import mbohwa from "@/public/images/conference-chairs/charles-mbohwa.jpg"
+import ogueke from "@/public/images/conference-chairs/ogueke.jpg"
 
 export const conferenceChairInfo = [
     {
@@ -13,6 +14,14 @@ export const conferenceChairInfo = [
         school: "University of Port Harcourt",
         portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
         image: oghneruona
+    },
+    {
+        id: 6,
+        name: "Professor Nnamdi Ogueke",
+        role: "Conference Co-Chair",
+        school: "Federal University of Technology, Owerri",
+        portfolio: "Professor of Mechanical Engineering. \nTeam Lead, Solar Thermal Systems Research, Africa Centre of Excellence in Future Energies and Electrochemical Systems (ACE-FUELS).",
+        image: ogueke
     },
     {
         id: 2,
