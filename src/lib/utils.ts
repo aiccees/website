@@ -72,3 +72,7 @@ export const showPreviousConferences: boolean = false
 export const brochure2026Link = ''
 export const report2026Link = ''
 export const proceedings2026Link = ''
+
+// Programme page: false shows "The AICCEES 2027 programme will be published soon".
+// Change to true once the 2027 programme has been added to the page.
+export const programmePublished: boolean = false

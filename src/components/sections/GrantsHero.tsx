@@ -1,5 +1,6 @@
 import { Badge, EyeIcon, GiftIcon } from "lucide-react";
 import { Star } from "lucide-react";
+import { conferenceYear } from "@/lib/utils";
 
 export function GrantsHero() {
   return (
@@ -31,7 +32,7 @@ export function GrantsHero() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <GiftIcon className="w-4 h-4 mr-2" />
-              Grants for the AICCEES Conference 2026
+              AICCEES {conferenceYear} grants: details coming soon
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <EyeIcon className="w-4 h-4 mr-2" />
