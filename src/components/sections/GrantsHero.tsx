@@ -26,7 +26,7 @@ export function GrantsHero() {
 
           <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
             Access funding opportunities that drive impact, innovation, and
-            sustainable growth. Apply now and bring your ideas to life.
+            sustainable growth. Details for {conferenceYear} will be announced soon.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm">
