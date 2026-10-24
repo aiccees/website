@@ -8,11 +8,11 @@ import mbohwa from "@/public/images/conference-chairs/charles-mbohwa.jpg"
 export const conferenceChairInfo = [
     {
         id: 1,
-        name: "Professor Roland Uhunmwangho",
+        name: "Professor Ogheneruona Diemuodeke",
         role: "Conference Chair",
         school: "University of Port Harcourt",
-        portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
-        image: roland
+        portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
+        image: oghneruona
     },
     {
         id: 2,
@@ -32,14 +32,6 @@ export const conferenceChairInfo = [
     },
     {
         id: 4,
-        name: "Professor Ogheneruona Diemuodeke",
-        role: "Conference Co-Chair",
-        school: "University of Port Harcourt",
-        portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
-        image: oghneruona
-    },
-    {
-        id: 5,
         name: "Professor Charles Mbohwa",
         role: "Conference Co-Chair",
         school: "University of South Africa.",
@@ -47,10 +39,22 @@ export const conferenceChairInfo = [
         image: mbohwa
     },
     {
-        id: 6,
+        id: 5,
         name: "Dr. Veronica Akpasoh",
         role: "Conference Co-Chair",
         school: "CEO Tovero Energy Ltd.",
         image: vero
+    },
+]
+
+// AICCEES Advisory Council (more members to be added)
+export const advisoryCouncilInfo = [
+    {
+        id: 1,
+        name: "Professor Roland Uhunmwangho",
+        role: "Advisory Council Member",
+        school: "University of Port Harcourt",
+        portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
+        image: roland
     },
 ]
