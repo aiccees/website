@@ -1,4 +1,4 @@
-import { innovationChallengeStatus } from '@/lib/utils'
+import { innovationChallengeStatus, conferenceYear, preConferenceDateLabel, TO_BE_ANNOUNCED } from '@/lib/utils'
 
 export type FocusArea = {
   id: number
@@ -51,7 +51,7 @@ export const innovationProgramStages: ProgramStage[] = [
     id: 4,
     title: 'Live Pitch Session',
     description:
-      'Finalists deliver 5-minute pitches and Q&A during the Clean Energy Business Innovation and Mentorship Session at AICCEES 2026.',
+      `Finalists deliver 5-minute pitches and Q&A during the Clean Energy Business Innovation and Mentorship Session at the AICCEES ${conferenceYear} pre-conference.`,
   },
 ]
 
@@ -71,11 +71,12 @@ export const awardsAndBenefits = [
   'All finalists will be featured in the AICCEES Innovation Showcase Publication',
 ]
 
+// AICCEES 2027 timeline: replace TO_BE_ANNOUNCED with the real dates once they are fixed
 export const timelineItems = [
-  { label: 'Call for Innovators', date: '1st April 2026' },
-  { label: 'Shortlisting', date: '31st August 2026' },
-  { label: 'Mentorship Bootcamp', date: '1st-20th September 2026' },
-  { label: 'Live Pitch Session', date: '24th-25th September 2026' },
+  { label: 'Call for Innovators', date: TO_BE_ANNOUNCED },
+  { label: 'Shortlisting', date: TO_BE_ANNOUNCED },
+  { label: 'Mentorship Bootcamp', date: TO_BE_ANNOUNCED },
+  { label: 'Live Pitch Session', date: preConferenceDateLabel ?? TO_BE_ANNOUNCED },
 ]
 
 export const intellectualProperty = [
