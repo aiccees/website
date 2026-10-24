@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Calendar, Download, Circle } from "lucide-react";
 import AOS from "../layout/AOS";
-import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, preConferenceDateLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, preConferenceDateLabel, TO_BE_ANNOUNCED, brochure2026Link, report2026Link, proceedings2026Link } from "@/lib/utils";
 
 const info = [
   {
@@ -81,6 +81,31 @@ const getStatusColor = (status: string) => {
       return "text-gray-400";
   }
 };
+
+// A Conference Materials button: opens the document when a link is set.
+// With no link yet, it looks like the other buttons but does nothing when clicked.
+function MaterialButton({ href, label, className, showIcon = true }: { href: string; label: string; className: string; showIcon?: boolean }) {
+  const content = (
+    <>
+      {showIcon && <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />}
+      {label}
+    </>
+  );
+  if (!href) {
+    return (
+      <Button variant="outline" size="lg" type="button" aria-disabled="true" className={`w-full ${className} transition-colors group cursor-default`}>
+        {content}
+      </Button>
+    );
+  }
+  return (
+    <Link target="_blank" href={href}>
+      <Button variant="outline" size="lg" className={`w-full ${className} transition-colors group`}>
+        {content}
+      </Button>
+    </Link>
+  );
+}
 
 function Submissions() {
   return (
@@ -177,6 +202,11 @@ function Submissions() {
                     Conference Brochures
                   </h4>
                   <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={brochure2026Link}
+                      label="2026 Conference Brochure"
+                      className="bg-emerald-600 text-white hover:bg-emerald-500 border-emerald-400"
+                    />
                     <Link
                       target="_blank"
                       href="https://drive.google.com/file/d/1qwZicrxrCkvxRAsaOJ-htPuI2ivag9Kr/view?usp=drive_link"
@@ -225,6 +255,13 @@ function Submissions() {
                   <h4 className="text-white text-lg font-semibold">
                     Conference Reports
                   </h4>
+                  <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={report2026Link}
+                      label="2026 Conference Report"
+                      className="bg-white/90 text-green-900 hover:bg-white border-green-400"
+                    />
+                  </div>
                   <div className="flex flex-col gap-4">
                     <Link
                       href="https://drive.google.com/file/d/19ZK_LBP-h9x66k26Dn2NCa5twOLn3BFr/view?usp=drive_link"
@@ -280,6 +317,12 @@ function Submissions() {
                     Conference Proceedings
                   </h4>
                   <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={proceedings2026Link}
+                      label="4th Edition (2026) Proceedings"
+                      showIcon={false}
+                      className="bg-emerald-600 text-white hover:bg-emerald-500 border-emerald-400"
+                    />
                     <Link
                       href="https://www.scientific.net/book/the-3rd-africa-international-conference-on-clean-energy-and-energy-storage-aiccees/978-3-0364-3059-1"
                       target="_blank"
