@@ -237,7 +237,7 @@ function Submissions() {
                     </Link>
                     <Link
                       target="_blank"
-                      href="https://drive.google.com/file/d/1hfZu3e08-7X2kIs076ogpYEvNLTgxtj7/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1YmD8gAnF-ORh0zxfkX0tiJWmB6h8LuMa/view?usp=sharing"
                       download="Book_of_abstracts.pdf"
                     >
                       <Button

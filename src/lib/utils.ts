@@ -69,7 +69,7 @@ export const showPreviousConferences: boolean = false
 
 // Conference Materials (Call for Papers section): 2026 documents.
 // Paste each document's link between the quotes when it is ready. While empty, the button shows "coming soon" and does nothing.
-export const brochure2026Link = ''
+export const brochure2026Link = 'https://drive.google.com/file/d/1SpHgzTwEew8xIePlWVrEypGgADKgpiq0/view?usp=drive_link'
 export const report2026Link = ''
 export const proceedings2026Link = ''
 
