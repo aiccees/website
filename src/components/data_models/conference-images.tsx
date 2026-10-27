@@ -32,6 +32,57 @@ import cooking9 from '@/public/images/cooking-demonstration/cooking5.jpg'
 import cooking10 from '@/public/images/cooking-demonstration/IMG_2389.jpg'
 import cooking11 from '@/public/images/cooking-demonstration/IMG_2406.jpg'
 
+import gallery2026_01 from "@/public/images/gallery-2026/aiccees-2026-01.jpg"
+import gallery2026_02 from "@/public/images/gallery-2026/aiccees-2026-02.jpg"
+import gallery2026_03 from "@/public/images/gallery-2026/aiccees-2026-03.jpg"
+import gallery2026_04 from "@/public/images/gallery-2026/aiccees-2026-04.jpg"
+import gallery2026_05 from "@/public/images/gallery-2026/aiccees-2026-05.jpg"
+import gallery2026_06 from "@/public/images/gallery-2026/aiccees-2026-06.jpg"
+import gallery2026_07 from "@/public/images/gallery-2026/aiccees-2026-07.jpg"
+import gallery2026_08 from "@/public/images/gallery-2026/aiccees-2026-08.jpg"
+import gallery2026_09 from "@/public/images/gallery-2026/aiccees-2026-09.jpg"
+import gallery2026_10 from "@/public/images/gallery-2026/aiccees-2026-10.jpg"
+import gallery2026_11 from "@/public/images/gallery-2026/aiccees-2026-11.jpg"
+import gallery2026_12 from "@/public/images/gallery-2026/aiccees-2026-12.jpg"
+import gallery2026_13 from "@/public/images/gallery-2026/aiccees-2026-13.jpg"
+import gallery2026_14 from "@/public/images/gallery-2026/aiccees-2026-14.jpg"
+import gallery2026_15 from "@/public/images/gallery-2026/aiccees-2026-15.jpg"
+import gallery2026_16 from "@/public/images/gallery-2026/aiccees-2026-16.jpg"
+import gallery2026_17 from "@/public/images/gallery-2026/aiccees-2026-17.jpg"
+import gallery2026_18 from "@/public/images/gallery-2026/aiccees-2026-18.jpg"
+import gallery2026_19 from "@/public/images/gallery-2026/aiccees-2026-19.jpg"
+import gallery2026_20 from "@/public/images/gallery-2026/aiccees-2026-20.jpg"
+import gallery2026_21 from "@/public/images/gallery-2026/aiccees-2026-21.jpg"
+import gallery2026_22 from "@/public/images/gallery-2026/aiccees-2026-22.jpg"
+import gallery2026_23 from "@/public/images/gallery-2026/aiccees-2026-23.jpg"
+
+// AICCEES 2026 Highlights (the first five also appear in the homepage gallery slider)
+export const conference2026Images = [
+    { src: gallery2026_01, alt: "AICCEES 2026 photo 1" },
+    { src: gallery2026_02, alt: "AICCEES 2026 photo 2" },
+    { src: gallery2026_03, alt: "AICCEES 2026 photo 3" },
+    { src: gallery2026_04, alt: "AICCEES 2026 photo 4" },
+    { src: gallery2026_05, alt: "AICCEES 2026 photo 5" },
+    { src: gallery2026_06, alt: "AICCEES 2026 photo 6" },
+    { src: gallery2026_07, alt: "AICCEES 2026 photo 7" },
+    { src: gallery2026_08, alt: "AICCEES 2026 photo 8" },
+    { src: gallery2026_09, alt: "AICCEES 2026 photo 9" },
+    { src: gallery2026_10, alt: "AICCEES 2026 photo 10" },
+    { src: gallery2026_11, alt: "AICCEES 2026 photo 11" },
+    { src: gallery2026_12, alt: "AICCEES 2026 photo 12" },
+    { src: gallery2026_13, alt: "AICCEES 2026 photo 13" },
+    { src: gallery2026_14, alt: "AICCEES 2026 photo 14" },
+    { src: gallery2026_15, alt: "AICCEES 2026 photo 15" },
+    { src: gallery2026_16, alt: "AICCEES 2026 photo 16" },
+    { src: gallery2026_17, alt: "AICCEES 2026 photo 17" },
+    { src: gallery2026_18, alt: "AICCEES 2026 photo 18" },
+    { src: gallery2026_19, alt: "AICCEES 2026 photo 19" },
+    { src: gallery2026_20, alt: "AICCEES 2026 photo 20" },
+    { src: gallery2026_21, alt: "AICCEES 2026 photo 21" },
+    { src: gallery2026_22, alt: "AICCEES 2026 photo 22" },
+    { src: gallery2026_23, alt: "AICCEES 2026 photo 23" },
+]
+
 export const conferenceImages = [
     { src: conferencePics, alt: "Conference Image 1" },
     { src: conferencePics1, alt: "Conference Image 2" },
