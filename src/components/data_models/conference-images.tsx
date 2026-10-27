@@ -54,7 +54,6 @@ import gallery2026_19 from "@/public/images/gallery-2026/aiccees-2026-19.jpg"
 import gallery2026_20 from "@/public/images/gallery-2026/aiccees-2026-20.jpg"
 import gallery2026_21 from "@/public/images/gallery-2026/aiccees-2026-21.jpg"
 import gallery2026_22 from "@/public/images/gallery-2026/aiccees-2026-22.jpg"
-import gallery2026_23 from "@/public/images/gallery-2026/aiccees-2026-23.jpg"
 
 // AICCEES 2026 Highlights (the first five also appear in the homepage gallery slider)
 export const conference2026Images = [
@@ -80,7 +79,6 @@ export const conference2026Images = [
     { src: gallery2026_20, alt: "AICCEES 2026 photo 20" },
     { src: gallery2026_21, alt: "AICCEES 2026 photo 21" },
     { src: gallery2026_22, alt: "AICCEES 2026 photo 22" },
-    { src: gallery2026_23, alt: "AICCEES 2026 photo 23" },
 ]
 
 export const conferenceImages = [
