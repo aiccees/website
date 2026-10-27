@@ -52,7 +52,9 @@ function PersonCard({ person }: { person: Person }) {
     )
 }
 
-function PeopleSection({ title, subtitle, people }: { title: string; subtitle: string; people: Person[] }) {
+// Shows a heading and one or more rows of cards. Each row is centred on its own,
+// so a short row (like the Conference Chair alone) still looks balanced.
+function PeopleSection({ title, subtitle, groups }: { title: string; subtitle: string; groups: Person[][] }) {
     return (
         <div className="container mx-auto">
             <div className="text-center mb-10">
@@ -63,11 +65,14 @@ function PeopleSection({ title, subtitle, people }: { title: string; subtitle: s
                     {subtitle}
                 </p>
             </div>
-            {/* Cards are centred, so a short list (like the Advisory Council for now) still looks balanced */}
-            <div className="w-11/12 mx-auto flex flex-wrap justify-center gap-6">
-                {people.map((person) => (
-                    <div key={person.id} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                        <PersonCard person={person} />
+            <div className="space-y-6">
+                {groups.filter((group) => group.length > 0).map((group, index) => (
+                    <div key={index} className="w-11/12 mx-auto flex flex-wrap justify-center gap-6">
+                        {group.map((person) => (
+                            <div key={person.id} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                                <PersonCard person={person} />
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>
@@ -76,18 +81,21 @@ function PeopleSection({ title, subtitle, people }: { title: string; subtitle: s
 }
 
 export default function ConferenceChairs() {
+    // The Conference Chair gets a row of their own; the Co-Chairs follow in even rows
+    const chairs = conferenceChairInfo.filter((person) => person.role === "Conference Chair")
+    const coChairs = conferenceChairInfo.filter((person) => person.role !== "Conference Chair")
     return (
         <AOS>
             <section className="py-12 bg-white space-y-16">
                 <PeopleSection
                     title="AICCEES Advisory Council"
                     subtitle="Distinguished leaders providing strategic guidance to AICCEES"
-                    people={advisoryCouncilInfo}
+                    groups={[advisoryCouncilInfo]}
                 />
                 <PeopleSection
                     title="Conference Chairs"
                     subtitle="Meet our distinguished conference chairs"
-                    people={conferenceChairInfo}
+                    groups={[chairs, coChairs]}
                 />
             </section>
         </AOS>
