@@ -47,7 +47,7 @@ export const aicess = {
     {
         id: 1,
         logo: logo1,
-        number: "3,292",
+        number: "3,319",
         description: "Global Attendees",
       },
       {
