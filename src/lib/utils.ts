@@ -65,7 +65,7 @@ export const earlyBirdDeadlineLabel = 'July 31st 2027'
 export const TO_BE_ANNOUNCED = 'To be announced'
 
 // About page "Previous Conferences" section: hidden until real write-ups replace the placeholder text
-export const showPreviousConferences: boolean = false
+export const showPreviousConferences: boolean = true
 
 // Conference Materials (Call for Papers section): 2026 documents.
 // Paste each document's link between the quotes when it is ready. While empty, the button shows "coming soon" and does nothing.
