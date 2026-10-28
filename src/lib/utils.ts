@@ -57,7 +57,7 @@ export const innovationChallengeBanner =
 // Keynote speakers: change to true once the AICCEES 2027 speakers have been added
 export const keynoteSpeakersAnnounced: boolean = false
 export const paperSubmissionOpenLabel: string | null = 'November 1st 2026'
-export const paperSubmissionDeadlineLabel: string | null = 'July 31st 2027'
+export const paperSubmissionDeadlineLabel: string | null = 'May 31st 2027'
 
 // Conference fees: early-bird payment deadline (shown in the fees table)
 export const earlyBirdDeadlineLabel = 'July 31st 2027'
