@@ -21,8 +21,8 @@ export default function ParticipationSection() {
         <div className="text-center space-y-4 mb-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">Conference Fees</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES {conferenceYear} will be open to all virtually and physically, however this will come with a determined fee.
-            Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all paid conference participants.
+            Participation at AICCEES {conferenceYear} is free and open to all, virtually and physically. Participants who wish to receive a certificate
+            of participation, conference materials and meals will pay the applicable fee below. Paper presentation and publication also require payment.
           </p>
           <div className="flex items-center justify-center space-x-2">
             <Label htmlFor="currency">Show prices in NGN</Label>

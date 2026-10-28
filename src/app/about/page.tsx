@@ -16,7 +16,7 @@ import { participationTypes } from "@/components/data_models/about-aiccees";
 import { useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { conferenceYear, showPreviousConferences } from "@/lib/utils";
+import { conferenceYear, earlyBirdDeadlineLabel, showPreviousConferences } from "@/lib/utils";
 
 export default function AboutPage() {
   const [showNGN, setShowNGN] = useState(false)
@@ -39,8 +39,8 @@ export default function AboutPage() {
         <div className="text-center space-y-4 mb-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#AA0000]">About AICCEES {conferenceYear}</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES {conferenceYear} will be open to all virtually and physically, however this will come with a determined fee.
-            Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all paid conference participants.
+            Participation at AICCEES {conferenceYear} is free and open to all, virtually and physically. Participants who wish to receive a certificate
+            of participation, conference materials and meals will pay the applicable fee below. Paper presentation and publication also require payment.
           </p>
           <div className="flex items-center justify-center space-x-2">
             <Label htmlFor="currency">Show prices in NGN</Label>
@@ -60,8 +60,8 @@ export default function AboutPage() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[40%] text-black">CATEGORY</TableHead>
-                  <TableHead className="text-black">EARLY-BIRD PAYMENT</TableHead>
-                  <TableHead className="text-black">LATE PAYMENT</TableHead>
+                  <TableHead className="text-black">EARLY-BIRD PAYMENT (Before {earlyBirdDeadlineLabel})</TableHead>
+                  <TableHead className="text-black">LATE PAYMENT (After {earlyBirdDeadlineLabel})</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
