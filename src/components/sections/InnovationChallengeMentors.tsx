@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { UserRound, ArrowRight } from 'lucide-react'
 import AOS from '@/components/layout/AOS'
+import { conferenceYear } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
   innovationChallengeMentors,
@@ -135,7 +136,7 @@ const InnovationChallengeMentors = ({
               </h2>
               <p className="mt-3 text-gray-600">
                 Industry operators, researchers, and ecosystem builders guiding finalists on pitch,
-                market readiness, and impact models ahead of AICCEES 2026.
+                market readiness, and impact models ahead of AICCEES {conferenceYear}.
               </p>
             </div>
             {isHighlight ? (

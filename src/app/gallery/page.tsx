@@ -1,4 +1,4 @@
-import { conferenceImages, cookingImages } from "@/components/data_models/conference-images";
+import { conference2026Images, conferenceImages, cookingImages } from "@/components/data_models/conference-images";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import ConferenceCallToAction from "@/components/call-to-action";
@@ -19,7 +19,32 @@ export default function GalleryPage() {
 
                 <section className="space-y-8">
                     <h2 className="text-2xl text-center font-semibold relative inline-block left-1/2 -translate-x-1/2">
-                        <span className="bg-green-600 text-white px-6 py-2 rounded-full">Conference Highlights</span>
+                        <span className="bg-green-600 text-white px-6 py-2 rounded-full">AICCEES 2026 Highlights</span>
+                    </h2>
+                    <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {conference2026Images.map((image, index) => (
+                            <Card key={index} className="group overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1 duration-300">
+                                <div className="relative aspect-[4/3] overflow-hidden">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                        {/* <p className="text-sm font-medium">{image.alt}</p> */}
+                                    </div>
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="space-y-8">
+                    <h2 className="text-2xl text-center font-semibold relative inline-block left-1/2 -translate-x-1/2">
+                        <span className="bg-green-600 text-white px-6 py-2 rounded-full">AICCEES Through the Years</span>
                     </h2>
                     <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {conferenceImages.map((image, index) => (

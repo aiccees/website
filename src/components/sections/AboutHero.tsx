@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Star } from "lucide-react";
-import { conferenceVenue } from "@/lib/utils";
+import { conferenceVenue, conferenceDateLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
 
 export default function AboutHero() {
   return (
@@ -34,7 +34,7 @@ export default function AboutHero() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Calendar className="w-4 h-4 mr-2" />
-              September 24-25, 2026
+              {conferenceDateLabel ?? TO_BE_ANNOUNCED}
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />

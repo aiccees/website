@@ -24,6 +24,7 @@ import oduoza from "@/public/images/keynote_speakers/ChikeOduoza.jpg"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import AOS from '../layout/AOS'
+import { conferenceYear, keynoteSpeakersAnnounced } from '@/lib/utils'
 
 const SPEAKERS = [
     // 2026 Keynote Speakers
@@ -209,7 +210,14 @@ export function SpeakersSection() {
     <AOS>
       <section id="speakers" className="w-full py-12 md:py-24 bg-gradient-to-b from-green-700 to-green-900">
         <div className="container md:w-11/12 mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">Keynote Speakers</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">
+            {keynoteSpeakersAnnounced ? 'Keynote Speakers' : 'Previous Keynote Speakers'}
+          </h2>
+          {!keynoteSpeakersAnnounced && (
+            <p className="text-center text-green-50 text-base sm:text-lg -mt-4 mb-8">
+              AICCEES {conferenceYear} keynote speakers will be announced soon.
+            </p>
+          )}
           
           {/* Speakers Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -227,7 +235,7 @@ export function SpeakersSection() {
                     className="rounded-full w-32 h-32 mx-auto mb-4 object-cover"
                   />
                   <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-full font-semibold ${
-                    speaker.status === "current" ? "bg-green-600 text-white" : "bg-yellow-500 text-white"
+                    speaker.year === String(conferenceYear) ? "bg-green-600 text-white" : "bg-yellow-500 text-white"
                   }`}>
                     {`${speaker.year} Speaker`}
                   </span>

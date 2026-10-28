@@ -16,7 +16,7 @@ import herobg7 from '@/public/images/herobg7.jpg'
 import herobg8 from '@/public/images/herobg8.jpg'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
-import { innovationChallengeApplicationsClosed } from '../data_models/innovation-challenge'
+import { conferenceStartDate, conferenceEndDate, conferenceYear, conferenceTheme, innovationChallengeBanner } from '@/lib/utils'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -30,23 +30,50 @@ const BACKGROUND_IMAGES = [
   herobg8,
 ]
 
+// Shows "Date to be announced" until conferenceStartDate is set in src/lib/utils.ts,
+// then counts down to it automatically.
 function CountdownTimer() {
-  const targetDate = new Date('2026-09-24T00:00:00Z').getTime()
-  const [timeLeft, setTimeLeft] = useState(targetDate - Date.now())
+  if (!conferenceStartDate) {
+    return (
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-white text-sm min-[360px]:text-[15px] min-[390px]:text-base sm:text-xl md:text-2xl font-semibold bg-black/40 rounded-lg px-2.5 sm:px-6 py-2 sm:py-3 shadow-lg">
+        <Clock className="text-yellow-400 shrink-0 w-4 h-4 sm:w-6 sm:h-6" />
+        <span>AICCEES {conferenceYear} &middot; Date to be announced</span>
+      </div>
+    )
+  }
+  return <Countdown target={conferenceStartDate} />
+}
+
+function Countdown({ target }: { target: string }) {
+  const targetDate = new Date(target).getTime()
+  // The current time is only read in the visitor's browser, after the page loads.
+  // Reading it while the page is being built makes the server and the browser
+  // disagree (a "hydration" error), so until then the timer shows dashes.
+  const [now, setNow] = useState<number | null>(null)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeLeft(targetDate - Date.now())
-    }, 1000)
+    setNow(Date.now())
+    const interval = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(interval)
-  }, [targetDate])
+  }, [])
 
-  if (timeLeft <= 0) return <span className="text-2xl font-bold text-red-600">Conference is Live!</span>
+  const timeLeft = now === null ? null : targetDate - now
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
-  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24)
-  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60)
-  const seconds = Math.floor((timeLeft / 1000) % 60)
+  if (now !== null && timeLeft !== null && timeLeft <= 0) {
+    if (conferenceEndDate && now >= new Date(conferenceEndDate).getTime()) {
+      return (
+        <div className="flex items-center justify-center text-white text-sm min-[360px]:text-[15px] min-[390px]:text-base sm:text-xl md:text-2xl font-semibold bg-black/40 rounded-lg px-2.5 sm:px-6 py-2 sm:py-3 shadow-lg">
+          Thank you for joining AICCEES {conferenceYear}
+        </div>
+      )
+    }
+    return <span className="text-2xl font-bold text-red-600">Conference is Live!</span>
+  }
+
+  const days = timeLeft === null ? '--' : Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+  const hours = timeLeft === null ? '--' : Math.floor((timeLeft / (1000 * 60 * 60)) % 24)
+  const minutes = timeLeft === null ? '--' : Math.floor((timeLeft / (1000 * 60)) % 60)
+  const seconds = timeLeft === null ? '--' : Math.floor((timeLeft / 1000) % 60)
 
   return (
     <div className="flex items-center justify-center gap-2 text-white text-sm sm:text-lg md:text-2xl font-semibold bg-black/40 rounded-lg px-3 sm:px-4 py-2 shadow-lg">
@@ -93,13 +120,13 @@ export function HeroSection() {
         <div className="flex w-full flex-col items-center space-y-4 text-center">
           <div className="space-y-3 text-center mb-4">
             <p className="inline-flex rounded-full bg-red-600/90 px-4 py-1 text-xs sm:text-sm font-semibold text-white shadow-sm">
-              Innovation Challenge applications are now {innovationChallengeApplicationsClosed ? 'closed' : 'open'}
+              {innovationChallengeBanner}
             </p>
             <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
               Africa International Conference on Clean Energy & Energy Storage (AICCEES)
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-200 text-base sm:text-lg md:text-xl">
-            Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition 
+            {conferenceTheme} 
             </p>
           </div>
           <CountdownTimer />
