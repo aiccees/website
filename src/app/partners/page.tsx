@@ -4,8 +4,7 @@ import { partners } from "@/components/data_models/conferences";
 import { PartnersHero } from "@/components/sections/PartnersHero";
 import { Button } from "@/components/ui/button";
 import TestimonialV2 from "@/components/ui/testimonial-v2";
-import { ArrowRight, X } from "lucide-react";
-import Link from "next/link";
+import { X } from "lucide-react";
 import { useState } from "react";
 
 export default function PartnersPage() {
@@ -24,7 +23,7 @@ export default function PartnersPage() {
 
       <TestimonialV2 items={items} variant="logo" showHeading={false} />
 
-        <section className="container mx-auto pt-16 px-4">
+        <section className="container mx-auto pt-16 px-4 mb-12">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-2xl md:text-4xl text-green-800 font-bold text-center">
               Ready to Become a Partner?
