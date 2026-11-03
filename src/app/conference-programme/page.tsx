@@ -18,7 +18,7 @@ import AOS from "@/components/layout/AOS";
 import Image from "next/image";
 import conferencePics1 from "@/public/images/conference-pics/IMG_2257.jpg";
 import conferencePics2 from "@/public/images/conference-pics/IMG_2095.jpg";
-import { conferenceVenue } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceDateLabel, TO_BE_ANNOUNCED, programmePublished } from "@/lib/utils";
 
 export default function ConferenceProgramPage() {
   const conferencePrograms = [
@@ -93,12 +93,12 @@ export default function ConferenceProgramPage() {
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-green-100 mb-8">
-              Discover the comprehensive agenda for AICCEES 2026
+              Discover the comprehensive agenda for AICCEES {conferenceYear}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
-                <span>September 24-25, 2026</span>
+                <span>{conferenceDateLabel ?? TO_BE_ANNOUNCED}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
@@ -109,6 +109,9 @@ export default function ConferenceProgramPage() {
         </div>
       </section>
 
+      {/* The detailed agenda below is from 2026. It stays hidden until programmePublished is true (src/lib/utils.ts). */}
+      {programmePublished ? (
+        <>
       {/* Program Overview */}
       <AOS>
         <section className="py-16 bg-gray-50">
@@ -378,13 +381,32 @@ export default function ConferenceProgramPage() {
         </section>
       </AOS>
 
+        </>
+      ) : (
+        <AOS>
+          <section className="py-20 bg-gray-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl shadow-sm border border-green-100 px-6 py-12">
+                <Calendar className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-3">
+                  The AICCEES {conferenceYear} programme will be published soon
+                </h2>
+                <p className="text-gray-600">
+                  Check back here for the full agenda and session details.
+                </p>
+              </div>
+            </div>
+          </section>
+        </AOS>
+      )}
+
       {/* Call to Action */}
       <AOS>
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-                Ready to Join AICCEES 2026?
+                Ready to Join AICCEES {conferenceYear}?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Don&apos;t miss this opportunity to connect with industry leaders, learn from experts, 
@@ -396,7 +418,7 @@ export default function ConferenceProgramPage() {
                   size="lg"
                   className="bg-green-600 hover:bg-green-700 text-white"
                 >
-                  <a href="/registration">
+                  <a href="/registrations">
                     <Users className="w-5 h-5 mr-2" />
                     Register for Conference
                   </a>

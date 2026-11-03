@@ -1,154 +1,156 @@
 "use client"
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card'
-import Image from 'next/image'
 import AOS from '../layout/AOS'
+import {
+  BatteryCharging,
+  CarFront,
+  CookingPot,
+  Cpu,
+  Factory,
+  Flame,
+  Landmark,
+  Lightbulb,
+  PlugZap,
+  Recycle,
+  ShieldCheck,
+  Sun,
+  type LucideIcon,
+} from 'lucide-react'
 
-const themes = [
-	{
-		title: 'Energy Access, Supply & Transition Pathways',
-		image: '/images/conference-theme-icons/Energy Access anfd Transition Pathways.png',
-		bullets: [
-			'Universal access (grid, mini-grids, stand-alone systems)',
-			'Policy, governance, and enabling regulations',
-			'Energy transition finance and investment models',
-		],
-	},
-	{
-		title: 'Renewable Energy Systems & Productive Use',
-		image: '/images/conference-theme-icons/Renewable Energy Systems & Productive Use.png',
-		bullets: [
-			'Solar, wind, hydro, geothermal innovations',
-			'Productive use of energy in agriculture, industry, and services',
-			'Energy-water-food nexus',
-		],
-	},
-	{
-		title: 'Hydrogen, Biofuels & Clean Fuels for Africa',
-		image: '/images/conference-theme-icons/Hydrogen and biofuels for clean energy.png',
-		bullets: [
-			'Hydrogen economy opportunities',
-			'Bioenergy and biofuels for transport and industry',
-			'CNG, LNG, and other transition fuels',
-		],
-	},
-	{
-		title: 'Energy Storage, Smart Grids & Digital Solutions',
-		image: '/images/conference-theme-icons/Energy Storage Smart Grid.png',
-		bullets: [
-			'Battery manufacturing & recycling in Africa',
-			'Grid integration, flexibility, and digital energy systems',
-			'AI, IoT, and blockchain for energy efficiency',
-		],
-	},
-	{
-		title: 'Clean Cooking, Health & Social Inclusion',
-		image: '/images/conference-theme-icons/Clean Cooking.png',
-		bullets: [
-			'E-cooking, LPG, and modern cooking fuels',
-			'Gender, health, and social impacts of clean cooking',
-			'Financing and scaling adoption',
-		],
-	},
-	{
-		title: 'Sustainable Mobility & Transport Decarbonization',
-		image: '/images/conference-theme-icons/Sustainable Mobility.png',
-		bullets: [
-			'Electric vehicles (EVs), charging infrastructure, e-mobility',
-			'CNG for transport and hybrid systems',
-			'Policies for clean, affordable mobility',
-		],
-	},
-	{
-		title: 'Waste-to-Energy, Circular Economy & Carbon Markets',
-		image: '/images/conference-theme-icons/Waste to Energy.png',
-		bullets: [
-			'Waste valorization for energy',
-			'Recycling, e-waste, and circular economy approaches',
-			'Carbon credits and climate finance mechanisms',
-		],
-	},
-	{
-		title: 'Climate Change, Adaptation & Resilience in Africa',
-		image: '/images/conference-theme-icons/Climate change and Resilience.png',
-		bullets: [
-			'Energy solutions for climate adaptation',
-			'Resilient infrastructure for vulnerable communities',
-			'Role of youth and innovation in climate action',
-		],
-	},
-	{
-		title: 'Hydropower & Agri-food Systems',
-		image: '/images/conference-theme-icons/Hydropower and agric-food Systems.png',
-		bullets: [
-			'Small- and large-scale hydro development',
-			'Energy for irrigation, processing, and storage',
-			'Reducing post-harvest losses with clean energy',
-		],
-	},
-	{
-		title: 'Policy, Capacity Building & Just Energy Transition',
-		image: '/images/conference-theme-icons/Policy, Capacity & Just Transition.png',
-		bullets: [
-			'Skills development for Africa’s energy workforce',
-			'Equity, inclusion, and just transition principles',
-			'Strengthening academia-industry-government collaboration',
-		],
-	},
+// The twelve thematic areas, from the AICCEES 2027 Information Booklet.
+const themes: { title: string; icon: LucideIcon; description: string }[] = [
+  {
+    title: 'Energy Access, Reliability and Productive Use',
+    icon: PlugZap,
+    description:
+      'Universal access, mini-grids, small hydropower, distributed energy and rural electrification. Energy for healthcare, education, agriculture and MSMEs.',
+  },
+  {
+    title: 'Renewable Energy Manufacturing and African Industrialisation',
+    icon: Factory,
+    description:
+      'African manufacture of solar modules, inverters, balance-of-system components, wind technologies and clean energy appliances. Supply chains, local content and quality assurance.',
+  },
+  {
+    title: 'Energy Storage, Battery Value Chains and Critical Minerals',
+    icon: BatteryCharging,
+    description:
+      'Battery technologies and long-duration storage; mineral beneficiation; local assembly; testing and standards; recycling and second-life batteries.',
+  },
+  {
+    title: 'Next-Generation Solar and Emerging Clean Energy Technologies',
+    icon: Sun,
+    description:
+      'Perovskites, organic photovoltaics, tandem cells and advanced materials. Emerging storage, smart energy materials and routes from laboratory to product.',
+  },
+  {
+    title: 'Grid Modernisation, Digital Energy and Artificial Intelligence',
+    icon: Cpu,
+    description:
+      'Smart grids, forecasting, demand response, flexibility, advanced metering and digital twins. AI, IoT, cybersecurity and data-driven energy planning.',
+  },
+  {
+    title: 'Clean Cooking, Household Energy and Inclusive Energy Transition',
+    icon: CookingPot,
+    description:
+      'Electric cooking, LPG, biogas, ethanol and improved cooking systems. Appliance finance, carbon finance, health, gender and underserved households.',
+  },
+  {
+    title: 'Sustainable Mobility, Electric Transport and Clean Fuels',
+    icon: CarFront,
+    description:
+      'Electric vehicles, two- and three-wheelers, public transport, battery swapping and charging. Mobility manufacturing, CNG, biofuels and hydrogen mobility.',
+  },
+  {
+    title: 'Hydrogen, Gas Transition and Industrial Decarbonisation',
+    icon: Flame,
+    description:
+      'Green and turquoise hydrogen, methane pyrolysis, gas utilisation and flare conversion. Industrial heat, fertiliser, steel, cement and hard-to-abate sectors.',
+  },
+  {
+    title: 'Circular Economy, Waste-to-Energy and Carbon Value Creation',
+    icon: Recycle,
+    description:
+      'Waste valorisation, biomass, biochar, biogas, e-waste and industrial symbiosis. Circular manufacturing, carbon utilisation and carbon markets.',
+  },
+  {
+    title: 'Climate Resilience, Energy Security and Resilient Infrastructure',
+    icon: ShieldCheck,
+    description:
+      'Climate-proof energy systems, extreme weather resilience and disaster preparedness. The water-energy-food nexus, resilient cities and energy security.',
+  },
+  {
+    title: 'Research Commercialisation, Innovation and Academia\u2013Industry Partnership',
+    icon: Lightbulb,
+    description:
+      'Technology transfer, university spin-outs, intellectual property, prototypes and industry-sponsored research. Innovation finance and testing centres.',
+  },
+  {
+    title: 'Finance, Policy, Regional Markets and a Just Energy Transition',
+    icon: Landmark,
+    description:
+      'Blended, local currency and carbon finance; policy reform and standards. Regional electricity markets, AfCFTA opportunities, skills, jobs, gender and youth.',
+  },
 ]
 
 const ConferenceThemes = () => {
-	return (
-		<AOS>
-			<section id="themes" className="w-full bg-green-50 py-12 md:pb-24">
-				<div className="container md:w-11/12 mx-auto px-4 md:px-6">
-					<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-green-600">
-						Conference Themes
-					</h2>
-					<p className="text-gray-500 mb-8">
-						The scope of the Africa International Conference on Clean Energy and
-						Energy Storage (AICCEES) includes contemporary and original research,
-						as well as innovative solutions for the clean energy sector and energy
-						storage systems. Manuscripts which cut across the conference sub-themes
-						should be between 6 to 12 pages, including references. Once submitted,
-						papers are promptly forwarded to our reviewers, with decisions typically
-						provided within 48 hours. The sub-themes are:
-					</p>
+  return (
+    <AOS>
+      <section id="themes" className="w-full bg-green-50 py-12 md:pb-24">
+        <div className="container md:w-11/12 mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-green-600">
+            Conference Thematic Areas
+          </h2>
+          <p className="text-gray-500 mb-8">
+            The scope of the Africa International Conference on Clean Energy and
+            Energy Storage (AICCEES) includes contemporary and original research,
+            as well as innovative solutions for the clean energy sector and energy
+            storage systems. The twelve thematic areas below guide paper
+            submissions, panels, demonstrations and partnership proposals; the
+            final programme may combine related topics into sessions. Manuscripts
+            should be between 6 to 12 pages, including references. Once submitted,
+            papers are promptly forwarded to our reviewers, with decisions typically
+            provided within 48 hours.
+          </p>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{themes.map((theme) => (
-							<Card
-								key={theme.title}
-								className={`border hover:shadow-lg transition-shadow duration-200`}
-							>
-								<CardHeader>
-									<div className="flex flex-col items-center gap-1">
-										<div className="w-32 h-32 relative flex-shrink-0">
-											<Image
-												src={theme.image}
-												alt={theme.title}
-												fill
-												className="object-contain"
-											/>
-										</div>
-										<CardTitle className="text-center">
-											{theme.title}
-										</CardTitle>
-									</div>
-								</CardHeader>
-								<CardContent>
-									<ul className="mt-2 text-sm space-y-1 list-disc list-inside">
-										{theme.bullets.map((b, i) => (
-											<li key={i}>{b}</li>
-										))}
-									</ul>
-								</CardContent>
-							</Card>
-						))}
-					</div>
-				</div>
-			</section>
-		</AOS>
-	)
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {themes.map((theme, index) => {
+              const Icon = theme.icon
+              return (
+                <Card
+                  key={theme.title}
+                  className="border hover:shadow-lg transition-shadow duration-200"
+                >
+                  <CardHeader>
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-20 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-10 h-10" strokeWidth={1.5} aria-hidden="true" />
+                      </div>
+                      <CardTitle className="text-center text-lg leading-snug">
+                        <span className="text-green-700">{index + 1}.</span> {theme.title}
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      {theme.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+
+          <p className="text-gray-500 mt-8">
+            We encourage work that combines technical evidence with implementation
+            conditions. Affordability, local skills, ownership, gender inclusion,
+            environmental performance and the needs of underserved communities
+            should be considered wherever relevant.
+          </p>
+        </div>
+      </section>
+    </AOS>
+  )
 }
 
 export default ConferenceThemes

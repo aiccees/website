@@ -61,10 +61,11 @@ const tiers: Tier[] = [
     {
         name: "Research Paper",
         description: "Sponsor researchers to attend and publish with full recognition",
+        // NGN price is per researcher resident in Nigeria; USD price is per researcher resident outside Nigeria
         priceUSD: 2000,
-        priceNGN: 3000000,
+        priceNGN: 700000,
         benefits: [
-            "Companies and organisations can sponsor 15-20 researchers to attend the conference and publish their papers and receive recognition for it.",
+            "Companies and organisations can sponsor researchers to attend the conference, present their papers and have them published.",
             "The sponsorship will cover transportation, accommodation, conference attendance fee, and publication fee of the researcher.",
             "The sponsor will be highlighted on all media platforms and will receive a recognition award."
         ]

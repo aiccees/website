@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster"
 import WhatsappLive from "@/components/WhatsappLive";
 import CookieConsent from "@/components/CookieConsent";
+import { conferenceTheme, conferenceYear, conferenceVenue, conferenceStartDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aiccees.com'),
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     default: "Africa International Conference on Clean Energy & Energy Storage",
     template: "%s | AICCEES",
   },
-  description: "Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition",
+  description: conferenceTheme,
   keywords: [
     "Clean Energy Conference",
     "Energy Storage",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://aiccees.com",
     siteName: "AICCEES",
     title: "Africa International Conference on Clean Energy & Energy Storage",
-    description: "Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition",
+    description: conferenceTheme,
     images: [
       {
         url: "/images/herobg2.jpg",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Africa International Conference on Clean Energy & Energy Storage",
-    description: "Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition",
+    description: conferenceTheme,
     creator: "@ToveroEnergy",
     images: ["/images/herobg2.jpg"],
   },
@@ -88,20 +89,17 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "Africa International Conference on Clean Energy & Energy Storage",
-  description: "Advancing Africa’s Clean Energy Future: Integrated Pathways for Access, Innovation, and a Just Transition",
-  startDate: "2026-09-25",
-  endDate: "2026-09-26",
+  name: `Africa International Conference on Clean Energy & Energy Storage (AICCEES ${conferenceYear})`,
+  description: conferenceTheme,
+  startDate: conferenceStartDate,
   location: {
     "@type": "Place",
-    name: "University of Port Harcourt",
+    name: conferenceVenue,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "University of Port Hacourt",
       addressLocality: "Port Harcourt",
       addressRegion: "Rivers",
-      postalCode: "Postal Code",
-      addressCountry: "Nigeria"
+      addressCountry: "NG"
     }
   },
   organizer: {
@@ -120,10 +118,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {/* Event details for Google: only published once the 2027 start date is set */}
+        {conferenceStartDate && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+        )}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* <link rel="manifest" href="/manifest.json" /> */}

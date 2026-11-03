@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Calendar, Download, Circle } from "lucide-react";
 import AOS from "../layout/AOS";
-import { conferenceVenue } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceEdition, conferenceDateLabel, paperSubmissionOpenLabel, paperSubmissionDeadlineLabel, preConferenceDateLabel, TO_BE_ANNOUNCED, brochure2026Link, report2026Link, proceedings2026Link } from "@/lib/utils";
 
 const info = [
   {
     id: 1,
     status: "red",
-    text: "Full Paper Submission",
-    date: "Jan. 1st 2026",
+    text: "Research Paper Submission",
+    date: paperSubmissionOpenLabel ?? TO_BE_ANNOUNCED,
     description: "Submission portal opens for all participants",
     icon: Calendar,
   },
   {
     id: 2,
     status: "amber",
-    text: "Full Paper Submission Deadline",
-    date: "July 31st 2026",
+    text: "Research Paper Submission Deadline",
+    date: paperSubmissionDeadlineLabel ?? TO_BE_ANNOUNCED,
     description: "Final deadline for all research paper submissions",
     icon: Calendar,
   },
@@ -28,16 +28,18 @@ const info = [
     id: 3,
     status: "green",
     text: "Conference Date",
-    date: "Sept. 24th & 25th 2026",
-    description:
-      "Two days of inspiring presentations, networking, and exhibitions",
+    date: conferenceDateLabel ?? TO_BE_ANNOUNCED,
+    description: "Two days of inspiring presentations, networking, and exhibitions",
+    note: preConferenceDateLabel
+      ? `Pre-conference events (Clean Energy Innovation Challenge pitch): ${preConferenceDateLabel}`
+      : null,
     icon: Calendar,
   },
   {
     id: 4,
     status: "black",
     text: "Conference Venue",
-    date: "Sept. 24th & 25th 2026",
+    date: null,
     description: conferenceVenue,
     icon: Calendar,
   },
@@ -80,6 +82,31 @@ const getStatusColor = (status: string) => {
   }
 };
 
+// A Conference Materials button: opens the document when a link is set.
+// With no link yet, it looks like the other buttons but does nothing when clicked.
+function MaterialButton({ href, label, className, showIcon = true }: { href: string; label: string; className: string; showIcon?: boolean }) {
+  const content = (
+    <>
+      {showIcon && <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />}
+      {label}
+    </>
+  );
+  if (!href) {
+    return (
+      <Button variant="outline" size="lg" type="button" aria-disabled="true" className={`w-full ${className} transition-colors group cursor-default`}>
+        {content}
+      </Button>
+    );
+  }
+  return (
+    <Link target="_blank" href={href}>
+      <Button variant="outline" size="lg" className={`w-full ${className} transition-colors group`}>
+        {content}
+      </Button>
+    </Link>
+  );
+}
+
 function Submissions() {
   return (
     <AOS>
@@ -97,7 +124,7 @@ function Submissions() {
                 variants={itemVariants}
                 className="text-green-300 text-base tracking-wider uppercase "
               >
-                AICCEES 2026 - <span className="normal-case">4th Edition</span>
+                AICCEES {conferenceYear} - <span className="normal-case">{conferenceEdition}</span>
               </motion.p>
               <motion.h2
                 variants={itemVariants}
@@ -133,10 +160,12 @@ function Submissions() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
-                      <item.icon className="w-4 h-4" />
-                      <p className="text-sm">{item.date}</p>
-                    </div>
+                    {item.date && (
+                      <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
+                        <item.icon className="w-4 h-4" />
+                        <p className="text-sm">{item.date}</p>
+                      </div>
+                    )}
                     {item.description &&
                       (item.id === 4 ? (
                         <>
@@ -152,6 +181,9 @@ function Submissions() {
                           {item.description}
                         </p>
                       ))}
+                    {item.note && (
+                      <p className="text-gray-200 text-sm">{item.note}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -170,6 +202,11 @@ function Submissions() {
                     Conference Brochures
                   </h4>
                   <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={brochure2026Link}
+                      label="2026 Conference Brochure"
+                      className="bg-emerald-600 text-white hover:bg-emerald-500 border-emerald-400"
+                    />
                     <Link
                       target="_blank"
                       href="https://drive.google.com/file/d/1qwZicrxrCkvxRAsaOJ-htPuI2ivag9Kr/view?usp=drive_link"
@@ -200,7 +237,7 @@ function Submissions() {
                     </Link>
                     <Link
                       target="_blank"
-                      href="https://drive.google.com/file/d/1hfZu3e08-7X2kIs076ogpYEvNLTgxtj7/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1YmD8gAnF-ORh0zxfkX0tiJWmB6h8LuMa/view?usp=sharing"
                       download="Book_of_abstracts.pdf"
                     >
                       <Button
@@ -218,6 +255,13 @@ function Submissions() {
                   <h4 className="text-white text-lg font-semibold">
                     Conference Reports
                   </h4>
+                  <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={report2026Link}
+                      label="2026 Conference Report"
+                      className="bg-white/90 text-green-900 hover:bg-white border-green-400"
+                    />
+                  </div>
                   <div className="flex flex-col gap-4">
                     <Link
                       href="https://drive.google.com/file/d/19ZK_LBP-h9x66k26Dn2NCa5twOLn3BFr/view?usp=drive_link"
@@ -273,6 +317,12 @@ function Submissions() {
                     Conference Proceedings
                   </h4>
                   <div className="flex flex-col gap-4">
+                    <MaterialButton
+                      href={proceedings2026Link}
+                      label="4th Edition (2026) Proceedings"
+                      showIcon={false}
+                      className="bg-emerald-600 text-white hover:bg-emerald-500 border-emerald-400"
+                    />
                     <Link
                       href="https://www.scientific.net/book/the-3rd-africa-international-conference-on-clean-energy-and-energy-storage-aiccees/978-3-0364-3059-1"
                       target="_blank"

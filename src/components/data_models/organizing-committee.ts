@@ -6,69 +6,29 @@ export interface OrganizingCommitteeMember {
   image?: string;
 }
 
+// AICCEES 2027 Organising Committee, in the same order as the Information Booklet.
+// (The Conference Chair and Co-Chairs have their own section on the About page.)
+// Former members' photos are still in public/images/organizing-cttee if needed again.
 export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
   {
     id: "1",
-    name: "Dr. Veronica Akpasoh",
-    role: "Chairman",
-    affiliation: "CEO, Tovero Energy Ltd",
-    image: "/images/conference-chairs/verro.jpg"
-
-  },
-  {
-    id: "2",
     name: "Engr. Anthony Akpasoh",
-    role: "Co-Chairman",
+    role: "Convener, AICCEES",
     affiliation: "COO, Tovero Energy Ltd",
     image: "/images/organizing-cttee/anthony.jpg"
   },
   {
+    id: "2",
+    name: "Dr. Veronica Akpasoh",
+    role: "Chairman, Organising Committee",
+    affiliation: "CEO, Tovero Energy Ltd",
+    image: "/images/conference-chairs/verro.jpg"
+  },
+  {
     id: "3",
-    name: "Peace Esuuk Ikpokonte",
-    role: "Technicals and Logistics",
-    image: "/images/organizing-cttee/esuuk.jpeg",
-    affiliation: "Projects Coordinator, Tovero Energy Ltd"
-  },
-  {
-    id: "5",
-    name: "Nathaniel Essien",
-    role: "AICCEES Conference Manager",
-    affiliation: "Conference Management",
-    image: "/images/organizing-cttee/NATHANDIEL.jpg"
-  },
-  {
-    id: "4",
-    name: "Uwem Johnson",
-    role: "Lead, Partnerships",
-    affiliation: "Head of Partnerships, Tovero Energy",
-    image: "/images/organizing-cttee/uwem2.jpg"
-  },
- 
-  {
-    id: "6",
-    name: "Peace Godwin",
-    role: "Secretary",
-    affiliation: "Secretariat, Tovero Energy",
-    image: "/images/organizing-cttee/peace-monday.png"
-  },
-  {
-    id: "7",
-    name: "Emmanuel Brendan",
-    role: "Branding and Design",
-    affiliation: "Brand Designer, Tovero Energy",
-    image: "/images/organizing-cttee/emma.jpeg"
-  },
-  {
-    id: "12",
-    name: "Kentimfon  Akpan",
-    role: "M and E Officer",
+    name: "Peace Monday",
+    role: "Conference Manager",
     affiliation: "Tovero Energy",
-    image: "/images/organizing-cttee/kentimfon.jpeg"
-  },
-  // {
-  //   id: "8",
-  //   name: "Legacy TV",
-  //   role: "Media",
-  //   affiliation: "Media Partner"
-  // }
-]; 
+    image: "/images/organizing-cttee/peace-monday.jpg"
+  }
+];

@@ -4,15 +4,33 @@ import oghneruona from "@/public/images/conference-chairs/ruona.jpg"
 import oyedepo from "@/public/images/conference-chairs/oyedepo.jpg"
 import vero from "@/public/images/conference-chairs/verro.jpg"
 import mbohwa from "@/public/images/conference-chairs/charles-mbohwa.jpg"
+import ogueke from "@/public/images/conference-chairs/ogueke.jpg"
+import asare from "@/public/images/conference-chairs/asare.jpg"
 
 export const conferenceChairInfo = [
     {
         id: 1,
-        name: "Professor Roland Uhunmwangho",
+        name: "Professor Ogheneruona Diemuodeke",
         role: "Conference Chair",
         school: "University of Port Harcourt",
-        portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
-        image: roland
+        portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
+        image: oghneruona
+    },
+    {
+        id: 6,
+        name: "Professor Nnamdi Ogueke",
+        role: "Conference Co-Chair",
+        school: "Federal University of Technology, Owerri",
+        portfolio: "Professor of Mechanical Engineering. \nTeam Lead, Solar Thermal Systems Research, Africa Centre of Excellence in Future Energies and Electrochemical Systems (ACE-FUELS).",
+        image: ogueke
+    },
+    {
+        id: 7,
+        name: "Dr. Joseph Asare",
+        role: "Conference Co-Chair",
+        school: "University of Ghana, Legon",
+        portfolio: "Senior Lecturer, Department of Physics, University of Ghana. \nAfrica Oxford Initiative (AfOx) Visiting Fellow, Merton College, University of Oxford.",
+        image: asare
     },
     {
         id: 2,
@@ -32,14 +50,6 @@ export const conferenceChairInfo = [
     },
     {
         id: 4,
-        name: "Professor Ogheneruona Diemuodeke",
-        role: "Conference Co-Chair",
-        school: "University of Port Harcourt",
-        portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
-        image: oghneruona
-    },
-    {
-        id: 5,
         name: "Professor Charles Mbohwa",
         role: "Conference Co-Chair",
         school: "University of South Africa.",
@@ -47,10 +57,22 @@ export const conferenceChairInfo = [
         image: mbohwa
     },
     {
-        id: 6,
+        id: 5,
         name: "Dr. Veronica Akpasoh",
         role: "Conference Co-Chair",
         school: "CEO Tovero Energy Ltd.",
         image: vero
+    },
+]
+
+// AICCEES Advisory Council (more members to be added)
+export const advisoryCouncilInfo = [
+    {
+        id: 1,
+        name: "Professor Roland Uhunmwangho",
+        role: "Advisory Council Member",
+        school: "University of Port Harcourt",
+        portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
+        image: roland
     },
 ]

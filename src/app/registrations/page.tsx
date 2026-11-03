@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import AOS from "@/components/layout/AOS";
 import { useRouter } from "next/navigation";
-import { conferenceVenue } from "@/lib/utils";
+import { conferenceVenue, conferenceYear, conferenceDateLabel, TO_BE_ANNOUNCED } from "@/lib/utils";
 
 export default function RegistrationPage() {
   const [aiccees2026Registration, setAiccees2026Registration] = useState(true);
@@ -25,7 +25,7 @@ export default function RegistrationPage() {
   const router = useRouter();
   // Form URLs - replace with actual URLs
   const registrationFormUrl =
-    "https://forms.office.com/r/g2urRDaq4P";
+    "https://forms.cloud.microsoft/r/yP0WZvbU8g?embed=true";
   const visaFormUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLScmC2LPj6Jtw7w6N9Lm9YpP7ge6DiVlSRlEZ5RSWsYaGt5SUg/viewform";
   // const scientificCommitteeFormUrl =
@@ -73,7 +73,7 @@ export default function RegistrationPage() {
                     </div>
                   </div>
                   <CardTitle className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
-                    AICCEES 2026 Registration
+                    AICCEES {conferenceYear} Registration
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -81,7 +81,7 @@ export default function RegistrationPage() {
                     <div className="flex flex-col lg:flex-row gap-4 justify-between text-sm text-neutral-600 dark:text-neutral-400">
                       <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                         <Calendar className="w-4 h-4" />
-                        <p>September 24-25, 2026</p>
+                        <p>{conferenceDateLabel ?? TO_BE_ANNOUNCED}</p>
                       </div>
                       <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                         <MapPin className="w-4 h-4" />
@@ -196,7 +196,7 @@ export default function RegistrationPage() {
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                 {aiccees2026Registration &&
-                  "Please fill out the form below to complete your registration for the AICCEES Conference 2026."}{" "}
+                  `Please fill out the form below to complete your registration for the AICCEES Conference ${conferenceYear}.`}{" "}
                 {aiccees2026ScientificCommittee &&
                   "Please fill out the form below to complete your registration for the Scientific Committee Membership Application."}
               </p>

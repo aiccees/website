@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CarFront, CalendarDays, Trophy, ShieldCheck, Lock } from 'lucide-react'
+import { ArrowRight, CarFront, CalendarDays, Trophy, ShieldCheck, Lock, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import AOS from '@/components/layout/AOS'
@@ -16,11 +16,12 @@ import {
   intellectualProperty,
   timelineItems,
 } from '@/components/data_models/innovation-challenge'
+import { conferenceYear, innovationChallengeStatus } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Innovation Challenge',
   description:
-    'AICCEES 2026 Clean Energy Innovation Challenge for startups, SMEs, researchers, and innovators across Africa.',
+    `AICCEES ${conferenceYear} Clean Energy Innovation Challenge for startups, SMEs, researchers, and innovators across Africa.`,
 }
 
 export default function InnovationChallengePage() {
@@ -35,14 +36,14 @@ export default function InnovationChallengePage() {
             <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
               <div>
                 <p className="inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-1 text-xs md:text-sm font-semibold tracking-wide">
-                  AICCEES 2026 CLEAN ENERGY INNOVATION CHALLENGE
+                  AICCEES {conferenceYear} CLEAN ENERGY INNOVATION CHALLENGE
                 </p>
                 <h1 className="mt-5 text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl">
                   Accelerating climate and clean energy innovators across Africa
                 </h1>
                 <p className="mt-5 text-green-50 text-base md:text-lg max-w-3xl block lg:hidden">
                   Showcase your innovation, receive mentorship, and pitch to technical reviewers, investors, and
-                  ecosystem leaders at AICCEES 2026.
+                  ecosystem leaders at AICCEES {conferenceYear}.
                 </p>
 
                 <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row">
@@ -53,7 +54,12 @@ export default function InnovationChallengePage() {
                     disabled={innovationChallengeApplicationsClosed}
                   >
                     <Link href={innovationChallengeApplicationsClosed ? '#' : innovationChallengeLink} target="_blank" tabIndex={innovationChallengeApplicationsClosed ? -1 : 0}>
-                      {innovationChallengeApplicationsClosed ? (
+                      {innovationChallengeStatus === 'opening-soon' ? (
+                        <>
+                          Applications opening soon
+                          <Clock className="ml-2 h-4 w-4" />
+                        </>
+                      ) : innovationChallengeApplicationsClosed ? (
                         <>
                           Application form closed
                           <Lock className="ml-2 h-4 w-4" />
@@ -117,7 +123,7 @@ export default function InnovationChallengePage() {
           <div className="container w-11/12 mx-auto px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-green-700 text-center">Focus Areas</h2>
             <p className="mt-3 text-gray-600 text-center max-w-3xl mx-auto">
-              Innovations align with AICCEES 2026 thematic areas.
+              Innovations align with AICCEES {conferenceYear} thematic areas.
             </p>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {focusAreas.map((area) => (
@@ -208,7 +214,26 @@ export default function InnovationChallengePage() {
                 <CardTitle className="text-green-800 text-2xl">How to Submit</CardTitle>
               </CardHeader>
               <CardContent>
-                {innovationChallengeApplicationsClosed ? (
+                {innovationChallengeStatus === 'opening-soon' ? (
+                  <>
+                    <div className="flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
+                      <Clock className="mt-0.5 h-5 w-5 shrink-0 text-amber-700" />
+                      <div>
+                        <p className="font-semibold text-amber-800">Applications opening soon</p>
+                        <p className="mt-1 text-sm text-amber-700">
+                          The call for innovators for AICCEES {conferenceYear} will open soon. Check back here for the application form.
+                        </p>
+                      </div>
+                    </div>
+                    <Button
+                      disabled
+                      className="mt-4 w-full sm:w-auto cursor-not-allowed bg-gray-300 text-gray-500 hover:bg-gray-300"
+                    >
+                      Opening soon
+                      <Clock className="ml-2 h-4 w-4" />
+                    </Button>
+                  </>
+                ) : innovationChallengeApplicationsClosed ? (
                   <>
                     <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3">
                       <Lock className="mt-0.5 h-5 w-5 shrink-0 text-red-700" />
@@ -216,7 +241,7 @@ export default function InnovationChallengePage() {
                         <p className="font-semibold text-red-800">Applications closed</p>
                         <p className="mt-1 text-sm text-red-700">
                           The call for innovators deadline has passed. We are no longer accepting new
-                          applications for AICCEES 2026.
+                          applications for AICCEES {conferenceYear}.
                         </p>
                       </div>
                     </div>

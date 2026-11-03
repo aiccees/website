@@ -5,46 +5,46 @@ export const aboutAiccees = [
 
 export const participationTypes = [
     {
-      category: "Delegate",
+      category: "Delegate Package",
       earlyBird: {
-        ngn: 50000,
-        usd: 50
-      },
-      latePayment: {
         ngn: 70000,
         usd: 70
+      },
+      latePayment: {
+        ngn: 170000,
+        usd: 170
       }
     },
     {
       category: "Delegate + Only Paper Presentation",
       earlyBird: {
-        ngn: 100000,
-        usd: 100
-      },
-      latePayment: {
         ngn: 150000,
         usd: 150
+      },
+      latePayment: {
+        ngn: 250000,
+        usd: 250
       }
     },
     {
       category: "Delegate + Paper Presentation + Publication",
       earlyBird: {
-        ngn: 200000,
-        usd: 200
+        ngn: 250000,
+        usd: 250
       },
       latePayment: {
-        ngn: 220000,
-        usd: 250
+        ngn: 350000,
+        usd: 350
       }
     },
     {
       category: "Open Access Publication",
       earlyBird: {
-        ngn: 700000,
+        ngn: 550000,
         usd: 550
       },
       latePayment: {
-        ngn: 700000,
+        ngn: 550000,
         usd: 550
       }
     }
