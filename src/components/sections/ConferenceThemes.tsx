@@ -3,13 +3,13 @@ import { Card, CardHeader, CardTitle, CardContent } from '../ui/card'
 import AOS from '../layout/AOS'
 import {
   BatteryCharging,
+  Building2,
   CarFront,
   CookingPot,
   Cpu,
   Factory,
   Flame,
   Landmark,
-  Lightbulb,
   PlugZap,
   Recycle,
   ShieldCheck,
@@ -17,79 +17,128 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 
-// The twelve thematic areas, from the AICCEES 2027 Information Booklet.
-const themes: { title: string; icon: LucideIcon; description: string }[] = [
+// The twelve thematic areas (AICCEES 2027 Information Booklet; theme 11 updated November 2026).
+// Each theme shows its topics as bullet points.
+const themes: { title: string; icon: LucideIcon; points: string[] }[] = [
   {
     title: 'Energy Access, Reliability and Productive Use',
     icon: PlugZap,
-    description:
-      'Universal access, mini-grids, small hydropower, distributed energy and rural electrification. Energy for healthcare, education, agriculture and MSMEs.',
+    points: [
+      'Universal access, mini-grids and small hydropower',
+      'Distributed energy and rural electrification',
+      'Energy for healthcare, education, agriculture and MSMEs',
+    ],
   },
   {
     title: 'Renewable Energy Manufacturing and African Industrialisation',
     icon: Factory,
-    description:
-      'African manufacture of solar modules, inverters, balance-of-system components, wind technologies and clean energy appliances. Supply chains, local content and quality assurance.',
+    points: [
+      'African manufacture of solar modules, inverters and balance-of-system components',
+      'Wind technologies and clean energy appliances',
+      'Supply chains, local content and quality assurance',
+    ],
   },
   {
     title: 'Energy Storage, Battery Value Chains and Critical Minerals',
     icon: BatteryCharging,
-    description:
-      'Battery technologies and long-duration storage; mineral beneficiation; local assembly; testing and standards; recycling and second-life batteries.',
+    points: [
+      'Battery technologies and long-duration storage',
+      'Mineral beneficiation and local assembly',
+      'Testing and standards',
+      'Recycling and second-life batteries',
+    ],
   },
   {
     title: 'Next-Generation Solar and Emerging Clean Energy Technologies',
     icon: Sun,
-    description:
-      'Perovskites, organic photovoltaics, tandem cells and advanced materials. Emerging storage, smart energy materials and routes from laboratory to product.',
+    points: [
+      'Perovskites, organic photovoltaics and tandem cells',
+      'Advanced materials and smart energy materials',
+      'Emerging storage',
+      'Routes from laboratory to product',
+    ],
   },
   {
     title: 'Grid Modernisation, Digital Energy and Artificial Intelligence',
     icon: Cpu,
-    description:
-      'Smart grids, forecasting, demand response, flexibility, advanced metering and digital twins. AI, IoT, cybersecurity and data-driven energy planning.',
+    points: [
+      'Smart grids, forecasting and demand response',
+      'Flexibility, advanced metering and digital twins',
+      'AI, IoT and cybersecurity',
+      'Data-driven energy planning',
+    ],
   },
   {
     title: 'Clean Cooking, Household Energy and Inclusive Energy Transition',
     icon: CookingPot,
-    description:
-      'Electric cooking, LPG, biogas, ethanol and improved cooking systems. Appliance finance, carbon finance, health, gender and underserved households.',
+    points: [
+      'Electric cooking, LPG, biogas and ethanol',
+      'Improved cooking systems',
+      'Appliance finance and carbon finance',
+      'Health, gender and underserved households',
+    ],
   },
   {
     title: 'Sustainable Mobility, Electric Transport and Clean Fuels',
     icon: CarFront,
-    description:
-      'Electric vehicles, two- and three-wheelers, public transport, battery swapping and charging. Mobility manufacturing, CNG, biofuels and hydrogen mobility.',
+    points: [
+      'Electric vehicles, two- and three-wheelers and public transport',
+      'Battery swapping and charging',
+      'Mobility manufacturing',
+      'CNG, biofuels and hydrogen mobility',
+    ],
   },
   {
     title: 'Hydrogen, Gas Transition and Industrial Decarbonisation',
     icon: Flame,
-    description:
-      'Green and turquoise hydrogen, methane pyrolysis, gas utilisation and flare conversion. Industrial heat, fertiliser, steel, cement and hard-to-abate sectors.',
+    points: [
+      'Green and turquoise hydrogen and methane pyrolysis',
+      'Gas utilisation and flare conversion',
+      'Industrial heat',
+      'Fertiliser, steel, cement and hard-to-abate sectors',
+    ],
   },
   {
     title: 'Circular Economy, Waste-to-Energy and Carbon Value Creation',
     icon: Recycle,
-    description:
-      'Waste valorisation, biomass, biochar, biogas, e-waste and industrial symbiosis. Circular manufacturing, carbon utilisation and carbon markets.',
+    points: [
+      'Waste valorisation, biomass and biochar',
+      'Biogas and e-waste',
+      'Industrial symbiosis and circular manufacturing',
+      'Carbon utilisation and carbon markets',
+    ],
   },
   {
     title: 'Climate Resilience, Energy Security and Resilient Infrastructure',
     icon: ShieldCheck,
-    description:
-      'Climate-proof energy systems, extreme weather resilience and disaster preparedness. The water-energy-food nexus, resilient cities and energy security.',
+    points: [
+      'Climate-proof energy systems',
+      'Extreme weather resilience and disaster preparedness',
+      'The water-energy-food nexus',
+      'Resilient cities and energy security',
+    ],
   },
   {
-    title: 'Research Commercialisation, Innovation and Academia\u2013Industry Partnership',
-    icon: Lightbulb,
-    description:
-      'Technology transfer, university spin-outs, intellectual property, prototypes and industry-sponsored research. Innovation finance and testing centres.',
+    title: 'Energy Efficiency, Green Buildings and Smart Architecture',
+    icon: Building2,
+    points: [
+      'Passive cooling, natural ventilation and daylighting',
+      'Energy-efficient roofs, walls and windows',
+      'Efficient air conditioning, fans and lighting',
+      'Smart controls and building energy management',
+      'Energy audits, retrofits and measured savings',
+      'Green building standards and lifecycle costs',
+    ],
   },
   {
     title: 'Finance, Policy, Regional Markets and a Just Energy Transition',
     icon: Landmark,
-    description:
-      'Blended, local currency and carbon finance; policy reform and standards. Regional electricity markets, AfCFTA opportunities, skills, jobs, gender and youth.',
+    points: [
+      'Blended, local currency and carbon finance',
+      'Policy reform and standards',
+      'Regional electricity markets and AfCFTA opportunities',
+      'Skills, jobs, gender and youth',
+    ],
   },
 ]
 
@@ -132,9 +181,14 @@ const ConferenceThemes = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-gray-600 text-center leading-relaxed">
-                      {theme.description}
-                    </p>
+                    <ul className="space-y-1.5 text-sm text-gray-600 leading-relaxed">
+                      {theme.points.map((point) => (
+                        <li key={point} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-green-600" aria-hidden="true" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               )
