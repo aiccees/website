@@ -86,7 +86,7 @@ export default function ParticipationSection() {
               <CardContent className="space-y-4 pt-6">
                 <div>
                   <div className="font-semibold">Bank</div>
-                  <div>Guaranty Trust Bank</div>
+                  <div>Sterling Bank</div>
                 </div>
                 <div>
                   <div className="font-semibold">Account Name</div>
@@ -94,7 +94,7 @@ export default function ParticipationSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Account Number</div>
-                  <div>0737393294</div>
+                  <div>0150974126</div>
                 </div>
                 <div>
                   <div className="font-semibold">Currency</div>
@@ -109,20 +109,28 @@ export default function ParticipationSection() {
               </CardHeader>
               <CardContent className="space-y-4 pt-6">
                 <div>
+                  <div className="font-semibold">Bank</div>
+                  <div>Sterling Bank PLC</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Bank Address</div>
+                  <div>20 Marina Sterling Towers, Lagos, Lagos State, Nigeria</div>
+                </div>
+                <div>
                   <div className="font-semibold">Swift Code</div>
-                  <div>GTBINGLA</div>
+                  <div>NAMENGLA</div>
                 </div>
                 <div>
                   <div className="font-semibold">Account Name</div>
-                  <div>Tovero Energy Ltd</div>
+                  <div>Tovero Energy Limited</div>
                 </div>
                 <div>
                   <div className="font-semibold">Account Number</div>
-                  <div>0737393304</div>
+                  <div>0151441968</div>
                 </div>
                 <div>
                   <div className="font-semibold">Sort Code</div>
-                  <div>058-083956</div>
+                  <div>232150016</div>
                 </div>
                 <div>
                   <div className="font-semibold">Currency</div>
