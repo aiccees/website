@@ -18,10 +18,13 @@ const AboutUs = () => {
                     ))}
                 </div>
                 <div className="w-full lg:w-[45%] grid grid-cols-2 gap-y-4 lg:gap-y-0 mt-4 lg:mt-0">
-      {aicess["aicessStats"].map((item) => (
+      {aicess["aicessStats"].map((item, index, list) => (
         <div
           key={item.id}
-          className="flex flex-col justify-between md:justify-end items-center gap-2"
+          className={`flex flex-col justify-between md:justify-end items-center gap-2 ${
+            // an odd last number sits centred on its own row
+            index === list.length - 1 && list.length % 2 === 1 ? "col-span-2 lg:mt-6" : ""
+          }`}
         >
           <Image alt="Logo" src={item.logo} />
           <h1 className="text-4xl font-bold">{item.number}</h1>
