@@ -4,6 +4,7 @@ import { Building2 } from 'lucide-react'
 import { advisoryCouncilInfo, conferenceChairInfo } from "../data_models/conference-chairs"
 import AOS from "../layout/AOS"
 import Image, { type StaticImageData } from "next/image"
+import { ExpandableBio } from "./ExpandableBio"
 
 type Person = {
     id: number
@@ -11,6 +12,7 @@ type Person = {
     role: string
     school: string
     portfolio?: string
+    bio?: string // optional longer bio, shown with "Read more"
     image: StaticImageData | string
 }
 
@@ -42,7 +44,7 @@ function PersonCard({ person }: { person: Person }) {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <p className="text-sm text-center mb-4">{person.portfolio}</p>
+                <ExpandableBio summary={person.portfolio} bio={person.bio} />
                 <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
                     <Building2 className="w-4 h-4" />
                     <span>{person.school}</span>

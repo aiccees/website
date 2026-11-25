@@ -6,6 +6,8 @@ import vero from "@/public/images/conference-chairs/verro.jpg"
 import mbohwa from "@/public/images/conference-chairs/charles-mbohwa.jpg"
 import ogueke from "@/public/images/conference-chairs/ogueke.jpg"
 import asare from "@/public/images/conference-chairs/asare.jpg"
+// Photo used exactly as supplied (not enhanced), at her request
+import jiska from "@/public/images/conference-chairs/jiska-de-groot.jpg"
 
 export const conferenceChairInfo = [
     {
@@ -74,5 +76,14 @@ export const advisoryCouncilInfo = [
         school: "University of Port Harcourt",
         portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
         image: roland
+    },
+    {
+        id: 2,
+        name: "Dr. Jiska de Groot",
+        role: "Advisory Council Member",
+        school: "University of Cape Town",
+        portfolio: "Senior Researcher, Energy, Climate and Development programme, African Climate and Development Initiative (ACDI), University of Cape Town. \nPrincipal Investigator, Transforming Energy Access Learning Partnership.",
+        bio: "Jiska de Groot is a Senior Researcher in the Energy, Climate and Development programme at the University of Cape Town's African Climate and Development Initiative (ACDI). Her work focuses on energy access and the localisation of energy innovation in African contexts, with a particular interest in how new technologies and solutions can be adapted to serve communities across the continent. She is the Principal Investigator of the Transforming Energy Access Learning Partnership. Jiska brings a systems-oriented perspective to the complex social, economic, and policy dimensions of the energy transition in Africa.",
+        image: jiska
     },
 ]

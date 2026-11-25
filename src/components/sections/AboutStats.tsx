@@ -28,15 +28,17 @@ function StatsCard({
   value,
   label,
   suffix = "",
+  className = "",
 }: {
   value: number;
   label: string;
   suffix?: string;
+  className?: string;
 }) {
   const animatedValue = useCountAnimation(value);
 
   return (
-    <div>
+    <div className={className}>
       <div className="text-5xl lg:text-7xl text-center font-bold text-gray-800 mb-2">
         {animatedValue.toLocaleString("en-US")}
         {suffix}
@@ -51,12 +53,18 @@ function StatsCard({
 export default function AboutStats() {
   return (
     <div className="container mx-auto grid grid-cols-2 px-6 md:grid-cols-3 place-items-center gap-6 mb-14 mt-10 relative z-10">
-      {aicess.aicessStats.map((item) => (
+      {aicess.aicessStats.map((item, index, list) => (
         <StatsCard
           key={item.id}
           value={Number(item.number.replace(/,/g, ""))}
           label={item.description}
           suffix={item.id === 1 ? "+" : ""}
+          // a last number left alone on its row is centred across the row
+          className={
+            index === list.length - 1
+              ? `${list.length % 2 === 1 ? "col-span-2" : ""} ${list.length % 3 === 1 ? "md:col-span-3" : "md:col-span-1"}`
+              : ""
+          }
         />
       ))}
     </div>

@@ -4,6 +4,7 @@ import logo3 from "@/public/images/aicess/logo3.png";
 import logo4 from "@/public/images/aicess/logo4.png";
 import logo5 from "@/public/images/aicess/logo5.png";
 import logo6 from "@/public/images/aicess/logo6.png"
+import logo7 from "@/public/images/aicess/logo7.png";
 import svg1 from "@/public/images/aicess/svg1.png";
 import svg2 from "@/public/images/aicess/svg2.png";
 import svg3 from "@/public/images/aicess/svg3.png";
@@ -79,6 +80,12 @@ export const aicess = {
         logo: logo6,
         number: "18",
         description: "Keynote Speakers",
+      },
+      {
+        id: 7,
+        logo: logo7,
+        number: "15",
+        description: "Clean Energy Innovation Challenge Finalists",
       },
   ]
 };
